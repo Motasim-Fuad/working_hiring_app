@@ -1,0 +1,917 @@
+{
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/main.dart": {
+    "mtime": 1780037831.4950678,
+    "ast_hash": "bc4e31d3a1c93b065f40b7b60038c0a9",
+    "semantic_hash": "bc4e31d3a1c93b065f40b7b60038c0a9"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/constants/app_images.dart": {
+    "mtime": 1779782930.0352974,
+    "ast_hash": "091400cda3ea81940fa0c26267b6b462",
+    "semantic_hash": "091400cda3ea81940fa0c26267b6b462"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/constants/app_strings.dart": {
+    "mtime": 1779425444.8348749,
+    "ast_hash": "de2f3ecf1dcbf07e4aa3da87a69fc19a",
+    "semantic_hash": "de2f3ecf1dcbf07e4aa3da87a69fc19a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/constants/app_colors.dart": {
+    "mtime": 1779425444.834748,
+    "ast_hash": "89364dc1a2d5c0391329d399176703a1",
+    "semantic_hash": "89364dc1a2d5c0391329d399176703a1"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/theme/app_theme.dart": {
+    "mtime": 1779425444.834949,
+    "ast_hash": "a44e89a06015f18130bb983caf256cb8",
+    "semantic_hash": "a44e89a06015f18130bb983caf256cb8"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/language_selector.dart": {
+    "mtime": 1779425444.8353846,
+    "ast_hash": "c7c4b6e0f81dac27ac3d4da8e65010e3",
+    "semantic_hash": "c7c4b6e0f81dac27ac3d4da8e65010e3"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/service_chip.dart": {
+    "mtime": 1779425444.8354282,
+    "ast_hash": "473db1b8165780264fec6ed4daf1dcce",
+    "semantic_hash": "473db1b8165780264fec6ed4daf1dcce"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/contextual_warning_banner.dart": {
+    "mtime": 1779425444.8351328,
+    "ast_hash": "8c75ed7a7f1bd82cb029cdb359555595",
+    "semantic_hash": "8c75ed7a7f1bd82cb029cdb359555595"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/custom_button.dart": {
+    "mtime": 1779425444.8352456,
+    "ast_hash": "aa0507d6f32ad264d2d4bbff8d1e028c",
+    "semantic_hash": "aa0507d6f32ad264d2d4bbff8d1e028c"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/home_header.dart": {
+    "mtime": 1779771125.5459015,
+    "ast_hash": "5d335798d6f4bece33bad84f095eb1e9",
+    "semantic_hash": "5d335798d6f4bece33bad84f095eb1e9"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/custom_text_field.dart": {
+    "mtime": 1779425444.8352928,
+    "ast_hash": "14207fc386e7c8d129ba07d5d890a0ff",
+    "semantic_hash": "14207fc386e7c8d129ba07d5d890a0ff"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/bottom_nav_bar.dart": {
+    "mtime": 1779425444.8350873,
+    "ast_hash": "fcb45f63b48ef4d2f33e797ae5d119bf",
+    "semantic_hash": "fcb45f63b48ef4d2f33e797ae5d119bf"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/social_button.dart": {
+    "mtime": 1779425444.8354719,
+    "ast_hash": "a7472074ecc5d911340b7b7404c77fa6",
+    "semantic_hash": "a7472074ecc5d911340b7b7404c77fa6"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/task_success_view/task_success_view.dart": {
+    "mtime": 1779425444.8355463,
+    "ast_hash": "c6ca260af8208c090a7ed1d524cf0dd0",
+    "semantic_hash": "c6ca260af8208c090a7ed1d524cf0dd0"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/custom_appBar/custom_app_bar.dart": {
+    "mtime": 1779425444.835206,
+    "ast_hash": "cb5b7ec65106ce50c2e8814a4b628f82",
+    "semantic_hash": "cb5b7ec65106ce50c2e8814a4b628f82"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/widgets/app_link_button/app_link_button.dart": {
+    "mtime": 1779425444.8350456,
+    "ast_hash": "a1a461b653e6a5175fdbe2209452ec0b",
+    "semantic_hash": "a1a461b653e6a5175fdbe2209452ec0b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/role_selection/bindings/role_selection_binding.dart": {
+    "mtime": 1779425444.8462806,
+    "ast_hash": "20db7f676c24f68c91ba9cca41fc0724",
+    "semantic_hash": "20db7f676c24f68c91ba9cca41fc0724"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/role_selection/controllers/role_selection_controller.dart": {
+    "mtime": 1779425444.846379,
+    "ast_hash": "ea63175fad1eb49bc38bf54763a81a8f",
+    "semantic_hash": "ea63175fad1eb49bc38bf54763a81a8f"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/role_selection/views/role_selection_view.dart": {
+    "mtime": 1779425444.8464632,
+    "ast_hash": "a5799f3943d2c1fec3cde118c518b7e7",
+    "semantic_hash": "a5799f3943d2c1fec3cde118c518b7e7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/bindings/worker_home_binding.dart": {
+    "mtime": 1779630179.39631,
+    "ast_hash": "3880fb0e42666c87b24f3e8479fd75c1",
+    "semantic_hash": "3880fb0e42666c87b24f3e8479fd75c1"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/controllers/worker_home_controller.dart": {
+    "mtime": 1779695062.771528,
+    "ast_hash": "3c7be7806c062ff8fe7b8d77092a9c64",
+    "semantic_hash": "3c7be7806c062ff8fe7b8d77092a9c64"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/views/worker_home_view.dart": {
+    "mtime": 1779693958.338182,
+    "ast_hash": "df934e24b2a6e93dc428eb932afa78af",
+    "semantic_hash": "df934e24b2a6e93dc428eb932afa78af"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/widgets/job_card.dart": {
+    "mtime": 1779425444.8425217,
+    "ast_hash": "baef60f0ed32f49d29d216e46201f28b",
+    "semantic_hash": "baef60f0ed32f49d29d216e46201f28b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/widgets/filter_modal.dart": {
+    "mtime": 1779425444.8424675,
+    "ast_hash": "08210b2ab08edde9de2135d1b00b00a8",
+    "semantic_hash": "08210b2ab08edde9de2135d1b00b00a8"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/widgets/task_detail_sheet.dart": {
+    "mtime": 1779425444.842622,
+    "ast_hash": "e60fb7a640753134bdbc70ab0787dde3",
+    "semantic_hash": "e60fb7a640753134bdbc70ab0787dde3"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/home/widgets/proposal_modal.dart": {
+    "mtime": 1779425444.8425689,
+    "ast_hash": "32d647c16d240b6057b74b60935e3b45",
+    "semantic_hash": "32d647c16d240b6057b74b60935e3b45"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/dashboard/bindings/worker_dashboard_binding.dart": {
+    "mtime": 1780038589.3916054,
+    "ast_hash": "50a3df1142fa93c5f1054c902db6346b",
+    "semantic_hash": "50a3df1142fa93c5f1054c902db6346b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/dashboard/controllers/worker_dashboard_controller.dart": {
+    "mtime": 1780339795.6410978,
+    "ast_hash": "e3676ba0ff7bbfdac3dc8faa68f1f4e9",
+    "semantic_hash": "e3676ba0ff7bbfdac3dc8faa68f1f4e9"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/dashboard/views/worker_dashboard_view.dart": {
+    "mtime": 1779425444.8421404,
+    "ast_hash": "86f95257c5f9bb33b92e547c455c4a34",
+    "semantic_hash": "86f95257c5f9bb33b92e547c455c4a34"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/saved_tasks/views/saved_tasks_view.dart": {
+    "mtime": 1779425444.8450913,
+    "ast_hash": "ba796674b5ed10bb5cb7acedee973a43",
+    "semantic_hash": "ba796674b5ed10bb5cb7acedee973a43"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/edit_helper_profile_view.dart": {
+    "mtime": 1779869291.1628907,
+    "ast_hash": "09a8d1edce5f78b828a0f7fea4e3c635",
+    "semantic_hash": "09a8d1edce5f78b828a0f7fea4e3c635"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/create_helper_profile_view.dart": {
+    "mtime": 1779869281.140702,
+    "ast_hash": "8b6edd6afe258f01d067b8024e99531a",
+    "semantic_hash": "8b6edd6afe258f01d067b8024e99531a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/helper_profile_model.dart": {
+    "mtime": 1779425444.8439271,
+    "ast_hash": "409c3a434a1eed3667bd241a1c8174d5",
+    "semantic_hash": "409c3a434a1eed3667bd241a1c8174d5"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/helper_profile_controller.dart": {
+    "mtime": 1780339075.299323,
+    "ast_hash": "8f204275c18e63c56ce016e7aeb16310",
+    "semantic_hash": "8f204275c18e63c56ce016e7aeb16310"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/bindings/worker_profile_binding.dart": {
+    "mtime": 1779632270.3114805,
+    "ast_hash": "0022d447beddc36714acf88b5f835e84",
+    "semantic_hash": "0022d447beddc36714acf88b5f835e84"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/bindings/worker_account_verification_binding.dart": {
+    "mtime": 1779632367.9281187,
+    "ast_hash": "9eea86c980f3d7db2142e3a12eaa2c7f",
+    "semantic_hash": "9eea86c980f3d7db2142e3a12eaa2c7f"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/controllers/worker_account_verification_controller.dart": {
+    "mtime": 1779866871.8776188,
+    "ast_hash": "334f67543dd3e9b25233ad0e0da0bbcd",
+    "semantic_hash": "334f67543dd3e9b25233ad0e0da0bbcd"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/controllers/worker_profile_controller.dart": {
+    "mtime": 1779634727.685538,
+    "ast_hash": "601527e094d0b59daeb5161871a2bb9f",
+    "semantic_hash": "601527e094d0b59daeb5161871a2bb9f"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/controllers/worker_support_ticket_controller.dart": {
+    "mtime": 1779425444.8437057,
+    "ast_hash": "ffe0bd4e3f1bbe2592408679bae05d51",
+    "semantic_hash": "ffe0bd4e3f1bbe2592408679bae05d51"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/controllers/worker_report_controller.dart": {
+    "mtime": 1779425444.843656,
+    "ast_hash": "5dfa7621467a6636c7ac2340d30d53ca",
+    "semantic_hash": "5dfa7621467a6636c7ac2340d30d53ca"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_change_phone_view.dart": {
+    "mtime": 1779425444.8446374,
+    "ast_hash": "b3065d191932147fc15fc93238049751",
+    "semantic_hash": "b3065d191932147fc15fc93238049751"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_support_ticket_history_view.dart": {
+    "mtime": 1779425444.8449225,
+    "ast_hash": "dcc35b2af1dcbc01bfac215bc865c6ef",
+    "semantic_hash": "dcc35b2af1dcbc01bfac215bc865c6ef"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_account_verification_instruction_view.dart": {
+    "mtime": 1779425444.8440855,
+    "ast_hash": "2fcdeb9dee4e405f23130028edb09e31",
+    "semantic_hash": "2fcdeb9dee4e405f23130028edb09e31"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_add_billing_view.dart": {
+    "mtime": 1779425444.8444462,
+    "ast_hash": "47587b2ff47e13460694a1dce8e581f6",
+    "semantic_hash": "47587b2ff47e13460694a1dce8e581f6"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_profile_view.dart": {
+    "mtime": 1779632992.3008196,
+    "ast_hash": "2bfca8e2a65722fda5093662f264f039",
+    "semantic_hash": "2bfca8e2a65722fda5093662f264f039"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_account_verification_view.dart": {
+    "mtime": 1780339638.7481015,
+    "ast_hash": "aae00bffdac120bb78117c481bd0fbec",
+    "semantic_hash": "aae00bffdac120bb78117c481bd0fbec"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_account_verification_camera_view.dart": {
+    "mtime": 1779425444.8440194,
+    "ast_hash": "67743d9f82e22cfe84d052fecae62273",
+    "semantic_hash": "67743d9f82e22cfe84d052fecae62273"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_settings_view.dart": {
+    "mtime": 1779425444.8448741,
+    "ast_hash": "22385e8f2cdb74beb209d97aeb182562",
+    "semantic_hash": "22385e8f2cdb74beb209d97aeb182562"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_add_bank_details_view.dart": {
+    "mtime": 1779425444.8443892,
+    "ast_hash": "3c82fce86c05bd45f8158b281c35463a",
+    "semantic_hash": "3c82fce86c05bd45f8158b281c35463a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_support_ticket_view.dart": {
+    "mtime": 1779425444.8449764,
+    "ast_hash": "be3f36fca29c2c6637f1acb61ee493b2",
+    "semantic_hash": "be3f36fca29c2c6637f1acb61ee493b2"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_account_view.dart": {
+    "mtime": 1779425444.8443375,
+    "ast_hash": "0840a97b2c1a68950ea0560bf0b83b48",
+    "semantic_hash": "0840a97b2c1a68950ea0560bf0b83b48"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_account_verification_result_view.dart": {
+    "mtime": 1779425444.8442252,
+    "ast_hash": "a2fe2e470b1381a45ed57341405f1e81",
+    "semantic_hash": "a2fe2e470b1381a45ed57341405f1e81"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_change_name_view.dart": {
+    "mtime": 1779425444.8445897,
+    "ast_hash": "637e930e4c80dbea2e0ed9ff484f2428",
+    "semantic_hash": "637e930e4c80dbea2e0ed9ff484f2428"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_change_email_view.dart": {
+    "mtime": 1779425444.8445437,
+    "ast_hash": "5d25f413ae22e63e2ed7d6624f661821",
+    "semantic_hash": "5d25f413ae22e63e2ed7d6624f661821"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_change_city_view.dart": {
+    "mtime": 1779425444.8444946,
+    "ast_hash": "d76a15e5f5a61378b9d1d2b71934147b",
+    "semantic_hash": "d76a15e5f5a61378b9d1d2b71934147b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_change_photo_view.dart": {
+    "mtime": 1779425444.844689,
+    "ast_hash": "33d8422167387ff43170d99c532680e1",
+    "semantic_hash": "33d8422167387ff43170d99c532680e1"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/profile/views/worker_report_view.dart": {
+    "mtime": 1779425444.844823,
+    "ast_hash": "f7bda9b1da273ee92edd106921003526",
+    "semantic_hash": "f7bda9b1da273ee92edd106921003526"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/bindings/my_job_binding.dart": {
+    "mtime": 1779607175.8520522,
+    "ast_hash": "df2300c96e26f589de9cc08ce6571dde",
+    "semantic_hash": "df2300c96e26f589de9cc08ce6571dde"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/controllers/my_job_controller.dart": {
+    "mtime": 1779605290.385529,
+    "ast_hash": "2831c2777d47bc2a84f4719210a33f5e",
+    "semantic_hash": "2831c2777d47bc2a84f4719210a33f5e"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/views/my_job_view.dart": {
+    "mtime": 1779607207.7802632,
+    "ast_hash": "c017f65c406e82d4f2d50d9d4b1aa6fa",
+    "semantic_hash": "c017f65c406e82d4f2d50d9d4b1aa6fa"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/views/job_otp_verification_view.dart": {
+    "mtime": 1779607237.8092117,
+    "ast_hash": "16096c749a5121900405a047a1a01d7c",
+    "semantic_hash": "16096c749a5121900405a047a1a01d7c"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/widgets/task_detail_sheet.dart": {
+    "mtime": 1779425444.8433082,
+    "ast_hash": "67398ccef0310ea665b31464f7328cbb",
+    "semantic_hash": "67398ccef0310ea665b31464f7328cbb"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/widgets/my_job_card.dart": {
+    "mtime": 1779628515.2153223,
+    "ast_hash": "89308f6db29643451e1908ed25ed3d50",
+    "semantic_hash": "89308f6db29643451e1908ed25ed3d50"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_want_to_work/my_job/widgets/finish_work_sheet.dart": {
+    "mtime": 1779425444.843208,
+    "ast_hash": "5aeac3e7696f253f39e5b233948751db",
+    "semantic_hash": "5aeac3e7696f253f39e5b233948751db"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/splash/bindings/splash_binding.dart": {
+    "mtime": 1780339160.6135275,
+    "ast_hash": "7d575d014fc0c66214238cb80006bf26",
+    "semantic_hash": "7d575d014fc0c66214238cb80006bf26"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/splash/controllers/splash_controller.dart": {
+    "mtime": 1780339808.1012373,
+    "ast_hash": "80e00031e9b972b52605bd77fa1befcb",
+    "semantic_hash": "80e00031e9b972b52605bd77fa1befcb"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/splash/views/splash_view.dart": {
+    "mtime": 1779425444.847026,
+    "ast_hash": "6cde2db1e0ee5131573f1bab3c470aec",
+    "semantic_hash": "6cde2db1e0ee5131573f1bab3c470aec"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/order/controllers/order_controller.dart": {
+    "mtime": 1779605809.0993426,
+    "ast_hash": "e2fcbfb1c04290138a02a2fb2f8c3319",
+    "semantic_hash": "e2fcbfb1c04290138a02a2fb2f8c3319"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/order/views/order_view.dart": {
+    "mtime": 1779609528.4909124,
+    "ast_hash": "552eabd4bcc609a01ae3fbe6b07b844d",
+    "semantic_hash": "552eabd4bcc609a01ae3fbe6b07b844d"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/order/views/order_detail_view.dart": {
+    "mtime": 1779609532.6891575,
+    "ast_hash": "fdf791746e7c08f9581763e6caa36d5c",
+    "semantic_hash": "fdf791746e7c08f9581763e6caa36d5c"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/order/views/feedback_success_view.dart": {
+    "mtime": 1779425444.839699,
+    "ast_hash": "5b777895b2225060fff79e176b2bd083",
+    "semantic_hash": "5b777895b2225060fff79e176b2bd083"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/order/views/review_view.dart": {
+    "mtime": 1779609496.1013794,
+    "ast_hash": "23f228c7b6112004836f96b6007d3baf",
+    "semantic_hash": "23f228c7b6112004836f96b6007d3baf"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/home/inner_widget/home_baner/home_banner.dart": {
+    "mtime": 1779630220.5956535,
+    "ast_hash": "425b221eae8092b1b340d35bf5166605",
+    "semantic_hash": "425b221eae8092b1b340d35bf5166605"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/home/bindings/home_binding.dart": {
+    "mtime": 1779630217.654368,
+    "ast_hash": "c710cae43895cb7fd0ecac1927ac30e7",
+    "semantic_hash": "c710cae43895cb7fd0ecac1927ac30e7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/home/controllers/home_controller.dart": {
+    "mtime": 1779781120.3475919,
+    "ast_hash": "73c3aa0b60b188bfbff5a3475193af0b",
+    "semantic_hash": "73c3aa0b60b188bfbff5a3475193af0b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/home/views/home_view.dart": {
+    "mtime": 1779865286.211334,
+    "ast_hash": "1470686c4e80d14561a9cbb8212e66a3",
+    "semantic_hash": "1470686c4e80d14561a9cbb8212e66a3"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/home/views/widgets/add_address_map_dialog.dart": {
+    "mtime": 1779425444.83932,
+    "ast_hash": "323c31b4e3cb274111ae667b98b3abdb",
+    "semantic_hash": "323c31b4e3cb274111ae667b98b3abdb"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/home/views/widgets/location_list_bottom_sheet.dart": {
+    "mtime": 1779605103.5476203,
+    "ast_hash": "dcde4731d7675edfc77f4f1e2aff0f20",
+    "semantic_hash": "dcde4731d7675edfc77f4f1e2aff0f20"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/bindings/billing_payments_binding.dart": {
+    "mtime": 1779425444.8400886,
+    "ast_hash": "871acbbbe5942d22d4a25de2d4c5cebf",
+    "semantic_hash": "871acbbbe5942d22d4a25de2d4c5cebf"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/controllers/billing_payments_controller.dart": {
+    "mtime": 1779425444.84016,
+    "ast_hash": "c643bd8bcb72fcd199ca515d285a7329",
+    "semantic_hash": "c643bd8bcb72fcd199ca515d285a7329"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/views/add_billing_view.dart": {
+    "mtime": 1779425444.840278,
+    "ast_hash": "f8c8e29c53e75a2886f449945c45489c",
+    "semantic_hash": "f8c8e29c53e75a2886f449945c45489c"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/views/payment_view.dart": {
+    "mtime": 1779607232.6626058,
+    "ast_hash": "b382085876e8525664f0bca47f17d976",
+    "semantic_hash": "b382085876e8525664f0bca47f17d976"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/views/billing_list_view.dart": {
+    "mtime": 1779425444.840332,
+    "ast_hash": "ab2ca25ca8afd8c3b8f89c062928ab31",
+    "semantic_hash": "ab2ca25ca8afd8c3b8f89c062928ab31"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/views/billing_payments_view.dart": {
+    "mtime": 1779425444.8403955,
+    "ast_hash": "ec300fb967d7f4b753d618db08d580be",
+    "semantic_hash": "ec300fb967d7f4b753d618db08d580be"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/views/add_billing_method_view.dart": {
+    "mtime": 1779425444.8402326,
+    "ast_hash": "8ecb554a2e89f9bdd65dd866c70e4ec4",
+    "semantic_hash": "8ecb554a2e89f9bdd65dd866c70e4ec4"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/payment/views/payment_success_view.dart": {
+    "mtime": 1779425444.840444,
+    "ast_hash": "5582114870a88380da948e04d378b8aa",
+    "semantic_hash": "5582114870a88380da948e04d378b8aa"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/custom_offer/controllers/custom_offer_controller.dart": {
+    "mtime": 1780038709.2001712,
+    "ast_hash": "178d31f1de727c3a2cfecc2c07043848",
+    "semantic_hash": "178d31f1de727c3a2cfecc2c07043848"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/custom_offer/views/custom_offer_view.dart": {
+    "mtime": 1780038711.220022,
+    "ast_hash": "afbece0ef2362c4981afdcd5b83fdf55",
+    "semantic_hash": "afbece0ef2362c4981afdcd5b83fdf55"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/helper_list/bindings/helper_list_binding.dart": {
+    "mtime": 1779779117.1078033,
+    "ast_hash": "71d4f7ad2f77ec0168e27d62ebd213ea",
+    "semantic_hash": "71d4f7ad2f77ec0168e27d62ebd213ea"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/helper_list/controllers/helper_list_controller.dart": {
+    "mtime": 1779869041.9957721,
+    "ast_hash": "b751d575d9f1081b9945e9cb5def13cd",
+    "semantic_hash": "b751d575d9f1081b9945e9cb5def13cd"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/helper_list/views/helper_list_view.dart": {
+    "mtime": 1779869083.2447288,
+    "ast_hash": "9cbfbd3ea644bf0bc79812ee0a074c40",
+    "semantic_hash": "9cbfbd3ea644bf0bc79812ee0a074c40"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/dashboard/bindings/dashboard_binding.dart": {
+    "mtime": 1779779697.203172,
+    "ast_hash": "8dd87aad98dea00929951a11e1b408d8",
+    "semantic_hash": "8dd87aad98dea00929951a11e1b408d8"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/dashboard/controllers/dashboard_controller.dart": {
+    "mtime": 1779425444.838183,
+    "ast_hash": "40cf16541bfe6e38c0a15b899014b909",
+    "semantic_hash": "40cf16541bfe6e38c0a15b899014b909"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/dashboard/views/dashboard_view.dart": {
+    "mtime": 1779425444.8382668,
+    "ast_hash": "cc2b2cf6669bb5827aff3e462853b11a",
+    "semantic_hash": "cc2b2cf6669bb5827aff3e462853b11a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/bindings/vouchers_offers_binding.dart": {
+    "mtime": 1779425444.8406491,
+    "ast_hash": "3b8694424e5ce45976e463a2e15dadeb",
+    "semantic_hash": "3b8694424e5ce45976e463a2e15dadeb"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/controllers/profile_controller.dart": {
+    "mtime": 1779604706.3827956,
+    "ast_hash": "eee66f889a829ed616cf00ba3efeb3cc",
+    "semantic_hash": "eee66f889a829ed616cf00ba3efeb3cc"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/controllers/vouchers_offers_controller.dart": {
+    "mtime": 1779425444.840846,
+    "ast_hash": "fdfd4c2e445fdaa28750c1dd5cacbef3",
+    "semantic_hash": "fdfd4c2e445fdaa28750c1dd5cacbef3"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/controllers/support_ticket_controller.dart": {
+    "mtime": 1779425444.8408031,
+    "ast_hash": "5d274e1ccc66c17d7fc30d803c12d202",
+    "semantic_hash": "5d274e1ccc66c17d7fc30d803c12d202"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/transaction_history_view.dart": {
+    "mtime": 1779425444.8415096,
+    "ast_hash": "4eec90935520bcccce07858b52ad5c0f",
+    "semantic_hash": "4eec90935520bcccce07858b52ad5c0f"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/profile_view.dart": {
+    "mtime": 1779425444.841291,
+    "ast_hash": "2d2587604072ecb5c9228d857b6ac5cf",
+    "semantic_hash": "2d2587604072ecb5c9228d857b6ac5cf"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/change_email_view.dart": {
+    "mtime": 1779425444.8409538,
+    "ast_hash": "d241bfb5843b10ffe31eb11674f5ccc0",
+    "semantic_hash": "d241bfb5843b10ffe31eb11674f5ccc0"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/settings_view.dart": {
+    "mtime": 1779425444.8413436,
+    "ast_hash": "a09fe6258064ccc01e7b6c8204f60c34",
+    "semantic_hash": "a09fe6258064ccc01e7b6c8204f60c34"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/support_ticket_history_view.dart": {
+    "mtime": 1779425444.8414295,
+    "ast_hash": "4da7d5c9594059c9bf8e4de71ffb3e89",
+    "semantic_hash": "4da7d5c9594059c9bf8e4de71ffb3e89"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/change_photo_view.dart": {
+    "mtime": 1779425444.8411274,
+    "ast_hash": "03f34e6b0e1ef96b939f15c82483cbf1",
+    "semantic_hash": "03f34e6b0e1ef96b939f15c82483cbf1"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/change_phone_view.dart": {
+    "mtime": 1779425444.8410804,
+    "ast_hash": "689c7968f1859e114d7408bbe74b6d91",
+    "semantic_hash": "689c7968f1859e114d7408bbe74b6d91"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/worker_billing_list_view.dart": {
+    "mtime": 1779425444.8416193,
+    "ast_hash": "549404a63e1ab3bb3343feef0383d3f0",
+    "semantic_hash": "549404a63e1ab3bb3343feef0383d3f0"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/support_ticket_view.dart": {
+    "mtime": 1779425444.8414705,
+    "ast_hash": "dc4e3ff67497b231702352266397a072",
+    "semantic_hash": "dc4e3ff67497b231702352266397a072"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/edit_profile_view.dart": {
+    "mtime": 1779425444.8412306,
+    "ast_hash": "22135d9b20a76666c31d6bb7533cbaa6",
+    "semantic_hash": "22135d9b20a76666c31d6bb7533cbaa6"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/change_name_view.dart": {
+    "mtime": 1779425444.8409965,
+    "ast_hash": "f3007d959acac39a5026596326c1f67f",
+    "semantic_hash": "f3007d959acac39a5026596326c1f67f"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/support_ticket_feedback_view.dart": {
+    "mtime": 1779425444.841386,
+    "ast_hash": "34cdd8aeda301ad8852c888fe5e1d238",
+    "semantic_hash": "34cdd8aeda301ad8852c888fe5e1d238"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/vouchers_offers_view.dart": {
+    "mtime": 1779425444.8415563,
+    "ast_hash": "3088581f3b7a4df5b7d228c65157ae7b",
+    "semantic_hash": "3088581f3b7a4df5b7d228c65157ae7b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/change_city_view.dart": {
+    "mtime": 1779425444.8409145,
+    "ast_hash": "48b21ab520a065019d19f76a46065efe",
+    "semantic_hash": "48b21ab520a065019d19f76a46065efe"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/profile/views/client_reviews_view.dart": {
+    "mtime": 1779425444.8411775,
+    "ast_hash": "e89ddef9cb13100f6f1664766d6d713c",
+    "semantic_hash": "e89ddef9cb13100f6f1664766d6d713c"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/request/controllers/request_controller.dart": {
+    "mtime": 1779605530.2540612,
+    "ast_hash": "020e78781a098200823b58b6db76834f",
+    "semantic_hash": "020e78781a098200823b58b6db76834f"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/request/views/request_list_view.dart": {
+    "mtime": 1779605668.511102,
+    "ast_hash": "c09da9004be6a47d80e610dd3b23748a",
+    "semantic_hash": "c09da9004be6a47d80e610dd3b23748a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/request/views/request_detail_view.dart": {
+    "mtime": 1779605651.4291584,
+    "ast_hash": "9bc23aa30499be8d352f85c6d29115de",
+    "semantic_hash": "9bc23aa30499be8d352f85c6d29115de"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/helper_profile/bindings/helper_profile_binding.dart": {
+    "mtime": 1779863217.6157331,
+    "ast_hash": "3de705d0a7936343d6ce0722db03935d",
+    "semantic_hash": "3de705d0a7936343d6ce0722db03935d"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/helper_profile/controllers/helper_profile_controller.dart": {
+    "mtime": 1779863211.088521,
+    "ast_hash": "caea11297ea4a23e1d83e1fbbfccc680",
+    "semantic_hash": "caea11297ea4a23e1d83e1fbbfccc680"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/helper_profile/views/helper_profile_view.dart": {
+    "mtime": 1780033361.6534102,
+    "ast_hash": "c21d8f60e4423c585630d27f044e8326",
+    "semantic_hash": "c21d8f60e4423c585630d27f044e8326"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/create_task/bindings/create_task_binding.dart": {
+    "mtime": 1779605526.0776672,
+    "ast_hash": "fd2b75e16a84971f50302fd85c5974bb",
+    "semantic_hash": "fd2b75e16a84971f50302fd85c5974bb"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/create_task/controllers/create_task_controller.dart": {
+    "mtime": 1779609334.5720694,
+    "ast_hash": "c360763fdefbc9cfe32b2f47b5387f10",
+    "semantic_hash": "c360763fdefbc9cfe32b2f47b5387f10"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/create_task/views/task_success_view.dart": {
+    "mtime": 1779425444.8377304,
+    "ast_hash": "47e541a33b4248d9bff44098852f0048",
+    "semantic_hash": "47e541a33b4248d9bff44098852f0048"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/create_task/views/create_task_view.dart": {
+    "mtime": 1779605669.7571688,
+    "ast_hash": "daae8da0ee1ca68891ab1727b2347c00",
+    "semantic_hash": "daae8da0ee1ca68891ab1727b2347c00"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/create_task/widgets/location_picker_dialog.dart": {
+    "mtime": 1779425444.8378155,
+    "ast_hash": "dc968ba57a80e799b23c0efc086f1361",
+    "semantic_hash": "dc968ba57a80e799b23c0efc086f1361"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/i_need_help/main/controllers/main_controller.dart": {
+    "mtime": 1779630213.666749,
+    "ast_hash": "dffe6f65c00b4560e5fe0cba743bec34",
+    "semantic_hash": "dffe6f65c00b4560e5fe0cba743bec34"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/otp_verification/bindings/otp_verification_binding.dart": {
+    "mtime": 1779604534.1529703,
+    "ast_hash": "55d2b6d2874febeb619b0a6e18d5be32",
+    "semantic_hash": "55d2b6d2874febeb619b0a6e18d5be32"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/otp_verification/controllers/otp_verification_controller.dart": {
+    "mtime": 1779604504.3072088,
+    "ast_hash": "02fc8b67f67f4fd10626ee9f94542565",
+    "semantic_hash": "02fc8b67f67f4fd10626ee9f94542565"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/otp_verification/views/otp_view.dart": {
+    "mtime": 1779425444.836328,
+    "ast_hash": "d49cf11625c0df9db7f5a5393c3fab9b",
+    "semantic_hash": "d49cf11625c0df9db7f5a5393c3fab9b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/sign_up/bindings/signup_binding.dart": {
+    "mtime": 1779604532.3753524,
+    "ast_hash": "e87cafcd3e274c41396193a2f36ee5da",
+    "semantic_hash": "e87cafcd3e274c41396193a2f36ee5da"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/sign_up/controllers/signup_controller.dart": {
+    "mtime": 1779604506.2408426,
+    "ast_hash": "d2cb47d20164432a37d72ab37f503af7",
+    "semantic_hash": "d2cb47d20164432a37d72ab37f503af7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/sign_up/views/map_picker_view.dart": {
+    "mtime": 1779427301.62778,
+    "ast_hash": "3f71d6588043cc10fe5d6c9c9f45b0a1",
+    "semantic_hash": "3f71d6588043cc10fe5d6c9c9f45b0a1"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/sign_up/views/sign_up_view.dart": {
+    "mtime": 1779425444.8369005,
+    "ast_hash": "a4be4f71b0408c16b09424aae0dfafc6",
+    "semantic_hash": "a4be4f71b0408c16b09424aae0dfafc6"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/login/bindings/login_binding.dart": {
+    "mtime": 1779604527.21792,
+    "ast_hash": "f1380662e0696b9e56bfc14a1c9ea36a",
+    "semantic_hash": "f1380662e0696b9e56bfc14a1c9ea36a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/login/controllers/login_controller.dart": {
+    "mtime": 1779604491.4622376,
+    "ast_hash": "0984481714c0aae26f83eb22d59ed98e",
+    "semantic_hash": "0984481714c0aae26f83eb22d59ed98e"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/login/views/login_view.dart": {
+    "mtime": 1779425444.83603,
+    "ast_hash": "9f28ff5d4a9b866ceba6b04dfefe0b04",
+    "semantic_hash": "9f28ff5d4a9b866ceba6b04dfefe0b04"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/login/views/email_entry_view.dart": {
+    "mtime": 1779425444.8359785,
+    "ast_hash": "02ed02e9cc7667468e4b916628230829",
+    "semantic_hash": "02ed02e9cc7667468e4b916628230829"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/auth/login/views/otp_verify_view.dart": {
+    "mtime": 1779425444.8360813,
+    "ast_hash": "54d1f26730fc9374c263339da840094d",
+    "semantic_hash": "54d1f26730fc9374c263339da840094d"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/notification/bindings/notification_binding.dart": {
+    "mtime": 1779607385.019784,
+    "ast_hash": "388a52a5b73b339afaef838a12358a36",
+    "semantic_hash": "388a52a5b73b339afaef838a12358a36"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/notification/views/notification_view.dart": {
+    "mtime": 1779607445.1112294,
+    "ast_hash": "42a3962a13c854a0c95a9a5eb23eb885",
+    "semantic_hash": "42a3962a13c854a0c95a9a5eb23eb885"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/message/controllers/message_controller.dart": {
+    "mtime": 1780038609.4719956,
+    "ast_hash": "08f6cf10ba42212eb2bc83278b8d9d1b",
+    "semantic_hash": "08f6cf10ba42212eb2bc83278b8d9d1b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/message/views/chat_view.dart": {
+    "mtime": 1780037855.000771,
+    "ast_hash": "37c502b75c6d859d2e820de52cbdef66",
+    "semantic_hash": "37c502b75c6d859d2e820de52cbdef66"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/message/views/message_list_view.dart": {
+    "mtime": 1779607457.935065,
+    "ast_hash": "d0d7a69ec74ff297ee9c908248b71e76",
+    "semantic_hash": "d0d7a69ec74ff297ee9c908248b71e76"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/service_selection/oth.dart": {
+    "mtime": 1779425444.8466978,
+    "ast_hash": "3015e2b73622da5ff333cbac684ac0da",
+    "semantic_hash": "3015e2b73622da5ff333cbac684ac0da"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/service_selection/bindings/service_selection_binding.dart": {
+    "mtime": 1779604861.4069493,
+    "ast_hash": "c446a9fb1665e1b25199bd8508d3da8d",
+    "semantic_hash": "c446a9fb1665e1b25199bd8508d3da8d"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/service_selection/controllers/service_selection_controller.dart": {
+    "mtime": 1779628897.2715514,
+    "ast_hash": "87b3705838412be67158440eaa040f43",
+    "semantic_hash": "87b3705838412be67158440eaa040f43"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/service_selection/views/service_selection_view.dart": {
+    "mtime": 1779605149.1806612,
+    "ast_hash": "0abc1389abc14caa2c4aa946156cd1bf",
+    "semantic_hash": "0abc1389abc14caa2c4aa946156cd1bf"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/common/about/bindings/about_binding.dart": {
+    "mtime": 1779425444.837031,
+    "ast_hash": "3377a36d2b7182004734aadd84bfbac8",
+    "semantic_hash": "3377a36d2b7182004734aadd84bfbac8"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/common/about/controllers/about_controller.dart": {
+    "mtime": 1779425444.837101,
+    "ast_hash": "b9fc3c972e61322d4784623a76ca6168",
+    "semantic_hash": "b9fc3c972e61322d4784623a76ca6168"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/common/about/views/about_view.dart": {
+    "mtime": 1779425444.83718,
+    "ast_hash": "60037d3e903147951a099b4a7eeac9d7",
+    "semantic_hash": "60037d3e903147951a099b4a7eeac9d7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/common/payout/controllers/payout_controller.dart": {
+    "mtime": 1779425444.8372793,
+    "ast_hash": "c412d0e826f940f5a402c3d21bd22605",
+    "semantic_hash": "c412d0e826f940f5a402c3d21bd22605"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/common/payout/views/payout_view.dart": {
+    "mtime": 1779425444.83736,
+    "ast_hash": "0846c3d73bd2471c136c838c3840fd49",
+    "semantic_hash": "0846c3d73bd2471c136c838c3840fd49"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/main/bindings/main_binding.dart": {
+    "mtime": 1779699113.5598497,
+    "ast_hash": "011f756a160e5fb6166d16bc5cc30b2e",
+    "semantic_hash": "011f756a160e5fb6166d16bc5cc30b2e"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/main/controllers/main_controller.dart": {
+    "mtime": 1779699535.1510234,
+    "ast_hash": "48bdc2aed25471df5ff77e6ccf4745cb",
+    "semantic_hash": "48bdc2aed25471df5ff77e6ccf4745cb"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/main/views/main_view.dart": {
+    "mtime": 1779699540.3732543,
+    "ast_hash": "787caeece7c40a634ac773acb4e95e80",
+    "semantic_hash": "787caeece7c40a634ac773acb4e95e80"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/onboarding/bindings/onboarding_binding.dart": {
+    "mtime": 1779425444.8458836,
+    "ast_hash": "d39d76c5e5fa92d8eaf21e2c6351a6c7",
+    "semantic_hash": "d39d76c5e5fa92d8eaf21e2c6351a6c7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/onboarding/controllers/onboarding_controller.dart": {
+    "mtime": 1779425444.8459516,
+    "ast_hash": "2443f293e07cf9fa7aa4c8664db3a346",
+    "semantic_hash": "2443f293e07cf9fa7aa4c8664db3a346"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/onboarding/views/onboarding_view.dart": {
+    "mtime": 1779425444.8460276,
+    "ast_hash": "22c3a46a270c066d73b308a9d030e748",
+    "semantic_hash": "22c3a46a270c066d73b308a9d030e748"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/voucher_model.dart": {
+    "mtime": 1779425444.8356862,
+    "ast_hash": "7963ea014fcf2b10e535c730a5dfb9e7",
+    "semantic_hash": "7963ea014fcf2b10e535c730a5dfb9e7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/helper_model.dart": {
+    "mtime": 1779425444.835643,
+    "ast_hash": "9ac291bc8aab8a70e30018b2055b6041",
+    "semantic_hash": "9ac291bc8aab8a70e30018b2055b6041"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/routes/app_pages.dart": {
+    "mtime": 1779632936.9354422,
+    "ast_hash": "e8ffa5d09cae333ef9369df4ccf23bf7",
+    "semantic_hash": "e8ffa5d09cae333ef9369df4ccf23bf7"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/routes/app_routes.dart": {
+    "mtime": 1779632922.9705646,
+    "ast_hash": "ea4559b86bc8ef6aa807b57b5a45d9bf",
+    "semantic_hash": "ea4559b86bc8ef6aa807b57b5a45d9bf"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/core/constants/app_constants.dart": {
+    "mtime": 1779604174.641195,
+    "ast_hash": "9ba4e521c9aab518be5d5b4b967a7845",
+    "semantic_hash": "9ba4e521c9aab518be5d5b4b967a7845"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/service/api_url.dart": {
+    "mtime": 1779698396.687736,
+    "ast_hash": "a45d180d77507c5739edb929ece017ab",
+    "semantic_hash": "a45d180d77507c5739edb929ece017ab"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/service/logger.dart": {
+    "mtime": 1779601697.3126166,
+    "ast_hash": "2413f3372524d17d4e75ae391afaf3d6",
+    "semantic_hash": "2413f3372524d17d4e75ae391afaf3d6"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/service/api_service.dart": {
+    "mtime": 1779866397.9378698,
+    "ast_hash": "afacc202adaefbcd3b2165a9f8942896",
+    "semantic_hash": "afacc202adaefbcd3b2165a9f8942896"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/service/shared_prefs_helper.dart": {
+    "mtime": 1779601607.9842105,
+    "ast_hash": "19f7b448499a8266a527a675872b30ef",
+    "semantic_hash": "19f7b448499a8266a527a675872b30ef"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/modules/notification/controllers/notification_controller.dart": {
+    "mtime": 1779609456.6680443,
+    "ast_hash": "cb7008107e8e6121fdc83b81690b8697",
+    "semantic_hash": "cb7008107e8e6121fdc83b81690b8697"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/category_repository.dart": {
+    "mtime": 1779604779.6741405,
+    "ast_hash": "c0db640c2c7d37fead3444a105bebd78",
+    "semantic_hash": "c0db640c2c7d37fead3444a105bebd78"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/notification_repository.dart": {
+    "mtime": 1779609641.4829454,
+    "ast_hash": "4e7673ac70db6797a77f8757e0e56b15",
+    "semantic_hash": "4e7673ac70db6797a77f8757e0e56b15"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/chat_repository.dart": {
+    "mtime": 1779609611.5376527,
+    "ast_hash": "f2fd8f76bbb478c4ff1b2711105e73e2",
+    "semantic_hash": "f2fd8f76bbb478c4ff1b2711105e73e2"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/order_repository.dart": {
+    "mtime": 1779630105.3075538,
+    "ast_hash": "180034c6acaae847dbd2ab1cb8fb43e9",
+    "semantic_hash": "180034c6acaae847dbd2ab1cb8fb43e9"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/auth_repository.dart": {
+    "mtime": 1779604303.129683,
+    "ast_hash": "fb2a6e0c0ad90da1044fbbdb1d55535a",
+    "semantic_hash": "fb2a6e0c0ad90da1044fbbdb1d55535a"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/user_repository.dart": {
+    "mtime": 1779634113.3934777,
+    "ast_hash": "a989b58be4942532d61200592199ea26",
+    "semantic_hash": "a989b58be4942532d61200592199ea26"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/helper_repository.dart": {
+    "mtime": 1779869021.735616,
+    "ast_hash": "7b6d5933cd3b26f8d7b255461bdc4d32",
+    "semantic_hash": "7b6d5933cd3b26f8d7b255461bdc4d32"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/user_model.dart": {
+    "mtime": 1779632146.5556571,
+    "ast_hash": "643bca9905b116ef436cfaca1e40f721",
+    "semantic_hash": "643bca9905b116ef436cfaca1e40f721"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/order_model.dart": {
+    "mtime": 1779609340.655771,
+    "ast_hash": "f6bc076f11c2fca810dfb0baea541eb8",
+    "semantic_hash": "f6bc076f11c2fca810dfb0baea541eb8"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/auth_response_model.dart": {
+    "mtime": 1779604264.2270486,
+    "ast_hash": "5b77874cf100a85b173c3536b9c312ba",
+    "semantic_hash": "5b77874cf100a85b173c3536b9c312ba"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/category_model.dart": {
+    "mtime": 1779604776.0707276,
+    "ast_hash": "eb075ecdc245070df6b354f8163dfe91",
+    "semantic_hash": "eb075ecdc245070df6b354f8163dfe91"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/repositories/availability_repository.dart": {
+    "mtime": 1779695009.7002447,
+    "ast_hash": "c804027c0cb8e3ea7905e95049460b4b",
+    "semantic_hash": "c804027c0cb8e3ea7905e95049460b4b"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/activity_model.dart": {
+    "mtime": 1779781066.8820896,
+    "ast_hash": "b9f50d102b1af3b256d8afb469fbc733",
+    "semantic_hash": "b9f50d102b1af3b256d8afb469fbc733"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/availability_model.dart": {
+    "mtime": 1779694994.9965208,
+    "ast_hash": "d99c19a4111b6299df887a4986768493",
+    "semantic_hash": "d99c19a4111b6299df887a4986768493"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/data/models/customer_screen_slide_model.dart": {
+    "mtime": 1779782972.2318542,
+    "ast_hash": "ae2dd820e0a15d2c4e0c40ccbb5ffeac",
+    "semantic_hash": "ae2dd820e0a15d2c4e0c40ccbb5ffeac"
+  },
+  "/Users/sadid/development/flutter_project/working_hiring_app/lib/app/service/websocket_service.dart": {
+    "mtime": 1780037841.1659021,
+    "ast_hash": "96f90888f576a93b4fe5941f7c909306",
+    "semantic_hash": "96f90888f576a93b4fe5941f7c909306"
+  }
+}

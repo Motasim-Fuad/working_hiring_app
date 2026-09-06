@@ -1,0 +1,681 @@
+1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/provider/next-job-orders/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  25ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/room/customer/
+flutter: ║ Body: {"status":true,"count":0,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/provider-verification/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  29ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/helper-profile/
+flutter: ║ Body: {"status":true,"data":{"id":20,"company_name":"C Ser","logo":null,"details":"","hourly_rate":"25.00","min_booking_hours":"2.00","office_location":{"id":28,"address_line":"near","city":"New York","lat":40.7128,"lng":74.006},"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":0.0,"total_jobs":0,"rating":0.0,"service_category":[],"portfolio":[],"reviews_and_ratings":[]}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":20,"company_name":"C Ser","logo":null,"details":"","hourly_rate":"25.00","min_booking_hours":"2.00","office_location":{"id":28,"address_line":"near","city":"New York","lat":40.7128,"lng":74.006},"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":0.0,"total_jobs":0,"rating":0.0,"service_category":[],"portfolio":[],"reviews_and_ratings":[]}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+[GETX] Instance "WorkerProfileController" has been created
+[GETX] Instance "WorkerProfileController" has been initialized
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  52ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Body: {"status":true,"data":{"id":29,"first_name":"test8","last_name":"test","username":"test8test","email":"test8@gmail.com","phone":"1710450788","photo":null,"language":"en","default_profile":null,"address":{"id":28,"display_address":"near New York","lat":40.7128,"lng":74.006},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":29,"first_name":"test8","last_name":"test","username":"test8test","email":"test8@gmail.com","phone":"1710450788","photo":null,"language":"en","default_profile":null,"address":{"id":28,"display_address":"near New York","lat":40.7128,"lng":74.006},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  500 Internal Server Error  |  27ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/provider/next-job-orders/
+[GETX] "WorkerAccountVerificationController" onDelete() called
+[GETX] "WorkerAccountVerificationController" deleted from memory
+flutter: ║ Body: {"status":false,"message":"cannot import name 'OrderSerializer' from 'task.serializers' (/Users/sadid/development/flutter_project/working_hiring_app/Backend/worker_hiring_app_backend/task/serializers.py)"}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":false,"message":"cannot import name 'OrderSerializer' from 'task.serializers' (/Users/sadid/development/flutter_project/working_hiring_app/Backend/worker_hiring_app_backend/task/serializers.py)"}
+flutter: [ApiClient] DEBUG: Status Code => 500
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  28ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: ║ Body: {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  26ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/provider-verification/
+flutter: ║ Body: {"status":true,"data":{"id":22,"dob":"1987-03-10","document_type":"NID","document":"http://127.0.0.1:8000/media/user/verification/image_picker_75A15C5F-DAE9-4DF1-8D46-6043AD7F65FE-20613-00000053E342DF93.jpg","full_name":"MD ABDUR MAHIM","document_id":"A00000000","is_verified":true,"status":"APPROVED","update_at":"2026-05-27T07:44:26.671664Z"}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":22,"dob":"1987-03-10","document_type":"NID","document":"http://127.0.0.1:8000/media/user/verification/image_picker_75A15C5F-DAE9-4DF1-8D46-6043AD7F65FE-20613-00000053E342DF93.jpg","full_name":"MD ABDUR MAHIM","document_id":"A00000000","is_verified":true,"status":"APPROVED","update_at":"2026-05-27T07:44:26.671664Z"}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  25ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/
+flutter: ║ Body: {"status":true,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxNzcwLCJpYXQiOjE3Nzk4Njc3NzAsImp0aSI6IjNmYjU4MGQ1ZmQxZjRkOWJhNDg5OTM5NmQ3YmIwYmVkIiwidXNlcl9pZCI6IjI5In0.ozDnaL5FMPfKjA1sH_MVnvJS2KL2d_XDPqx8vA4xjX4, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  3ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Body: {"status":true,"data":{"id":29,"first_name":"test8","last_name":"test","username":"test8test","email":"test8@gmail.com","phone":"1710450788","photo":null,"language":"en","default_profile":null,"address":{"id":28,"display_address":"near New York","lat":40.7128,"lng":74.006},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":29,"first_name":"test8","last_name":"test","username":"test8test","email":"test8@gmail.com","phone":"1710450788","photo":null,"language":"en","default_profile":null,"address":{"id":28,"display_address":"near New York","lat":40.7128,"lng":74.006},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+[GETX] GOING TO ROUTE /worker-settings
+[GETX] OPEN DIALOG 698657959
+[GETX] CLOSE DIALOG 698657959
+[GETX] GOING TO ROUTE /sign-in
+[GETX] REMOVING ROUTE /worker-settings
+[GETX] REMOVING ROUTE /main
+[GETX] Instance "LoginController" has been created
+[GETX] Instance "AuthRepository" has been created
+[GETX] Instance "LoginController" has been initialized
+[GETX] "MainController" onDelete() called
+[GETX] "MessageController" onDelete() called
+[GETX] "HelperProfileController" onDelete() called
+[GETX] "WorkerProfileController" onDelete() called
+flutter: [ApiClient] INFO: |📍📍📍|-----------------[[ POST ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: URL => http://127.0.0.1:8000/api/v1/token/auth/
+flutter: [ApiClient] INFO: Body => {email: test7@gmail.com, password: 1234567abc}
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ POST http://127.0.0.1:8000/api/v1/token/auth/
+flutter: ║ Headers: {accept: application/json, content-type: application/json}
+flutter: ║ Body: {"email":"test7@gmail.com","password":"1234567abc"}
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  400 Bad Request  |  144ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/token/auth/
+flutter: ║ Body: {"status":false,"message":"No active account found with the given credentials"}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] INFO: response.body => {"status":false,"message":"No active account found with the given credentials"}
+flutter: [ApiClient] INFO: response.statusCode => 400
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ POST ]] method response end --------------------|📒📒📒|
+flutter: [ApiClient] INFO: |📍📍📍|-----------------[[ POST ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: URL => http://127.0.0.1:8000/api/v1/token/auth/
+flutter: [ApiClient] INFO: Body => {email: test7@gmail.com, password: 1234567abc}
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ POST http://127.0.0.1:8000/api/v1/token/auth/
+flutter: ║ Headers: {accept: application/json, content-type: application/json}
+flutter: ║ Body: {"email":"test7@gmail.com","password":"1234567abc"}
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  400 Bad Request  |  109ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/token/auth/
+flutter: ║ Body: {"status":false,"message":"No active account found with the given credentials"}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] INFO: response.body => {"status":false,"message":"No active account found with the given credentials"}
+flutter: [ApiClient] INFO: response.statusCode => 400
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ POST ]] method response end --------------------|📒📒📒|
+flutter: [ApiClient] INFO: |📍📍📍|-----------------[[ POST ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: URL => http://127.0.0.1:8000/api/v1/token/auth/
+flutter: [ApiClient] INFO: Body => {email: test6@gmail.com, password: 1234567abc}
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ POST http://127.0.0.1:8000/api/v1/token/auth/
+flutter: ║ Headers: {accept: application/json, content-type: application/json}
+flutter: ║ Body: {"email":"test6@gmail.com","password":"1234567abc"}
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  136ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/token/auth/
+flutter: ║ Body: {"status":true,"data":{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc4NTA1MTkxOSwiaWF0IjoxNzc5ODY3OTE5LCJqdGkiOiI5NGYyZjM0NTgzOTg0OGRmYmZhMWQzNjM0Y2VkNDc4NCIsInVzZXJfaWQiOiIyNyJ9.fBdBkZDTgLCHJnljuk4fjky2fd3cb4QqhxeWDRPzgOk","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE","default_profile":null}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] INFO: response.body => {"status":true,"data":{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc4NTA1MTkxOSwiaWF0IjoxNzc5ODY3OTE5LCJqdGkiOiI5NGYyZjM0NTgzOTg0OGRmYmZhMWQzNjM0Y2VkNDc4NCIsInVzZXJfaWQiOiIyNyJ9.fBdBkZDTgLCHJnljuk4fjky2fd3cb4QqhxeWDRPzgOk","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE","default_profile":null}}
+flutter: [ApiClient] INFO: response.statusCode => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ POST ]] method response end --------------------|📒📒📒|
+[GETX] GOING TO ROUTE /role-selection
+[GETX] REMOVING ROUTE /sign-in
+[GETX] Instance "RoleSelectionController" has been created
+[GETX] Instance "RoleSelectionController" has been initialized
+[GETX] "LoginController" onDelete() called
+[GETX] "LoginController" deleted from memory
+[GETX] GOING TO ROUTE /main
+[GETX] REMOVING ROUTE /role-selection
+[GETX] Instance "MainController" has been created
+[GETX] Instance "MainController" has been initialized
+[GETX] Instance "DashboardController" has been created
+[GETX] Instance "DashboardController" has been initialized
+[GETX] Instance "HomeController" has been created
+[GETX] Instance "CategoryRepository" has been created
+[GETX] Instance "UserRepository" has been created
+[GETX] Instance "HelperRepository" has been created
+[GETX] Instance "OrderRepository" has been created
+[GETX] Instance "HomeController" has been initialized
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/user/address/
+[GETX] Instance "MessageController" has been created
+[GETX] Instance "ChatRepository" has been created
+[GETX] Instance "MessageController" has been initialized
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/room/customer/
+[GETX] Instance "OrderController" has been created
+[GETX] Instance "OrderController" has been initialized
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/order/customer/?
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/user/address/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/room/customer/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/order/customer/?
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  10ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/user/address/
+flutter: ║ Body: {"status":true,"count":1,"data":[{"id":25,"address_line":"1-99 Stockton St, Union Square, San Francisco, United States","city":"San Francisco","lat":37.785834,"lng":-122.406417,"is_default":true}]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":1,"data":[{"id":25,"address_line":"1-99 Stockton St, Union Square, San Francisco, United States","city":"San Francisco","lat":37.785834,"lng":-122.406417,"is_default":true}]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/category/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/activity/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/user/recommended-helpers/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/sub-category/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/customer-screen/
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/category/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/activity/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/user/recommended-helpers/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/sub-category/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/customer-screen/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  21ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/room/customer/
+flutter: ║ Body: {"status":true,"count":0,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  21ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/order/customer/?
+flutter: ║ Body: {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  14ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/customer-screen/
+flutter: ║ Body: {"status":true,"count":0,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  24ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/sub-category/
+flutter: ║ Body (truncated): {"status":true,"count":32,"data":[{"id":1,"title":"Pipe Repair","description":"Pipe Repair under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.805915Z","created_at":"2026-05-26T06:46:21.805922Z","category":2},{"id":2,"title":"Drain Cleaning","description":"Drain Cleaning under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.806651Z","created_at":"2026-05-26T06:46:21.806656Z","category":2},{"id":3,"title":"Fixture Installation","description":"Fixture Installation under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807260Z","created_at":"2026-05-26T06:46:21.807266Z","category":2},{"id":4,"title":"Water Heater","description":"Water Heater under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807795Z","created_at":"2026-05-26T06:46:21.807799Z","category":2},{"id":5,"title":"Home Cleaning","description":"Home Cleaning under Cleaning","icon":null,"is_active":true,"updated_a<…>
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":32,"data":[{"id":1,"title":"Pipe Repair","description":"Pipe Repair under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.805915Z","created_at":"2026-05-26T06:46:21.805922Z","category":2},{"id":2,"title":"Drain Cleaning","description":"Drain Cleaning under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.806651Z","created_at":"2026-05-26T06:46:21.806656Z","category":2},{"id":3,"title":"Fixture Installation","description":"Fixture Installation under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807260Z","created_at":"2026-05-26T06:46:21.807266Z","category":2},{"id":4,"title":"Water Heater","description":"Water Heater under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807795Z","created_at":"2026-05-26T06:46:21.807799Z","category":2},{"id":5,"title":"Home Cleaning","description":"Home Cleaning under Cleaning","icon":null,"is_active":true,"upda<…>
+[GETX] "RoleSelectionController" onDelete() called
+[GETX] "RoleSelectionController" deleted from memory
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  27ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/activity/
+flutter: ║ Body: {"status":true,"data":{"my_activity":{"active_orders":0,"completed_orders":0,"total_spent":0,"avg_rating":0},"recent_activities":[]}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"my_activity":{"active_orders":0,"completed_orders":0,"total_spent":0,"avg_rating":0},"recent_activities":[]}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  27ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/user/recommended-helpers/
+flutter: ║ Body: {"status":true,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  29ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/category/
+flutter: ║ Body (truncated): {"status":true,"count":9,"data":[{"id":1,"subcategory":[],"title":"Home Appreance","description":"","icon":"minor_repairs","is_active":true,"updated_at":"2026-05-26T08:09:58.101774Z","created_at":"2026-05-21T12:44:50.380189Z"},{"id":2,"subcategory":[{"id":1,"title":"Pipe Repair","description":"Pipe Repair under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.805915Z","created_at":"2026-05-26T06:46:21.805922Z","category":2},{"id":2,"title":"Drain Cleaning","description":"Drain Cleaning under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.806651Z","created_at":"2026-05-26T06:46:21.806656Z","category":2},{"id":3,"title":"Fixture Installation","description":"Fixture Installation under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807260Z","created_at":"2026-05-26T06:46:21.807266Z","category":2},{"id":4,"title":"Water Heater","description":"Water Heater under Plumbing","icon":null,"is_active":true,<…>
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":9,"data":[{"id":1,"subcategory":[],"title":"Home Appreance","description":"","icon":"minor_repairs","is_active":true,"updated_at":"2026-05-26T08:09:58.101774Z","created_at":"2026-05-21T12:44:50.380189Z"},{"id":2,"subcategory":[{"id":1,"title":"Pipe Repair","description":"Pipe Repair under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.805915Z","created_at":"2026-05-26T06:46:21.805922Z","category":2},{"id":2,"title":"Drain Cleaning","description":"Drain Cleaning under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.806651Z","created_at":"2026-05-26T06:46:21.806656Z","category":2},{"id":3,"title":"Fixture Installation","description":"Fixture Installation under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807260Z","created_at":"2026-05-26T06:46:21.807266Z","category":2},{"id":4,"title":"Water Heater","description":"Water Heater under Plumbing","icon":null,"is_active":<…>
+[GETX] Instance "WorkerDashboardController" has been created
+[GETX] Instance "WorkerDashboardController" has been initialized
+[GETX] Instance "WorkerHomeController" has been created
+[GETX] Instance "AvailabilityRepository" has been created
+[GETX] Instance "WorkerHomeController" has been initialized
+[GETX] Instance "MyJobController" has been created
+[GETX] Instance "MyJobController" has been initialized
+[GETX] Instance "MessageController" has been created
+[GETX] Instance "MessageController" has been initialized
+[GETX] Instance "HelperProfileController" has been created
+[GETX] Instance "HelperProfileController" has been initialized
+[GETX] Instance "WorkerProfileController" has been created
+[GETX] Instance "WorkerProfileController" has been initialized
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/current-user/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/weekly-day-list/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/room/customer/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/helper-profile/
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/weekly-day-list/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/room/customer/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/helper-profile/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  20ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/weekly-day-list/
+flutter: ║ Body: {"status":true,"data":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/provider/next-job-orders/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/provider-verification/
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/provider/next-job-orders/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/provider-verification/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  22ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/room/customer/
+flutter: ║ Body: {"status":true,"count":0,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  26ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: ║ Body: {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  27ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/helper-profile/
+flutter: ║ Body: {"status":true,"data":{"id":18,"company_name":"Plam 2","logo":null,"details":"","hourly_rate":"25.00","min_booking_hours":"2.00","office_location":null,"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":0.0,"total_jobs":0,"rating":0.0,"service_category":[{"id":1,"title":"Home Appreance"}],"portfolio":[],"reviews_and_ratings":[]}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":18,"company_name":"Plam 2","logo":null,"details":"","hourly_rate":"25.00","min_booking_hours":"2.00","office_location":null,"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":0.0,"total_jobs":0,"rating":0.0,"service_category":[{"id":1,"title":"Home Appreance"}],"portfolio":[],"reviews_and_ratings":[]}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  30ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Body: {"status":true,"data":{"id":27,"first_name":"test6","last_name":"test","username":"test6test","email":"test6@gmail.com","phone":"1710450772","photo":null,"language":"en","default_profile":null,"address":{"id":25,"display_address":"1-99 Stockton St, Union Square, San Francisco, United States San Francisco","lat":37.785834,"lng":-122.406417},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":27,"first_name":"test6","last_name":"test","username":"test6test","email":"test6@gmail.com","phone":"1710450772","photo":null,"language":"en","default_profile":null,"address":{"id":25,"display_address":"1-99 Stockton St, Union Square, San Francisco, United States San Francisco","lat":37.785834,"lng":-122.406417},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  500 Internal Server Error  |  15ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/provider/next-job-orders/
+flutter: ║ Body: {"status":false,"message":"cannot import name 'OrderSerializer' from 'task.serializers' (/Users/sadid/development/flutter_project/working_hiring_app/Backend/worker_hiring_app_backend/task/serializers.py)"}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":false,"message":"cannot import name 'OrderSerializer' from 'task.serializers' (/Users/sadid/development/flutter_project/working_hiring_app/Backend/worker_hiring_app_backend/task/serializers.py)"}
+flutter: [ApiClient] DEBUG: Status Code => 500
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  16ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/order/provider/?
+flutter: ║ Body: {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":0,"next":null,"previous":null,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  16ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/provider-verification/
+flutter: ║ Body: {"status":true,"data":{"id":20,"dob":"1987-03-10","document_type":"NID","document":"http://127.0.0.1:8000/media/user/verification/image_picker_F5D53E95-0309-4E89-B290-9F24003DAB76-20613-0000003EFEA899E2.jpg","full_name":"MD ABDUR MAHIM","document_id":"A00000000","is_verified":true,"status":"APPROVED","update_at":"2026-05-27T06:42:07.694990Z"}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":20,"dob":"1987-03-10","document_type":"NID","document":"http://127.0.0.1:8000/media/user/verification/image_picker_F5D53E95-0309-4E89-B290-9F24003DAB76-20613-0000003EFEA899E2.jpg","full_name":"MD ABDUR MAHIM","document_id":"A00000000","is_verified":true,"status":"APPROVED","update_at":"2026-05-27T06:42:07.694990Z"}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  16ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/user/helper-weekly-availability/
+flutter: ║ Body: {"status":true,"data":[]}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":[]}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/current-user/
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: provider}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  4ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/current-user/
+flutter: ║ Body: {"status":true,"data":{"id":27,"first_name":"test6","last_name":"test","username":"test6test","email":"test6@gmail.com","phone":"1710450772","photo":null,"language":"en","default_profile":null,"address":{"id":25,"display_address":"1-99 Stockton St, Union Square, San Francisco, United States San Francisco","lat":37.785834,"lng":-122.406417},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"data":{"id":27,"first_name":"test6","last_name":"test","username":"test6test","email":"test6@gmail.com","phone":"1710450772","photo":null,"language":"en","default_profile":null,"address":{"id":25,"display_address":"1-99 Stockton St, Union Square, San Francisco, United States San Francisco","lat":37.785834,"lng":-122.406417},"has_customer_profile":true,"has_provider_profile":true,"provider_verification_status":"APPROVED"}}
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+[GETX] GOING TO ROUTE /helper-list
+[GETX] Instance "HelperListController" has been created
+[GETX] Instance "HelperListController" has been initialized
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/category/
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/category/
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  17ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/category/
+flutter: ║ Body (truncated): {"status":true,"count":9,"data":[{"id":1,"subcategory":[],"title":"Home Appreance","description":"","icon":"minor_repairs","is_active":true,"updated_at":"2026-05-26T08:09:58.101774Z","created_at":"2026-05-21T12:44:50.380189Z"},{"id":2,"subcategory":[{"id":1,"title":"Pipe Repair","description":"Pipe Repair under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.805915Z","created_at":"2026-05-26T06:46:21.805922Z","category":2},{"id":2,"title":"Drain Cleaning","description":"Drain Cleaning under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.806651Z","created_at":"2026-05-26T06:46:21.806656Z","category":2},{"id":3,"title":"Fixture Installation","description":"Fixture Installation under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807260Z","created_at":"2026-05-26T06:46:21.807266Z","category":2},{"id":4,"title":"Water Heater","description":"Water Heater under Plumbing","icon":null,"is_active":true,<…>
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":9,"data":[{"id":1,"subcategory":[],"title":"Home Appreance","description":"","icon":"minor_repairs","is_active":true,"updated_at":"2026-05-26T08:09:58.101774Z","created_at":"2026-05-21T12:44:50.380189Z"},{"id":2,"subcategory":[{"id":1,"title":"Pipe Repair","description":"Pipe Repair under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.805915Z","created_at":"2026-05-26T06:46:21.805922Z","category":2},{"id":2,"title":"Drain Cleaning","description":"Drain Cleaning under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.806651Z","created_at":"2026-05-26T06:46:21.806656Z","category":2},{"id":3,"title":"Fixture Installation","description":"Fixture Installation under Plumbing","icon":null,"is_active":true,"updated_at":"2026-05-26T06:46:21.807260Z","created_at":"2026-05-26T06:46:21.807266Z","category":2},{"id":4,"title":"Water Heater","description":"Water Heater under Plumbing","icon":null,"is_active":<…>
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [HelperList] loadHelpers called — q="C", catId=null
+flutter: [HelperRepo] GET http://127.0.0.1:8000/api/v1/helper/?q=C&sort_by=distance
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/helper/?q=C&sort_by=distance
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/helper/?q=C&sort_by=distance
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  14ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/helper/?q=C&sort_by=distance
+flutter: ║ Body (truncated): {"status":true,"count":11,"next":"http://127.0.0.1:8000/api/v1/helper/?page=2&q=C&sort_by=distance","previous":null,"data":[{"id":10,"company_name":"Swift Movers Toronto","logo":null,"details":"Reliable moving services for local and long-distance relocations. Careful handling, efficient packing, and competitive rates. Truck sizes for any job.","hourly_rate":"55.00","min_booking_hours":"3.00","office_location":{"id":17,"address_line":"1200 King St W","city":"Toronto","lat":43.6397,"lng":-79.4233},"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":91.4,"total_jobs":421,"rating":4.5,"distance_km":3639.14,"service_category":[{"id":6,"title":"Moving"}],"portfolio":[],"reviews_and_ratings":[]},{"id":14,"company_name":"Johnson Plumbing & Heating","logo":null,"details":"Dual-licensed plumber and gas fitter. Residential and commercial plumbing, boiler installation, radiant floor heating. Family-owned business since 2005.","hour<…>
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":11,"next":"http://127.0.0.1:8000/api/v1/helper/?page=2&q=C&sort_by=distance","previous":null,"data":[{"id":10,"company_name":"Swift Movers Toronto","logo":null,"details":"Reliable moving services for local and long-distance relocations. Careful handling, efficient packing, and competitive rates. Truck sizes for any job.","hourly_rate":"55.00","min_booking_hours":"3.00","office_location":{"id":17,"address_line":"1200 King St W","city":"Toronto","lat":43.6397,"lng":-79.4233},"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":91.4,"total_jobs":421,"rating":4.5,"distance_km":3639.14,"service_category":[{"id":6,"title":"Moving"}],"portfolio":[],"reviews_and_ratings":[]},{"id":14,"company_name":"Johnson Plumbing & Heating","logo":null,"details":"Dual-licensed plumber and gas fitter. Residential and commercial plumbing, boiler installation, radiant floor heating. Family-owned business since 2005.",<…>
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [HelperRepo] parseApiResponse returned type: List<dynamic>
+flutter: [HelperRepo] list has 10 items
+flutter: [HelperList] got 10 helpers from API
+flutter: [HelperList] displayedHelpers now has 10 items
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
+[GETX] OPEN BOTTOMSHEET 956481718
+[GETX] CLOSE BOTTOMSHEET 956481718
+flutter: [HelperList] loadHelpers called — q="C", catId=3
+flutter: [HelperRepo] GET http://127.0.0.1:8000/api/v1/helper/?q=C&category_id=3&sort_by=distance
+flutter: [ApiClient] INFO: |📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|
+flutter: [ApiClient] INFO: http://127.0.0.1:8000/api/v1/helper/?q=C&category_id=3&sort_by=distance
+flutter: Token _________ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE
+flutter: ╔═══════════════════════════════════════════════════════════
+flutter: ║ 🌐 API REQUEST
+flutter: ║ GET http://127.0.0.1:8000/api/v1/helper/?q=C&category_id=3&sort_by=distance
+flutter: ║ Headers: {accept: application/json, content-type: application/json, authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg1MDUxOTE5LCJpYXQiOjE3Nzk4Njc5MTksImp0aSI6Ijg3ODU0NjA0MmJlMjQyMjA4MzY5MGJhZWViM2Q3OTM0IiwidXNlcl9pZCI6IjI3In0.bq8vteFeGxeC7rav8Sw3ido_1R0EVN1_Dmhq2eaPYIE, profile-type: customer}
+flutter: ║ Body:
+flutter:
+flutter: ║───────────────────────────────────────────────────────────
+flutter: ║ 📦 API RESPONSE  |  200 OK  |  30ms
+flutter: ║ URL: http://127.0.0.1:8000/api/v1/helper/?q=C&category_id=3&sort_by=distance
+flutter: ║ Body: {"status":true,"count":2,"next":null,"previous":null,"data":[{"id":7,"company_name":"Maria's Sparkle Clean","logo":null,"details":"Professional cleaning services for homes and offices. Eco-friendly products, attention to detail, and reliable service. Fully insured and bonded.","hourly_rate":"35.00","min_booking_hours":"3.00","office_location":{"id":14,"address_line":"78 Spadina Ave","city":"Toronto","lat":43.6475,"lng":-79.3958},"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":98.2,"total_jobs":518,"rating":4.9,"distance_km":3641.27,"service_category":[{"id":3,"title":"Cleaning"}],"portfolio":[],"reviews_and_ratings":[]},{"id":15,"company_name":"Priya's Premium Cleaning","logo":null,"details":"Detailed-oriented cleaning professional. Specializing in post-renovation cleaning, Airbnb turnover, and commercial office cleaning. All supplies included.","hourly_rate":"38.00","min_booking_hours":"2.00","office_location":{"id":22,"addres<…>
+flutter: ╚═══════════════════════════════════════════════════════════
+flutter:
+flutter: [ApiClient] DEBUG: Body => {"status":true,"count":2,"next":null,"previous":null,"data":[{"id":7,"company_name":"Maria's Sparkle Clean","logo":null,"details":"Professional cleaning services for homes and offices. Eco-friendly products, attention to detail, and reliable service. Fully insured and bonded.","hourly_rate":"35.00","min_booking_hours":"3.00","office_location":{"id":14,"address_line":"78 Spadina Ave","city":"Toronto","lat":43.6475,"lng":-79.3958},"strike_count":0,"account_status":"GOOD","availability_status":true,"is_verified":true,"complete_rate":98.2,"total_jobs":518,"rating":4.9,"distance_km":3641.27,"service_category":[{"id":3,"title":"Cleaning"}],"portfolio":[],"reviews_and_ratings":[]},{"id":15,"company_name":"Priya's Premium Cleaning","logo":null,"details":"Detailed-oriented cleaning professional. Specializing in post-renovation cleaning, Airbnb turnover, and commercial office cleaning. All supplies included.","hourly_rate":"38.00","min_booking_hours":"2.00","office_location"<…>
+flutter: [ApiClient] DEBUG: Status Code => 200
+flutter: [ApiClient] INFO: |📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|
+flutter: [HelperRepo] parseApiResponse returned type: List<dynamic>
+flutter: [HelperRepo] list has 2 items
+flutter: [HelperList] got 2 helpers from API
+flutter: [HelperList] displayedHelpers now has 2 items
+
+════════ Exception caught by image resource service ════════════════════════════
+Unable to load asset: "assets/images/default_avatar.png".
+════════════════════════════════════════════════════════════════════════════════
