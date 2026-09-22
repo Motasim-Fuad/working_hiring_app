@@ -68,6 +68,8 @@ class SignupController extends GetxController {
   final RxString lng = "".obs;
   final RxString city = "".obs;
 
+  final RxBool isResolvingCity = false.obs;
+
   final signupFormKey = GlobalKey<FormState>();
 
   String? validateEmail(String? value) {
@@ -89,38 +91,69 @@ class SignupController extends GetxController {
     return null;
   }
 
+  static const String _googleMapsEnvKey = 'GOOGLE_MAP_API_KEY';
+
   Future<void> updateLocation(double latitude, double longitude) async {
     lat.value = latitude.toString();
     lng.value = longitude.toString();
+    isResolvingCity.value = true;
+    city.value = '';
+    cityController.text = '';
 
-    // 1) Google Geocoding API দিয়ে চেষ্টা (নির্ভরযোগ্য)
-    final ok = await _reverseGeocodeWithGoogle(latitude, longitude);
-    if (ok) return;
-
-    // 2) Fallback: native geocoding
     try {
-      final placemarks = await placemarkFromCoordinates(latitude, longitude);
-      if (placemarks.isNotEmpty) {
-        final place = placemarks[0];
-        final c = place.locality ?? place.subAdministrativeArea ?? "";
-        city.value = c;
-        cityController.text = c;
-        addressLineController.text =
-        "${place.street}, ${place.subLocality}, ${place.locality}, ${place.country}";
-      }
-    } catch (e) {
-      // 3) তাও fail করলে অন্তত খালি না রাখা
-      if (city.value.isEmpty) {
-        city.value = "Selected location";
-        cityController.text = "Selected location";
-      }
+      final ok = await _reverseGeocodeWithGoogle(latitude, longitude);
+      if (ok) return;
+
+
+      final resolvedNatively = await _reverseGeocodeNatively(latitude, longitude);
+      if (resolvedNatively) return;
+
+
+      city.value = "Selected location".tr;
+      cityController.text = "Selected location".tr;
+    } finally {
+      isResolvingCity.value = false;
     }
   }
 
-  /// Google Geocoding API দিয়ে reverse geocode
+  Future<bool> _reverseGeocodeNatively(double latitude, double longitude) async {
+    try {
+      final placemarks = await placemarkFromCoordinates(latitude, longitude);
+      if (placemarks.isEmpty) return false;
+
+      final place = placemarks.first;
+      final c = [
+        place.locality,
+        place.subAdministrativeArea,
+        place.subLocality,
+        place.administrativeArea,
+      ].firstWhere(
+            (v) => v != null && v.trim().isNotEmpty,
+        orElse: () => null,
+      );
+
+      if (c == null) return false;
+
+      city.value = c;
+      cityController.text = c;
+
+      final addressParts = [
+        place.street,
+        place.subLocality,
+        place.locality,
+        place.country,
+      ].where((v) => v != null && v.trim().isNotEmpty).join(', ');
+      addressLineController.text = addressParts;
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   Future<bool> _reverseGeocodeWithGoogle(double latitude, double longitude) async {
     try {
-      final key = dotenv.env['GOOGLE_MAPS_API_KEY'] ?? '';
+      final key = dotenv.env[_googleMapsEnvKey] ?? '';
       if (key.isEmpty) return false;
 
       final url = Uri.parse(
@@ -138,22 +171,30 @@ class SignupController extends GetxController {
 
       final first = results.first;
       addressLineController.text = first['formatted_address'] ?? '';
+      const typesPriority = [
+        'locality',
+        'postal_town',
+        'sublocality_level_1',
+        'sublocality',
+        'administrative_area_level_2',
+        'administrative_area_level_1',
+      ];
 
       String c = '';
-      for (final comp in (first['address_components'] as List)) {
-        final types = (comp['types'] as List).cast<String>();
-        if (types.contains('locality')) {
-          c = comp['long_name'] ?? '';
-          break;
+      for (final wantedType in typesPriority) {
+        for (final comp in (first['address_components'] as List)) {
+          final types = (comp['types'] as List).cast<String>();
+          if (types.contains(wantedType)) {
+            c = comp['long_name'] ?? '';
+            break;
+          }
         }
-        if (c.isEmpty && types.contains('administrative_area_level_2')) {
-          c = comp['long_name'] ?? '';
-        }
+        if (c.isNotEmpty) break;
       }
-      if (c.isEmpty) c = 'Selected location';
+      if (c.isEmpty) c = 'Selected location'.tr;
 
-      city.value = c;          // ✅ UI rebuild হবে
-      cityController.text = c;  // ✅ signup body-তে যাবে
+      city.value = c;
+      cityController.text = c;
       return true;
     } catch (_) {
       return false;
