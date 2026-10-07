@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -8,6 +9,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_places_flutter/google_places_flutter.dart';
+import 'package:http/http.dart' as http;
+
 class MapPickerView extends StatefulWidget {
   MapPickerView({super.key});
 
@@ -27,11 +30,14 @@ class _MapPickerViewState extends State<MapPickerView> {
   final RxBool _isLoading = true.obs;
   final RxBool _canShowCurrentLocation = false.obs;
 
-  // --- new state ---
   final Rx<MapType> _mapType = MapType.normal.obs;
   final RxDouble _currentZoom = 15.0.obs;
   final RxString _addressLabel = ''.obs;
   final RxBool _isResolvingAddress = false.obs;
+
+  final RxBool _streetViewAvailable = false.obs;
+  final RxBool _isCheckingStreetView = false.obs;
+  final RxInt _streetViewRequestId = 0.obs;
 
   @override
   void initState() {
@@ -76,6 +82,7 @@ class _MapPickerViewState extends State<MapPickerView> {
         CameraUpdate.newLatLngZoom(current, 16),
       );
       await _reverseGeocode(current);
+      unawaited(_checkStreetViewAvailability(current));
     } catch (e) {
       debugPrint('MapPicker current-location error: $e');
     } finally {
@@ -101,6 +108,7 @@ class _MapPickerViewState extends State<MapPickerView> {
         CameraUpdate.newLatLngZoom(current, 16),
       );
       await _reverseGeocode(current);
+      unawaited(_checkStreetViewAvailability(current));
     } catch (e) {
       debugPrint('MapPicker recenter error: $e');
     } finally {
@@ -115,6 +123,7 @@ class _MapPickerViewState extends State<MapPickerView> {
       CameraUpdate.newLatLngZoom(location, 16),
     );
     await _reverseGeocode(location);
+    unawaited(_checkStreetViewAvailability(location));
   }
 
   Future<void> _reverseGeocode(LatLng location) async {
@@ -153,6 +162,53 @@ class _MapPickerViewState extends State<MapPickerView> {
     } finally {
       _isResolvingAddress.value = false;
     }
+  }
+
+
+  String _streetViewUrl(LatLng loc, {int width = 640, int height = 300}) {
+    return 'https://maps.googleapis.com/maps/api/streetview'
+        '?size=${width}x$height'
+        '&location=${loc.latitude},${loc.longitude}'
+        '&fov=80&heading=151.78&pitch=-0.76'
+        '&source=outdoor'
+        '&key=$_googleApiKey';
+  }
+
+  Future<void> _checkStreetViewAvailability(LatLng loc) async {
+    if (_googleApiKey.isEmpty) {
+      _streetViewAvailable.value = false;
+      return;
+    }
+    _isCheckingStreetView.value = true;
+    try {
+      final uri = Uri.parse(
+        'https://maps.googleapis.com/maps/api/streetview/metadata'
+            '?location=${loc.latitude},${loc.longitude}'
+            '&source=outdoor'
+            '&key=$_googleApiKey',
+      );
+      final response = await http.get(uri);
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body) as Map<String, dynamic>;
+        _streetViewAvailable.value = data['status'] == 'OK';
+      } else {
+        _streetViewAvailable.value = false;
+      }
+    } catch (e) {
+      debugPrint('MapPicker street-view metadata error: $e');
+      _streetViewAvailable.value = false;
+    } finally {
+      _streetViewRequestId.value++;
+      _isCheckingStreetView.value = false;
+    }
+  }
+
+  Future<void> _zoomIn() async {
+    await _mapController?.animateCamera(CameraUpdate.zoomIn());
+  }
+
+  Future<void> _zoomOut() async {
+    await _mapController?.animateCamera(CameraUpdate.zoomOut());
   }
 
   void _confirmLocation() {
@@ -241,6 +297,7 @@ class _MapPickerViewState extends State<MapPickerView> {
                 _selectedLocation.value = latLng;
                 _searchFocusNode.unfocus();
                 _reverseGeocode(latLng);
+                unawaited(_checkStreetViewAvailability(latLng));
               },
               onCameraMove: (position) {
                 _currentZoom.value = position.zoom;
@@ -347,6 +404,29 @@ class _MapPickerViewState extends State<MapPickerView> {
                     ),
                   ),
                 ),
+                SizedBox(height: 12.h),
+                Material(
+                  color: Colors.white,
+                  elevation: 4,
+                  borderRadius: BorderRadius.circular(10.r),
+                  clipBehavior: Clip.antiAlias,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        tooltip: 'Zoom in'.tr,
+                        icon: Icon(Icons.add),
+                        onPressed: _zoomIn,
+                      ),
+                      Divider(height: 1, thickness: 1),
+                      IconButton(
+                        tooltip: 'Zoom out'.tr,
+                        icon: Icon(Icons.remove),
+                        onPressed: _zoomOut,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -369,6 +449,85 @@ class _MapPickerViewState extends State<MapPickerView> {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    Obx(() {
+                      if (!_streetViewAvailable.value) {
+                        return const SizedBox.shrink();
+                      }
+                      final loc = _selectedLocation.value;
+                      final reqId = _streetViewRequestId.value;
+                      return Padding(
+                        padding: EdgeInsets.only(bottom: 10.h),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.r),
+                          child: SizedBox(
+                            height: 90.h,
+                            width: double.infinity,
+                            child: Stack(
+                              fit: StackFit.expand,
+                              children: [
+                                Image.network(
+                                  _streetViewUrl(loc),
+                                  fit: BoxFit.cover,
+                                  loadingBuilder: (context, child, progress) {
+                                    if (progress == null) return child;
+                                    return Container(
+                                      color: Colors.black12,
+                                      child: Center(
+                                        child: SizedBox(
+                                          width: 18.r,
+                                          height: 18.r,
+                                          child: CircularProgressIndicator(
+                                            strokeWidth: 2,
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  errorBuilder: (context, error, stackTrace) {
+                                    WidgetsBinding.instance
+                                        .addPostFrameCallback((_) {
+                                      _streetViewAvailable.value = false;
+                                    });
+                                    return const SizedBox.shrink();
+                                  },
+                                ),
+                                Positioned(
+                                  left: 8.w,
+                                  bottom: 6.h,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 8.w,
+                                      vertical: 3.h,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.black.withValues(alpha: 0.55),
+                                      borderRadius: BorderRadius.circular(6.r),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(Icons.streetview,
+                                            size: 14.r, color: Colors.white),
+                                        SizedBox(width: 4.w),
+                                        Text(
+                                          'Street View'.tr,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 11.sp,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+
                     Obx(
                           () {
                         final zoom = _currentZoom.value;
@@ -443,3 +602,5 @@ class _MapPickerViewState extends State<MapPickerView> {
     );
   }
 }
+
+void unawaited(Future<void> future) {}

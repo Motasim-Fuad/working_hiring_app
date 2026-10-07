@@ -275,8 +275,11 @@ class OrderModel {
           (json['lng'] as num?)?.toDouble(),
       provider: parseIdField(json['provider']),
       customer: parseIdField(json['customer']),
-      providerName: json['provider_name'] as String? ??
-          parseNameField(json['provider'], 'company_name'),
+      // Customers must only see the provider's company name, never the
+      // provider's personal name.
+      providerName: json['provider'] is Map
+          ? (json['provider'] as Map)['company_name'] as String?
+          : json['provider_name'] as String?,
       customerName: json['customer_name'] as String? ??
           parseNameField(json['customer'], 'first_name'),
       categoryName: json['category_name'] as String? ??

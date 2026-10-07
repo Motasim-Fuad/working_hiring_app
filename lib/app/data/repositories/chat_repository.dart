@@ -16,6 +16,11 @@ Map<String, dynamic>? _firstAttachment(dynamic attachments) {
   return null;
 }
 
+String? _nonEmpty(dynamic v) {
+  final s = v?.toString().trim();
+  return (s == null || s.isEmpty) ? null : s;
+}
+
 class ChatRoomModel {
   /// Integer primary key — used for GET /room/{id}/message/.
   /// Nullable because some backend responses (e.g. /room/start-chat/) only
@@ -52,27 +57,29 @@ class ChatRoomModel {
     String? name;
     String? photo;
 
-    // Preferred (and observed) shape: backend returns an `other_user` object
-    // regardless of role.
     final otherUser = json['other_user'] as Map<String, dynamic>?;
-    if (otherUser != null) {
+    if (!isProviderView) {
+      // Customers must only ever see the provider's company name, never the
+      // provider's personal first/last name. The room list does not include
+      // it, so ChatRepository resolves it later via the room's order.
+      final provider = json['provider'];
+      if (provider is Map) {
+        name = _nonEmpty(provider['company_name']);
+        photo = _nonEmpty(provider['logo']);
+      }
+    } else if (otherUser != null) {
       final firstName = (otherUser['first_name'] as String?) ?? '';
       final lastName = (otherUser['last_name'] as String?) ?? '';
       final full = [firstName, lastName].where((s) => s.isNotEmpty).join(' ');
       name = full.isNotEmpty ? full : null;
       photo = otherUser['photo'] as String?;
-    } else if (isProviderView) {
-      // Fallback to the documented split shape.
+    } else {
       final customer = json['customer'] as Map<String, dynamic>?;
       final firstName = (customer?['first_name'] as String?) ?? '';
       final lastName = (customer?['last_name'] as String?) ?? '';
       final full = [firstName, lastName].where((s) => s.isNotEmpty).join(' ');
       name = full.isNotEmpty ? full : null;
       photo = customer?['photo'] as String?;
-    } else {
-      final provider = json['provider'] as Map<String, dynamic>?;
-      name = provider?['company_name'] as String?;
-      photo = provider?['logo'] as String?;
     }
 
     final lastMessageObj = json['last_message'] as Map<String, dynamic>?;
@@ -91,6 +98,17 @@ class ChatRoomModel {
       unreadCount: json['unread_count'] as int?,
     );
   }
+
+  ChatRoomModel copyWith({String? name, String? photo}) => ChatRoomModel(
+        id: id,
+        uuid: uuid,
+        name: name ?? this.name,
+        photo: photo ?? this.photo,
+        lastMessage: lastMessage,
+        lastMessageTime: lastMessageTime,
+        isOnline: isOnline,
+        unreadCount: unreadCount,
+      );
 }
 
 class ChatMessageModel {
@@ -234,7 +252,7 @@ class ChatRepository {
         '[ROOM] first room id="${first['id']}" uuid="${first['uuid']}" room_id="${first['room_id']}"',
       );
     }
-    return list
+    final rooms = list
         .map(
           (e) => ChatRoomModel.fromJson(
             e as Map<String, dynamic>,
@@ -242,6 +260,56 @@ class ChatRepository {
           ),
         )
         .toList();
+
+    return Future.wait(rooms.map((room) async {
+      if (room.name != null) return room;
+      final company = await _resolveRoomCompany(room.uuid);
+      return room.copyWith(
+        name: company?.name ?? 'Helper',
+        photo: company?.logo,
+      );
+    }));
+  }
+
+  final Map<String, ({String? name, String? logo})> _roomCompanyCache = {};
+  final Map<int, ({String? name, String? logo})> _orderCompanyCache = {};
+
+  /// The customer room list only exposes the provider's personal name, so the
+  /// company is looked up through an order referenced in the room's history.
+  Future<({String? name, String? logo})?> _resolveRoomCompany(
+    String uuid,
+  ) async {
+    final cached = _roomCompanyCache[uuid];
+    if (cached != null) return cached;
+    try {
+      final messages = await getMessagesByUuid(uuid, profileType: 'customer');
+      final orderId = messages
+          .map((m) => m.eventData?['id'])
+          .whereType<int>()
+          .firstOrNull;
+      if (orderId == null) return null;
+
+      var company = _orderCompanyCache[orderId];
+      if (company == null) {
+        _client.profileType = 'customer';
+        final response = await _client.get(
+          url: _fullUrl(ApiUrl.customerOrderDetail(orderId)),
+        );
+        final data = parseApiResponse(response);
+        final provider = data is Map ? data['provider'] : null;
+        if (provider is! Map) return null;
+        company = (
+          name: _nonEmpty(provider['company_name']),
+          logo: _nonEmpty(provider['logo']) ?? _nonEmpty(provider['photo']),
+        );
+        _orderCompanyCache[orderId] = company;
+      }
+      if (company.name != null) _roomCompanyCache[uuid] = company;
+      return company;
+    } catch (e) {
+      debugPrint('[ROOM] resolve company failed for $uuid: $e');
+      return null;
+    }
   }
 
   Future<List<ChatRoomModel>> getProviderRooms() async {
