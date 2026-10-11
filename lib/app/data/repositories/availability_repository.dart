@@ -1,6 +1,6 @@
-import '../../service/api_service.dart';
-import '../../service/api_url.dart';
-import '../models/availability_model.dart';
+import 'package:working_hiring/app/service/api_service.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/data/models/availability_model.dart';
 
 class AvailabilityRepository {
   final ApiClient _client;
@@ -15,7 +15,6 @@ class AvailabilityRepository {
   static String formatDateForAvailability(Object date) {
     if (date is DateTime) return _ddmmyyyy(date);
     if (date is String) {
-      // Already DD-MM-YYYY (10 chars, dashes at 2 and 5)
       if (RegExp(r'^\d{2}-\d{2}-\d{4}$').hasMatch(date)) return date;
       final parsed = DateTime.tryParse(date);
       if (parsed != null) return _ddmmyyyy(parsed);
@@ -30,43 +29,69 @@ class AvailabilityRepository {
     return '$dd-$mm-${d.year}';
   }
 
-  Future<List<WeeklyDayAvailability>> getWeeklyAvailability({String? profileType}) async {
+  Future<List<WeeklyDayAvailability>> getWeeklyAvailability({
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.helperWeeklyAvailability));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.helperWeeklyAvailability),
+    );
     final data = parseApiResponse(response);
     final list = data as List<dynamic>;
-    return list.map((e) => WeeklyDayAvailability.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => WeeklyDayAvailability.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 
-  Future<void> setWeeklyAvailability(Map<String, dynamic> body, {String? profileType}) async {
+  Future<void> setWeeklyAvailability(
+    Map<String, dynamic> body, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
-    await _client.post(url: _fullUrl(ApiUrl.helperSetWeeklyAvailability), body: body);
+    await _client.post(
+      url: _fullUrl(ApiUrl.helperSetWeeklyAvailability),
+      body: body,
+    );
   }
 
-  Future<WeeklyDayAvailability> updateDayAvailability(String day, Map<String, dynamic> body, {String? profileType}) async {
+  Future<WeeklyDayAvailability> updateDayAvailability(
+    String day,
+    Map<String, dynamic> body, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
-    final response = await _client.post(url: _fullUrl(ApiUrl.helperUpdateAvailability(day)), body: body);
+    final response = await _client.post(
+      url: _fullUrl(ApiUrl.helperUpdateAvailability(day)),
+      body: body,
+    );
     final data = parseApiResponse(response);
     return WeeklyDayAvailability.fromJson(data as Map<String, dynamic>);
   }
 
-  Future<List<DateSlot>> getDateSlotList(Object date, {String? profileType}) async {
+  Future<List<DateSlot>> getDateSlotList(
+    Object date, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
     final formatted = formatDateForAvailability(date);
-    final response = await _client.get(url: _fullUrl(ApiUrl.helperDateSlotList(formatted)));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.helperDateSlotList(formatted)),
+    );
     final data = parseApiResponse(response);
     final map = data as Map<String, dynamic>;
     final list = map['slots'] as List<dynamic>;
-    return list.map((e) => DateSlot.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => DateSlot.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 
   /// Customer-side: a SPECIFIC helper's hourly slots for a date.
   /// GET /get-helper-availablity/{providerId}/{date}/   (date = DD-MM-YYYY)
   Future<List<DateSlot>> getHelperDateSlots(
-      int providerId,
-      Object date, {
-        String? profileType,
-      }) async {
+    int providerId,
+    Object date, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'customer';
     final formatted = formatDateForAvailability(date);
     final response = await _client.get(
@@ -75,25 +100,28 @@ class AvailabilityRepository {
     final data = parseApiResponse(response);
     final map = data as Map<String, dynamic>;
     final list = map['slots'] as List<dynamic>;
-    return list.map((e) => DateSlot.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => DateSlot.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
-
 
   /// Hours-wise check: is [startTime] free for [workingHour] hours on [date]?
   /// GET /get-helper-availablity/{id}/{date}/?working_hour=H&start_time=09:00 AM
   Future<HourSlotCheck> checkHelperSlot(
-      int providerId,
-      Object date, {
-        required int workingHour,
-        required String startTime, // "12:00 PM"
-        String? profileType,
-      }) async {
+    int providerId,
+    Object date, {
+    required int workingHour,
+    required String startTime,
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'customer';
     final formatted = formatDateForAvailability(date);
-    final qp = Uri(queryParameters: {
-      'working_hour': workingHour.toString(),
-      'start_time': startTime,
-    }).query;
+    final qp = Uri(
+      queryParameters: {
+        'working_hour': workingHour.toString(),
+        'start_time': startTime,
+      },
+    ).query;
     final response = await _client.get(
       url: _fullUrl('/get-helper-availablity/$providerId/$formatted/?$qp'),
     );
@@ -101,23 +129,44 @@ class AvailabilityRepository {
     final map = body is Map<String, dynamic> ? body : <String, dynamic>{};
     return HourSlotCheck.fromJson(map);
   }
-  Future<void> setSlotException(Object date, Map<String, dynamic> body, {String? profileType}) async {
+
+  Future<void> setSlotException(
+    Object date,
+    Map<String, dynamic> body, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
     final formatted = formatDateForAvailability(date);
-    await _client.post(url: _fullUrl(ApiUrl.helperSlotException(formatted)), body: body);
+    await _client.post(
+      url: _fullUrl(ApiUrl.helperSlotException(formatted)),
+      body: body,
+    );
   }
 
-  Future<void> setSpecialDate(Object date, Map<String, dynamic> body, {String? profileType}) async {
+  Future<void> setSpecialDate(
+    Object date,
+    Map<String, dynamic> body, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
     final formatted = formatDateForAvailability(date);
-    await _client.post(url: _fullUrl(ApiUrl.helperSpecialDate(formatted)), body: body);
+    await _client.post(
+      url: _fullUrl(ApiUrl.helperSpecialDate(formatted)),
+      body: body,
+    );
   }
 
-  Future<List<WeeklyDayAvailability>> getWeeklyDayList({String? profileType}) async {
+  Future<List<WeeklyDayAvailability>> getWeeklyDayList({
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.helperWeeklyDayList));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.helperWeeklyDayList),
+    );
     final data = parseApiResponse(response);
     final list = data as List<dynamic>;
-    return list.map((e) => WeeklyDayAvailability.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => WeeklyDayAvailability.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 }

@@ -1,28 +1,5 @@
-class SubCategoryModel {
-  final int id;
-  final String? title;
-  final String? description;
-  final String? icon;
-  final int? category;
-
-  const SubCategoryModel({
-    required this.id,
-    this.title,
-    this.description,
-    this.icon,
-    this.category,
-  });
-
-  factory SubCategoryModel.fromJson(Map<String, dynamic> json) {
-    return SubCategoryModel(
-      id: json['id'] as int,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      icon: json['icon'] as String?,
-      category: json['category'] as int?,
-    );
-  }
-}
+import 'package:working_hiring/app/data/models/sub_category_model.dart';
+export 'package:working_hiring/app/data/models/sub_category_model.dart';
 
 class CategoryModel {
   final int id;
@@ -48,7 +25,8 @@ class CategoryModel {
       description: json['description'] as String?,
       icon: json['icon'] as String?,
       image: json['image'] as String?,
-      subcategories: (json['subcategory'] as List<dynamic>?)
+      subcategories:
+          (json['subcategory'] as List<dynamic>?)
               ?.map((e) => SubCategoryModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           [],

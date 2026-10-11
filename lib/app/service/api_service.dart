@@ -11,14 +11,18 @@ import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 import 'package:mime/mime.dart';
 
-import '../core/constants/app_constants.dart';
-import 'api_url.dart';
-import 'logger.dart';
-import 'shared_prefs_helper.dart';
+import 'package:working_hiring/app/core/constants/app_constants.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/service/logger.dart';
+import 'package:working_hiring/app/service/shared_prefs_helper.dart';
+import 'package:working_hiring/app/service/api/logging_client.dart';
+import 'package:working_hiring/app/service/api/api_exception.dart';
+import 'package:working_hiring/app/service/api/multipart_body.dart';
+export 'package:working_hiring/app/service/api/logging_client.dart';
+export 'package:working_hiring/app/service/api/api_exception.dart';
+export 'package:working_hiring/app/service/api/multipart_body.dart';
 
 final log = logger(ApiClient);
-
-// typedef ServerResponse<T> = Future<Either<ErrorResponseModel, T>>;
 
 Map<String, String> basicHeaderInfo() {
   return {
@@ -29,7 +33,6 @@ Map<String, String> basicHeaderInfo() {
 
 Future<Map<String, String>> bearerHeaderInfo({String? profileType}) async {
   final token = await SharedPrefsHelper.getString(AppConstants.token);
-  debugPrint("Token _________ $token");
   final headers = {
     HttpHeaders.acceptHeader: "application/json",
     HttpHeaders.contentTypeHeader: "application/json",
@@ -47,11 +50,7 @@ Future<Map<String, String>> childBearerHeaderInfo() async {
     // Fallback to parent token when child token is not available
     // (e.g. parent mode after child registration, before child login).
     token = await SharedPrefsHelper.getString(AppConstants.token);
-    debugPrint(
-      "Child token empty, falling back to parent token _________ $token",
-    );
-  } else {
-    debugPrint("Child Token _________ $token");
+    debugPrint("Child token empty, falling back to parent token");
   }
   return {
     HttpHeaders.acceptHeader: "application/json",
@@ -68,69 +67,11 @@ dynamic safeJsonDecode(String body, String url) {
   try {
     return jsonDecode(body);
   } on FormatException {
-    log.e('❌❌❌ JSON parse failed for URL: $url');
+    log.e('JSON parse failed for URL: $url');
     log.e(
-      '❌❌❌ Response body (first 500 chars): ${body.substring(0, body.length > 500 ? 500 : body.length)}',
+      'Response body (first 500 chars): ${body.substring(0, body.length > 500 ? 500 : body.length)}',
     );
     rethrow;
-  }
-}
-
-/// A [http.BaseClient] that logs every HTTP request and response to the
-/// terminal. Wrap all calls through [ApiClient] so every endpoint is captured
-/// without per-method print statements.
-class LoggingClient extends http.BaseClient {
-  final http.Client _inner = http.Client();
-
-  @override
-  Future<http.StreamedResponse> send(http.BaseRequest request) async {
-    final start = DateTime.now();
-
-    // ---------- Request ----------
-    final buffer = StringBuffer();
-    buffer.writeln('╔═══════════════════════════════════════════════════════════');
-    buffer.writeln('║ 🌐 API REQUEST');
-    buffer.writeln('║ ${request.method} ${request.url}');
-    buffer.writeln('║ Headers: ${request.headers}');
-    if (request is http.Request) {
-      buffer.writeln('║ Body: ${request.body}');
-    } else if (request is http.MultipartRequest) {
-      buffer.writeln('║ Fields: ${request.fields}');
-      buffer.writeln('║ Files: ${request.files.map((f) => f.filename)}');
-    }
-    debugPrint(buffer.toString());
-
-    // ---------- Response ----------
-    final streamedResponse = await _inner.send(request);
-    final elapsed = DateTime.now().difference(start);
-
-    final bytes = await streamedResponse.stream.toBytes();
-    final bodyStr = utf8.decode(bytes, allowMalformed: true);
-
-    final respBuffer = StringBuffer();
-    respBuffer.writeln('║───────────────────────────────────────────────────────────');
-    respBuffer.writeln(
-      '║ 📦 API RESPONSE  |  ${streamedResponse.statusCode} ${streamedResponse.reasonPhrase}  |  ${elapsed.inMilliseconds}ms',
-    );
-    respBuffer.writeln('║ URL: ${request.url}');
-    if (bodyStr.length <= 2000) {
-      respBuffer.writeln('║ Body: $bodyStr');
-    } else {
-      respBuffer.writeln('║ Body (truncated): ${bodyStr.substring(0, 2000)}...');
-    }
-    respBuffer.writeln('╚═══════════════════════════════════════════════════════════');
-    debugPrint(respBuffer.toString());
-
-    return http.StreamedResponse(
-      Stream.value(bytes),
-      streamedResponse.statusCode,
-      contentLength: bytes.length,
-      request: streamedResponse.request,
-      headers: streamedResponse.headers,
-      isRedirect: streamedResponse.isRedirect,
-      persistentConnection: streamedResponse.persistentConnection,
-      reasonPhrase: streamedResponse.reasonPhrase,
-    );
   }
 }
 
@@ -148,7 +89,9 @@ class ApiClient {
     if (_isRefreshing) return false;
     _isRefreshing = true;
     try {
-      final refresh = await SharedPrefsHelper.getString(AppConstants.refreshToken);
+      final refresh = await SharedPrefsHelper.getString(
+        AppConstants.refreshToken,
+      );
       if (refresh.isEmpty) return false;
       final response = await _client.post(
         Uri.parse('${ApiUrl.baseUrl}${ApiUrl.refreshToken}'),
@@ -179,8 +122,6 @@ class ApiClient {
     Get.offAllNamed('/login');
   }
 
-  //=========================== Get method ======================
-
   Future<Response> get({
     required String url,
     bool isBasic = false,
@@ -189,16 +130,8 @@ class ApiClient {
     bool showResult = true,
     BuildContext? context,
   }) async {
-    /// ======================- Check Internet ===================
-
-    // if (!await (connectionChecker.isConnected)) {
-    //   return Response(statusCode: 503, statusText: noInternetConnection);
-    // }
-
     if (showResult) {
-      log.i(
-        '|📍📍📍|----------------- [[ GET ]] method details start -----------------|📍📍📍|',
-      );
+      log.i('GET request');
       log.i(url);
     }
 
@@ -209,7 +142,9 @@ class ApiClient {
             : useChildToken
             ? await childBearerHeaderInfo()
             : await bearerHeaderInfo(profileType: profileType);
-        return _client.get(Uri.parse(url), headers: headers).timeout(Duration(seconds: duration));
+        return _client
+            .get(Uri.parse(url), headers: headers)
+            .timeout(Duration(seconds: duration));
       }
 
       var response = await makeCall();
@@ -228,9 +163,7 @@ class ApiClient {
         log.d("Body => ${response.body}");
         log.d("Status Code => ${response.statusCode}");
 
-        log.i(
-          '|📒📒📒|-----------------[[ GET ]] method response end -----------------|📒📒📒|',
-        );
+        log.i('GET response');
       }
 
       var body = safeJsonDecode(response.body, url);
@@ -248,7 +181,7 @@ class ApiClient {
         statusText: response.reasonPhrase,
       );
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert Timeout Exception🐞🐞🐞');
+      log.e('Error Alert Timeout Exception');
 
       log.e('Time out exception$url');
 
@@ -258,7 +191,7 @@ class ApiClient {
         statusText: 'Time out exception $url',
       );
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert Client Exception 🐞🐞🐞');
+      log.e('Error Alert Client Exception');
 
       log.e('client exception hitted');
 
@@ -271,11 +204,11 @@ class ApiClient {
         statusText: 'Error Alert Client Exception $url',
       );
     } catch (e) {
-      log.e('🐞🐞🐞 Other Error Alert 🐞🐞🐞');
+      log.e('Other Error Alert');
 
-      log.e('❌❌❌ unlisted error received for URL: $url');
+      log.e('unlisted error received for URL: $url');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return Response(
         body: {},
@@ -285,7 +218,6 @@ class ApiClient {
     }
   }
 
-  //========================== Post Method =======================
   Future<Response> post({
     required String url,
     bool isBasic = false,
@@ -296,16 +228,8 @@ class ApiClient {
     bool showResult = true,
   }) async {
     try {
-      /// ======================- Check Internet ===================
-
-      // if (!await (connectionChecker.isConnected)) {
-      //   return Response(statusCode: 503, statusText: noInternetConnection);
-      // }
-
       if (showResult) {
-        log.i(
-          '|📍📍📍|-----------------[[ POST ]] method details start -----------------|📍📍📍|',
-        );
+        log.i('POST request');
 
         log.i("URL => $url");
 
@@ -342,9 +266,7 @@ class ApiClient {
 
       log.i("response.statusCode => ${response.statusCode}");
 
-      log.i(
-        '|📒📒📒|-----------------[[ POST ]] method response end --------------------|📒📒📒|',
-      );
+      log.i('POST response');
 
       body = safeJsonDecode(response.body, url);
 
@@ -361,7 +283,7 @@ class ApiClient {
         statusText: response.reasonPhrase,
       );
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert Timeout Exception🐞🐞🐞');
+      log.e('Error Alert Timeout Exception');
 
       log.e('Time out exception$url');
 
@@ -371,7 +293,7 @@ class ApiClient {
         statusText: 'Time out exception $url',
       );
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert Client Exception🐞🐞🐞');
+      log.e('Error Alert Client Exception');
 
       log.e('client exception hitted');
 
@@ -385,16 +307,16 @@ class ApiClient {
         statusText: 'client exception hitted $url',
       );
     } catch (e) {
-      log.e('🐞🐞🐞 Other Error Alert 🐞🐞🐞');
+      log.e('Other Error Alert');
 
-      log.e('❌❌❌ unlisted error received for URL: $url');
+      log.e('unlisted error received for URL: $url');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return Response(
         body: {},
         statusCode: 400,
-        statusText: '🐞🐞🐞 Other Error Alert 🐞🐞🐞',
+        statusText: 'Other Error Alert',
       );
     }
   }
@@ -407,16 +329,8 @@ class ApiClient {
     bool showResult = true,
   }) async {
     try {
-      /// ======================- Check Internet ===================
-
-      // if (!await (connectionChecker.isConnected)) {
-      //   return Response(statusCode: 503, statusText: noInternetConnection);
-      // }
-
       if (showResult) {
-        log.i(
-          '|📍📍📍|-----------------[[ PATCH ]] method details start -----------------|📍📍📍|',
-        );
+        log.i('PATCH request');
 
         log.i("URL => $url");
 
@@ -436,9 +350,7 @@ class ApiClient {
       if (showResult) {
         log.i("response.body => ${response.body}");
         log.i("response.statusCode => ${response.statusCode}");
-        log.i(
-          '|📒📒📒|-----------------[[ PATCH ]] method response end --------------------|📒📒📒|',
-        );
+        log.i('PATCH response');
       }
 
       body = safeJsonDecode(response.body, url);
@@ -456,7 +368,7 @@ class ApiClient {
         statusText: response.reasonPhrase,
       );
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert Timeout Exception🐞🐞🐞');
+      log.e('Error Alert Timeout Exception');
 
       log.e('Time out exception$url');
 
@@ -466,7 +378,7 @@ class ApiClient {
         statusText: 'Time out exception $url',
       );
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert Client Exception🐞🐞🐞');
+      log.e('Error Alert Client Exception');
 
       log.e('client exception hitted');
 
@@ -480,21 +392,20 @@ class ApiClient {
         statusText: 'client exception hitted $url',
       );
     } catch (e) {
-      log.e('🐞🐞🐞 Other Error Alert 🐞🐞🐞');
+      log.e('Other Error Alert');
 
-      log.e('❌❌❌ unlisted error received for URL: $url');
+      log.e('unlisted error received for URL: $url');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return Response(
         body: {},
         statusCode: 400,
-        statusText: '🐞🐞🐞 Other Error Alert 🐞🐞🐞',
+        statusText: 'Other Error Alert',
       );
     }
   }
 
-  //========================== Post Method (Plain Text Response) =======================
   Future<Response> postPlainText({
     required String url,
     bool isBasic = false,
@@ -504,16 +415,8 @@ class ApiClient {
     bool showResult = true,
   }) async {
     try {
-      /// ======================- Check Internet ===================
-
-      // if (!await (connectionChecker.isConnected)) {
-      //   return Response(statusCode: 503, statusText: noInternetConnection);
-      // }
-
       if (showResult) {
-        log.i(
-          '|📍📍📍|-----------------[[ POST PLAIN TEXT ]] method details start -----------------|📍📍📍|',
-        );
+        log.i('POST PLAIN TEXT request');
 
         log.i("URL => $url");
 
@@ -534,13 +437,10 @@ class ApiClient {
 
       log.i("response.statusCode => ${response.statusCode}");
 
-      log.i(
-        '|📒📒📒|-----------------[[ POST PLAIN TEXT ]] method response end --------------------|📒📒📒|',
-      );
+      log.i('POST PLAIN TEXT response');
 
-      // Don't try to decode JSON - return plain text response
       return Response(
-        body: response.body, // Return as plain string
+        body: response.body,
         bodyString: response.body.toString(),
         request: Request(
           headers: response.request!.headers,
@@ -552,7 +452,7 @@ class ApiClient {
         statusText: response.reasonPhrase,
       );
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert Timeout Exception🐞🐞🐞');
+      log.e('Error Alert Timeout Exception');
 
       log.e('Time out exception$url');
 
@@ -562,7 +462,7 @@ class ApiClient {
         statusText: 'Time out exception $url',
       );
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert Client Exception🐞🐞🐞');
+      log.e('Error Alert Client Exception');
 
       log.e('client exception hitted');
 
@@ -576,21 +476,20 @@ class ApiClient {
         statusText: 'client exception hitted $url',
       );
     } catch (e) {
-      log.e('🐞🐞🐞 Other Error Alert 🐞🐞🐞');
+      log.e('Other Error Alert');
 
-      log.e('❌❌❌ unlisted error received');
+      log.e('unlisted error received');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return const Response(
         body: {},
         statusCode: 400,
-        statusText: '🐞🐞🐞 Other Error Alert 🐞🐞🐞',
+        statusText: 'Other Error Alert',
       );
     }
   }
 
-  // Param get method
   Future<Map<String, dynamic>?> paramGet({
     String? url,
     bool? isBasic,
@@ -599,9 +498,7 @@ class ApiClient {
     int duration = 15,
     bool showResult = true,
   }) async {
-    log.i(
-      '|Get param📍📍📍|----------------- [[ GET ]] param method Details Start -----------------|📍📍📍|',
-    );
+    log.i('GET (params) request');
 
     log.i("##body given --> ");
 
@@ -611,9 +508,7 @@ class ApiClient {
 
     log.i("##url list --> $url");
 
-    log.i(
-      '|Get param📍📍📍|----------------- [[ GET ]] param method details ended ** ---------------|📍📍📍|',
-    );
+    log.i('GET (params) request end');
 
     try {
       final response = await _client
@@ -623,37 +518,33 @@ class ApiClient {
           )
           .timeout(const Duration(seconds: 15));
 
-      log.i(
-        '|📒📒📒| ----------------[[ Get ]] Peram Response Start---------------|📒📒📒|',
-      );
+      log.i('GET (params) response');
 
       if (showResult) {
         log.i(response.body.toString());
       }
 
-      log.i(
-        '|📒📒📒| ----------------[[ Get ]] Peram Response End **-----------------|📒📒📒|',
-      );
+      log.i('GET (params) response end');
 
       if (response.statusCode == code) {
-        return safeJsonDecode(response.body, url!);
+        return safeJsonDecode(response.body, url);
       } else {
-        log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+        log.e('Error Alert');
 
         log.e(
-          'unknown error hitted in status code  ${safeJsonDecode(response.body, url!)}',
+          'unknown error hitted in status code  ${safeJsonDecode(response.body, url)}',
         );
 
         return null;
       }
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('Time out exception$url');
 
       return null;
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('client exception hitted');
 
@@ -663,19 +554,18 @@ class ApiClient {
 
       return null;
     } catch (e) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('#url->$url||#body -> $body');
 
-      log.e('❌❌❌ unlisted error received');
+      log.e('unlisted error received');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return null;
     }
   }
 
-  /// ========================= MaltiPart Request =====================
   Future<Response> multipartRequest({
     required String url,
     required String reqType,
@@ -685,19 +575,12 @@ class ApiClient {
     bool showResult = true,
   }) async {
     try {
-      /// ======================- Check Internet ===================
-
-      // if (!await (connectionChecker.isConnected)) {
-      //   return Response(statusCode: 503, statusText: noInternetConnection);
-      // }
       if (showResult) {
-        log.i(
-          '|📍📍📍|-----------------[[ MULTIPART $reqType]] method details start -----------------|📍📍📍|',
-        );
+        log.i('MULTIPART $reqType request');
 
         log.i("===> URL => $url");
 
-        log.i("====> body => $body");
+        log.i("body: $body");
       }
 
       final request = http.MultipartRequest(reqType, Uri.parse(url))
@@ -707,7 +590,6 @@ class ApiClient {
               ? basicHeaderInfo()
               : await bearerHeaderInfo(profileType: profileType),
         );
-      // http.MultipartRequest sets its own Content-Type with the boundary.
       request.headers.remove(HttpHeaders.contentTypeHeader);
 
       for (final element in multipartBody) {
@@ -722,7 +604,6 @@ class ApiClient {
         request.files.add(multipartImg);
       }
 
-      // ..files.add(await http.MultipartFile.fromPath(filedName!, filepath!));
       var response = await _client.send(request);
       var jsonData = await http.Response.fromStream(response);
 
@@ -731,26 +612,24 @@ class ApiClient {
 
         log.i("===> Status Code =>${response.statusCode}");
 
-        log.i(
-          '|📒📒📒|-----------------[[ MULTIPART $reqType ]] method response end --------------------|📒📒📒|',
-        );
+        log.i('MULTIPART $reqType response');
       }
 
       var decodeBody = safeJsonDecode(jsonData.body, url);
 
       return Response(body: decodeBody, statusCode: response.statusCode);
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert Timeout Exception🐞🐞🐞');
+      log.e('Error Alert Timeout Exception');
 
       log.e('Time out exception$url');
 
       return const Response(
         body: {},
         statusCode: 400,
-        statusText: '🐞🐞🐞 Error Alert Timeout Exception 🐞🐞🐞',
+        statusText: 'Error Alert Timeout Exception',
       );
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert Client Exception🐞🐞🐞');
+      log.e('Error Alert Client Exception');
 
       log.e('client exception hitted');
 
@@ -764,23 +643,19 @@ class ApiClient {
         statusText: 'client exception hitted',
       );
     } catch (e) {
-      log.e('🐞🐞🐞 Other Error Alert 🐞🐞🐞');
+      log.e('Other Error Alert');
 
-      log.e('❌❌❌ unlisted error received for URL: $url');
+      log.e('unlisted error received for URL: $url');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return const Response(
         body: {},
         statusCode: 400,
-        statusText: '🐞🐞🐞 Other Error Alert 🐞🐞🐞',
+        statusText: 'Other Error Alert',
       );
     }
   }
-
-  // Delete method
-
-  // In ApiClient class
 
   Future<Map<String, dynamic>?> deleteHelper({
     String? url,
@@ -790,22 +665,18 @@ class ApiClient {
     int duration = 15,
     bool showResult = false,
   }) async {
-    // ✅ Prevent null url
     if (url == null) return null;
 
-    log.i('|📍📍📍|-----------------[[ DELETE ]] method details start-----------------|📍📍📍|');
+    log.i('DELETE request');
     log.i(url);
-    log.i('|📍📍📍|-----------------[[ DELETE ]] method details end ------------------|📍📍📍|');
+    log.i('DELETE request end');
 
     try {
-      // ✅ Fix: use isBasic ?? false
       var headers = (isBasic ?? false)
           ? basicHeaderInfo()
           : await bearerHeaderInfo(profileType: profileType);
 
-      if (isLogout) {
-        // headers.addAll({"fcm_token": await FirebaseMessaging.instance.getToken()});
-      }
+      if (isLogout) {}
 
       log.i(headers);
 
@@ -813,7 +684,7 @@ class ApiClient {
           .delete(Uri.parse(url), headers: headers)
           .timeout(Duration(seconds: duration));
 
-      log.i('|📒📒📒|----------------- [[ DELETE ]] method response start-----------------|📒📒📒|');
+      log.i('DELETE response');
 
       if (showResult) {
         log.i(response.body.toString());
@@ -821,7 +692,7 @@ class ApiClient {
 
       log.i(response.statusCode);
 
-      log.i('|📒📒📒|----------------- [[ DELETE ]] method response end-----------------|📒📒📒|');
+      log.i('DELETE response end');
 
       if (response.statusCode == code) {
         if (response.body.isEmpty) return {};
@@ -831,24 +702,24 @@ class ApiClient {
           return {};
         }
       } else {
-        log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+        log.e('Error Alert');
         log.e('unknown error hitted in status code ${response.statusCode}');
         return null;
       }
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
       log.e('Time out exception$url');
       return null;
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
       log.e('client exception hitted');
       log.e(err.toString());
       log.e(stackrace.toString());
       return null;
     } catch (e) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
-      log.e('❌❌❌ unlisted error received for URL: $url');
-      log.e("❌❌❌ $e");
+      log.e('Error Alert');
+      log.e('unlisted error received for URL: $url');
+      log.e("$e");
       return null;
     }
   }
@@ -861,24 +732,16 @@ class ApiClient {
     int duration = 15,
     bool showResult = false,
   }) async {
-    log.i(
-      '|📍📍📍|-----------------[[ DELETE ]] method details start-----------------|📍📍📍|',
-    );
+    log.i('DELETE request');
 
     log.i(url);
 
-    log.i(
-      '|📍📍📍|-----------------[[ DELETE ]] method details end ------------------|📍📍📍|',
-    );
+    log.i('DELETE request end');
 
     try {
       var headers = isBasic! ? basicHeaderInfo() : await bearerHeaderInfo();
 
-      if (isLogout) {
-        // headers
-
-        // ..addAll({"fcm_token": await FirebaseMessaging.instance.getToken()});
-      }
+      if (isLogout) {}
 
       log.i(headers);
 
@@ -886,9 +749,7 @@ class ApiClient {
           .delete(Uri.parse(url!), headers: headers)
           .timeout(Duration(seconds: duration));
 
-      log.i(
-        '|📒📒📒|----------------- [[ DELETE ]] method response start-----------------|📒📒📒|',
-      );
+      log.i('DELETE response');
 
       if (showResult) {
         log.i(response.body.toString());
@@ -896,16 +757,12 @@ class ApiClient {
 
       log.i(response.statusCode);
 
-      log.i(
-        '|📒📒📒|----------------- [[ DELETE ]] method response start-----------------|📒📒📒|',
-      );
+      log.i('DELETE response');
 
       if (response.statusCode == code) {
-        // LocalStorage.clear();
-
         return jsonDecode(response.body);
       } else {
-        log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+        log.e('Error Alert');
 
         log.e(
           'unknown error hitted in status code  ${jsonDecode(response.body)}',
@@ -914,13 +771,13 @@ class ApiClient {
         return null;
       }
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('Time out exception$url');
 
       return null;
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('client exception hitted');
 
@@ -930,17 +787,15 @@ class ApiClient {
 
       return null;
     } catch (e) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
-      log.e('❌❌❌ unlisted error received for URL: $url');
+      log.e('unlisted error received for URL: $url');
 
-      log.e("❌❌❌ $e");
+      log.e("$e");
 
       return null;
     }
   }
-
-
 
   /// Multipart request that supports REPEATED form fields (same key multiple
   /// times) — needed when Django reads values with `request.POST.getlist(...)`,
@@ -961,26 +816,24 @@ class ApiClient {
   }) async {
     try {
       if (showResult) {
-        log.i('|📍📍📍|----------[[ MULTIPART(repeated) $reqType ]] start ----------|📍📍📍|');
+        log.i('MULTIPART(repeated) $reqType request');
         log.i('===> URL => $url');
-        log.i('====> single => $singleFields');
-        log.i('====> repeated => $repeatedFields');
+        log.i('single: $singleFields');
+        log.i('repeated: $repeatedFields');
       }
 
       final uri = Uri.parse(url);
-      final headers =
-      await bearerHeaderInfo(profileType: profileType);
+      final headers = await bearerHeaderInfo(profileType: profileType);
       headers.remove(HttpHeaders.contentTypeHeader);
 
       final boundary =
           '----dartFormBoundary${DateTime.now().millisecondsSinceEpoch}';
       headers[HttpHeaders.contentTypeHeader] =
-      'multipart/form-data; boundary=$boundary';
+          'multipart/form-data; boundary=$boundary';
 
       final body = <int>[];
       void writeLine(String s) => body.addAll(utf8.encode('$s\r\n'));
 
-      // Single-value fields
       singleFields?.forEach((key, value) {
         writeLine('--$boundary');
         writeLine('Content-Disposition: form-data; name="$key"');
@@ -988,7 +841,6 @@ class ApiClient {
         writeLine(value);
       });
 
-      // Repeated fields — one part per value, same name reused
       repeatedFields?.forEach((key, values) {
         for (final v in values) {
           writeLine('--$boundary');
@@ -998,15 +850,16 @@ class ApiClient {
         }
       });
 
-      // Files
       for (final f in files) {
         if (f.file.path.isEmpty) continue;
-        final mimeType = lookupMimeType(f.file.path) ?? 'application/octet-stream';
+        final mimeType =
+            lookupMimeType(f.file.path) ?? 'application/octet-stream';
         final filename = f.file.path.split('/').last;
         final bytes = await f.file.readAsBytes();
         writeLine('--$boundary');
         writeLine(
-            'Content-Disposition: form-data; name="${f.key}"; filename="$filename"');
+          'Content-Disposition: form-data; name="${f.key}"; filename="$filename"',
+        );
         writeLine('Content-Type: $mimeType');
         writeLine('');
         body.addAll(bytes);
@@ -1034,13 +887,13 @@ class ApiClient {
       if (showResult) {
         log.i('===> Response Body => $respBody');
         log.i('===> Status Code => ${streamed.statusCode}');
-        log.i('|📒📒📒|----------[[ MULTIPART(repeated) $reqType ]] end ----------|📒📒📒|');
+        log.i('MULTIPART(repeated) $reqType request end');
       }
 
       final decodeBody = safeJsonDecode(respBody, url);
       return Response(body: decodeBody, statusCode: streamed.statusCode);
     } catch (e) {
-      log.e('🐞🐞🐞 multipartRepeated error: $e');
+      log.e('multipartRepeated error: $e');
       return const Response(
         body: {},
         statusCode: 400,
@@ -1058,17 +911,13 @@ class ApiClient {
     bool showResult = false,
   }) async {
     try {
-      log.i(
-        '|📍📍📍|-------------[[ PUT ]] method details start-----------------|📍📍📍|',
-      );
+      log.i('PUT request');
 
       log.i(url);
 
       log.i(body);
 
-      log.i(
-        '|📍📍📍|-------------[[ PUT ]] method details end ------------|📍📍📍|',
-      );
+      log.i('PUT request end');
 
       final response = await _client
           .put(
@@ -1078,9 +927,7 @@ class ApiClient {
           )
           .timeout(Duration(seconds: duration));
 
-      log.i(
-        '|📒📒📒|-----------------[[ PUT ]] AKA Update method response start-----------------|📒📒📒|',
-      );
+      log.i('PUT response');
 
       if (showResult) {
         log.i(response.body);
@@ -1088,29 +935,27 @@ class ApiClient {
 
       log.i(response.statusCode);
 
-      log.i(
-        '|📒📒📒|-----------------[[ PUT ]] AKA Update method response End -----------------|📒📒📒|',
-      );
+      log.i('PUT response end');
 
       if (response.statusCode == code) {
-        return safeJsonDecode(response.body, url!);
+        return safeJsonDecode(response.body, url);
       } else {
-        log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+        log.e('Error Alert');
 
         log.e(
-          'unknown error hitted in status code  ${safeJsonDecode(response.body, url!)}',
+          'unknown error hitted in status code  ${safeJsonDecode(response.body, url)}',
         );
 
         return null;
       }
     } on TimeoutException {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('Time out exception$url');
 
       return null;
     } on http.ClientException catch (err, stackrace) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('client exception hitted');
 
@@ -1120,7 +965,7 @@ class ApiClient {
 
       return null;
     } catch (e) {
-      log.e('🐞🐞🐞 Error Alert 🐞🐞🐞');
+      log.e('Error Alert');
 
       log.e('unlisted catch error received for URL: $url');
 
@@ -1129,16 +974,6 @@ class ApiClient {
       return null;
     }
   }
-}
-
-/// Exception thrown when the backend returns {"status": false, "message": "..."}
-class ApiException implements Exception {
-  final String message;
-  final dynamic data;
-  const ApiException(this.message, [this.data]);
-
-  @override
-  String toString() => message;
 }
 
 /// Parses the backend's standard response envelope.
@@ -1168,7 +1003,6 @@ dynamic parseApiResponse(Response response) {
 String _extractErrorMessage(Response response) {
   final body = response.body;
   if (body is! Map) {
-    // Non-JSON response (e.g. HTML error page, network error page)
     if (response.statusCode == 401 || response.statusCode == 403) {
       return 'Session expired. Please log in again.';
     }
@@ -1181,9 +1015,7 @@ String _extractErrorMessage(Response response) {
   final rawMessage = body['message'];
 
   if (rawMessage == null) {
-    // DRF-style error: {"detail": "..."} or {"field": ["error"]}
     if (body['detail'] is String) return body['detail'];
-    // Extract first error from DRF field errors: {"field": ["error text"]}
     for (final value in body.values) {
       if (value is List && value.isNotEmpty) return value.first.toString();
       if (value is String && value.isNotEmpty) return value;
@@ -1193,13 +1025,11 @@ String _extractErrorMessage(Response response) {
 
   if (rawMessage is String) return rawMessage;
 
-  // Message is a Map (serializer field errors): {"field": "error", ...}
   if (rawMessage is Map) {
     final parts = <String>[];
     for (final entry in rawMessage.entries) {
       final key = entry.key.toString();
       final value = entry.value.toString();
-      // Omit technical keys like "non_field_errors"
       if (key == 'non_field_errors' || key == 'detail') {
         parts.add(value);
       } else {
@@ -1210,10 +1040,4 @@ String _extractErrorMessage(Response response) {
   }
 
   return rawMessage.toString();
-}
-
-class MultipartBody {
-  String key;
-  File file;
-  MultipartBody(this.key, this.file);
 }

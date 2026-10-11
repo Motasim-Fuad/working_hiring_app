@@ -2,134 +2,12 @@
 /// Mirrors spec §4.5 of WEBSOCKET_ORDER_DOCUMENTATION.md exactly.
 library;
 
-/// Wire values for `event.event_type`. Constants — not an enum — because the
-/// server may add new values, and the `ORDER_COMPLETEL` typo (sic) must be
-/// matched literally per spec §8.
-class OrderEventType {
-  OrderEventType._();
-
-  static const String orderCreated = 'ORDER_CREATED';
-  static const String orderCounter = 'ORDER_COUNTER';
-  static const String orderStatus = 'ORDER_STATUS';
-  static const String orderCancel = 'ORDER_CANCEL';
-  static const String orderChangeRequest = 'ORDER_CHANGE_REQUEST';
-  static const String orderHourSet = 'ORDER_HOUR_SET';
-  static const String orderWorkStart = 'ORDER_WORK_START';
-  // Spec §8: backend literally emits "ORDER_COMPLETEL" with a trailing L.
-  // Do not "fix" this — match exactly or the work-completed UI breaks.
-  static const String orderCompleted = 'ORDER_COMPLETEL';
-  static const String orderUpdated = 'ORDER_UPDATED';
-}
-
-class OrderSnapshot {
-  final int id;
-  final String? title;
-  final String? description;
-  final String? area;
-  final double? amount;
-  final String? status;
-  final String? paymentStatus;
-  final String? workingDate;
-  final String? workingStartTime;
-  final int? workingHour;
-  final String? endTime;
-  final String? endDatetime;
-  final String? createdAt;
-
-  OrderSnapshot({
-    required this.id,
-    this.title,
-    this.description,
-    this.area,
-    this.amount,
-    this.status,
-    this.paymentStatus,
-    this.workingDate,
-    this.workingStartTime,
-    this.workingHour,
-    this.endTime,
-    this.endDatetime,
-    this.createdAt,
-  });
-
-  factory OrderSnapshot.fromJson(Map<String, dynamic> j) => OrderSnapshot(
-    id: (j['id'] as num?)?.toInt() ?? 0,
-    title: j['title'] as String?,
-    description: j['description'] as String?,
-    area: j['area'] as String?,
-    amount: double.tryParse(j['amount']?.toString() ?? ''),
-    status: j['status'] as String?,
-    paymentStatus: j['payment_status'] as String?,
-    workingDate: j['working_date'] as String?,
-    workingStartTime: j['working_start_time'] as String?,
-    workingHour: (j['working_hour'] as num?)?.toInt(),
-    endTime: j['end_time'] as String?,
-    endDatetime: j['end_datetime'] as String?,
-    createdAt: j['created_at'] as String?,
-  );
-}
-
-/// Wire schema for `event.reference_object` — populated for COUNTER, CANCEL,
-/// CHANGE_REQUEST, and HOUR_SET events. Carries the `OrderChangesRequest.id`
-/// the receiver echoes back when responding via REST.
-class OrderChangesRequest {
-  final int id;
-  final String? requestBy; // "CUSTOMER" | "PROVIDER"
-  final String? status; // "ACCEPT" | "DECLINED" | "NO_RESPONSE"
-  final String?
-  changesType; // TIME | DATE | TIME_AND_DATE | AMOUNT | COUNTER | SET_HOUR | CANCEL
-  final Map<String, dynamic> changesData;
-  final String? createdAt;
-  final String? updatedAt;
-
-  OrderChangesRequest({
-    required this.id,
-    this.requestBy,
-    this.status,
-    this.changesType,
-    this.changesData = const {},
-    this.createdAt,
-    this.updatedAt,
-  });
-
-  factory OrderChangesRequest.fromJson(Map<String, dynamic> j) {
-    final changesData = (j['changes_data'] is Map)
-        ? Map<String, dynamic>.from(j['changes_data'] as Map)
-        : <String, dynamic>{};
-    if (!changesData.containsKey('budget')) {
-      final budget = j['proposed_budget'] ?? j['budget'];
-      if (budget != null) changesData['budget'] = budget;
-    }
-    if (!changesData.containsKey('message') && j['message'] != null) {
-      changesData['message'] = j['message'];
-    }
-    return OrderChangesRequest(
-      id: (j['id'] as num?)?.toInt() ?? 0,
-      requestBy: j['request_by'] as String?,
-      status: j['status'] as String?,
-      changesType: j['changes_type'] as String?,
-      changesData: changesData,
-      createdAt: j['created_at'] as String?,
-      updatedAt: j['updated_at'] as String?,
-    );
-  }
-
-  /// Proposed budget for COUNTER events. Always returned as string per spec §2.2.
-  double? get proposedBudget =>
-      double.tryParse(changesData['budget']?.toString() ?? '');
-
-  /// Proposed working date for TIME/DATE/TIME_AND_DATE events ("YYYY-MM-DD").
-  String? get proposedDate => changesData['date'] as String?;
-
-  /// Proposed working time for TIME/TIME_AND_DATE events (e.g. "10:00 AM").
-  String? get proposedTime => changesData['time'] as String?;
-
-  /// Proposed work hour for SET_HOUR events.
-  int? get proposedHour => (changesData['set_hour'] as num?)?.toInt();
-
-  /// Free-text message attached to the proposal.
-  String? get message => changesData['message'] as String?;
-}
+import 'package:working_hiring/app/data/models/order_event_type.dart';
+import 'package:working_hiring/app/data/models/order_snapshot.dart';
+import 'package:working_hiring/app/data/models/order_changes_request.dart';
+export 'package:working_hiring/app/data/models/order_event_type.dart';
+export 'package:working_hiring/app/data/models/order_snapshot.dart';
+export 'package:working_hiring/app/data/models/order_changes_request.dart';
 
 class OrderEvent {
   final int id;
@@ -141,7 +19,7 @@ class OrderEvent {
 
   /// Echoed top-level fields from the outer chat-message frame — useful
   /// when downstream consumers need to know who triggered the event.
-  final String? sender; // "CUSTOMER" | "PROVIDER"
+  final String? sender;
   final int? chatMessageId;
   final String? timestamp;
   final String? roomUuid;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../constants/app_colors.dart';
-import 'responsive_layout.dart';
+import 'package:working_hiring/app/core/constants/app_colors.dart';
+import 'package:working_hiring/app/core/widgets/responsive_layout.dart';
 
 class ServiceChip extends StatelessWidget {
   final String iconPath;
@@ -27,9 +27,7 @@ class ServiceChip extends StatelessWidget {
         constraints: const BoxConstraints(minHeight: 44, maxHeight: 56),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
-          color: isSelected
-              ? const Color(0xFFF2F8F2)
-              : Colors.white, // Light green bg if selected
+          color: isSelected ? const Color(0xFFF2F8F2) : Colors.white,
           borderRadius: BorderRadius.circular(30.r),
           border: Border.all(
             color: isSelected ? AppColors.primary : AppColors.border,

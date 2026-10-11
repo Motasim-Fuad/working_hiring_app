@@ -3,7 +3,6 @@ class AuthResponse {
   final String refresh;
   final String? defaultProfile;
 
-
   const AuthResponse({
     required this.access,
     required this.refresh,

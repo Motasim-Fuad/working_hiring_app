@@ -44,39 +44,41 @@ lib/
 ├── main.dart                          # App entry point, GetMaterialApp config
 └── app/
     ├── core/                          # Shared app-wide concerns
-    │   ├── constants/                 # AppColors, AppStrings (i18n keys), AppImages
+    │   ├── animations/                # AppDurations, AppCurves, FadeSlideIn, PressableScale
+    │   ├── constants/                 # AppColors, AppStrings (i18n keys), AppImages, AppIcons
     │   ├── theme/                     # AppTheme (light theme with Poppins font)
-    │   └── widgets/                   # Reusable widgets (custom_button, custom_text_field, bottom_nav_bar, etc.)
-    ├── data/                          # Models, mock data, API endpoint constants
-    ├── modules/                       # Feature modules organized by domain
-    │   ├── auth/                      # login, sign_up, otp_verification, password_reset
-    │   ├── splash/                    # Initial screen with role-based routing
-    │   ├── onboarding/               # Onboarding flow
-    │   ├── role_selection/           # "I need help" vs "I want to work"
-    │   ├── service_selection/        # Service category picker
-    │   ├── main/                     # Post-role-selection shell; switches between dashboards
-    │   ├── i_need_help/              # Client-side features (home, dashboard, create_task, helper_list, order, payment, profile, request, custom_offer)
-    │   ├── i_want_to_work/           # Worker-side features (home, dashboard, my_job, profile, saved_tasks)
-    │   ├── message/                  # Chat/messaging
-    │   ├── notification/             # Notifications
-    │   ├── common/                   # Shared screens (about, payout)
-    │   └── provider_verification/    # Provider identity verification
+    │   └── widgets/                   # Reusable widgets (custom_button, state views, shimmer primitives + shared skeletons)
+    ├── data/                          # Models, repositories, json parsers (one model class per file)
+    ├── features/                      # Feature modules organized by domain
+    │   ├── auth/ splash/ onboarding/ role_selection/ service_selection/
+    │   ├── shell/                     # Post-role-selection shell; switches between dashboards
+    │   ├── client/                    # "I need help": home, dashboard, helper_list, helper_profile, custom_offer, order, payment, profile, support, vouchers, saved_helpers
+    │   ├── worker/                    # "I want to work": home, dashboard, my_job, profile, helper_profile, account_verification, support, report
+    │   ├── chat/                      # Chat list + chat room (controllers, mappers, models, utils)
+    │   ├── notification/ about/ payout/
     ├── routes/                        # Centralized GetX route definitions (app_pages.dart + app_routes.dart)
-    └── services/                      # App-wide services (AuthService extends GetxService)
+    └── service/                       # ApiClient, WebSocketService (ReconnectingSocket), event bus, storage helpers
 ```
 
-### GetX module pattern
-
-Each feature module follows a consistent structure:
+### Feature module pattern (MVVM)
 
 ```
-modules/<feature>/
+features/<area>/<feature>/
 ├── bindings/        # GetX bindings — declares dependencies (lazyPut/create)
-├── controllers/     # GetX controllers — UI logic, state with .obs
-├── providers/       # Optional — API/data layer (http calls)
-├── views/           # Flutter widgets (GetView<Controller> pattern)
-└── widgets/         # Optional — feature-specific sub-widgets
+├── controllers/     # ViewModels — GetX controllers, state with .obs
+├── models/          # Optional — feature-only models
+├── utils/           # Optional — pure helpers (formatters, mappers)
+└── views/
+    └── <page>/
+        ├── <page>_view.dart     # The page; composes widgets only
+        └── widgets/             # One widget per file, used only by this page
+            ├── shimmer/         # Page-specific loading skeleton mirroring the real layout
+            ├── sheets/ dialogs/ # `show...()` functions for bottom sheets/dialogs
+            └── <widget>/        # Sub-widgets of a large widget file
 ```
+
+- Keep one public class per file. Data repositories and API calls live in `data/`.
+- Loading lists show the page's shimmer skeleton (`ShimmerList` + a skeleton widget). Buttons never shimmer; `CustomButton(isLoading: true)` shows "Please wait...".
 
 Bindings must be registered in `app_pages.dart` for routes that need dependency injection. Routes are defined in two files: `app_pages.dart` (GetPage list) and `app_routes.dart` (static path/name constants). The `_Paths` class holds raw URIs; `Routes` exposes them as constants.
 
@@ -88,7 +90,7 @@ After role selection, `MainView` (at `/main`) uses `IndexedStack` to toggle betw
 
 - **GetX reactive state**: Controllers use `.obs` for reactive variables; views use `Obx()` to rebuild.
 - **GetStorage**: Simple key-value persistence (user role, language preference). Initialized in `main()` before `runApp`.
-- **FlutterSecureStorage**: Sensitive tokens (access/refresh tokens) managed by `AuthService`.
+- **FlutterSecureStorage**: Sensitive tokens (access/refresh tokens) managed by `SharedPrefsHelper` (`service/shared_prefs_helper.dart`).
 - **API base URL**: `https://samimdev.pythonanywhere.com/api/v1` (defined in `ApiEndpoints`).
 
 ### Internationalization

@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 
-import '../../service/api_service.dart';
-import '../../service/api_url.dart';
-import '../models/order_model.dart';
-import '../models/activity_model.dart';
+import 'package:working_hiring/app/service/api_service.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/data/models/order_model.dart';
+import 'package:working_hiring/app/data/models/activity_model.dart';
 
 class OrderRepository {
   final ApiClient _client;
@@ -13,8 +13,6 @@ class OrderRepository {
   OrderRepository(this._client);
 
   String _fullUrl(String path) => '${ApiUrl.baseUrl}$path';
-
-  // ----- Customer Orders -----
 
   Future<List<OrderModel>> getCustomerOrders({
     String? status,
@@ -32,10 +30,12 @@ class OrderRepository {
     if (budget != null) params['budget'] = budget.toStringAsFixed(2);
     if (workingDate != null) params['working_date'] = workingDate;
 
-    final url = '${_fullUrl(ApiUrl.customerOrders)}?${Uri(queryParameters: params).query}';
+    final url =
+        '${_fullUrl(ApiUrl.customerOrders)}?${Uri(queryParameters: params).query}';
     final response = await _client.get(url: url);
     final data = parseApiResponse(response);
-    final list = (data is List ? data : (data as Map)['results']) as List<dynamic>;
+    final list =
+        (data is List ? data : (data as Map)['results']) as List<dynamic>;
     return list
         .map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
         .toList();
@@ -43,13 +43,13 @@ class OrderRepository {
 
   Future<OrderModel> getCustomerOrderDetail(int id) async {
     _client.profileType = 'customer';
-    final response = await _client.get(url: _fullUrl(ApiUrl.customerOrderDetail(id)));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.customerOrderDetail(id)),
+    );
 
-    // 🐛 DEBUG — full raw response
-    debugPrint('===== ORDER DETAIL RAW (id=$id) =====');
+    debugPrint('Order detail raw (id=$id)');
     debugPrint('statusCode: ${response.statusCode}');
     _printLong(response.body.toString());
-    debugPrint('=====================================');
 
     final data = parseApiResponse(response);
 
@@ -67,10 +67,11 @@ class OrderRepository {
     return order;
   }
 
-// debugPrint boro JSON-e line truncate kore, tai chunk kore print kori
   void _printLong(String text, {int chunk = 800}) {
     for (var i = 0; i < text.length; i += chunk) {
-      debugPrint(text.substring(i, i + chunk > text.length ? text.length : i + chunk));
+      debugPrint(
+        text.substring(i, i + chunk > text.length ? text.length : i + chunk),
+      );
     }
   }
 
@@ -109,7 +110,10 @@ class OrderRepository {
   }
 
   Future<void> cancelAcceptCustomer(
-      int id, int changesRequestId, String action) async {
+    int id,
+    int changesRequestId,
+    String action,
+  ) async {
     _client.profileType = 'customer';
     await _client.post(
       url: _fullUrl(ApiUrl.customerOrderCancelAccept(id)),
@@ -139,10 +143,11 @@ class OrderRepository {
     );
   }
 
-  // ----- Provider Orders -----
-
   Future<void> cancelAcceptProvider(
-      int id, int changesRequestId, String action) async {
+    int id,
+    int changesRequestId,
+    String action,
+  ) async {
     _client.profileType = 'provider';
     await _client.post(
       url: _fullUrl(ApiUrl.providerOrderCancelAccept(id)),
@@ -200,10 +205,12 @@ class OrderRepository {
     if (workingDate != null) params['working_date'] = workingDate;
     if (createdAt != null) params['created_at'] = createdAt;
 
-    final url = '${_fullUrl(ApiUrl.providerOrders)}?${Uri(queryParameters: params).query}';
+    final url =
+        '${_fullUrl(ApiUrl.providerOrders)}?${Uri(queryParameters: params).query}';
     final response = await _client.get(url: url);
     final data = parseApiResponse(response);
-    final list = (data is List ? data : (data as Map)['results']) as List<dynamic>;
+    final list =
+        (data is List ? data : (data as Map)['results']) as List<dynamic>;
     return list
         .map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
         .toList();
@@ -211,7 +218,9 @@ class OrderRepository {
 
   Future<OrderModel> getProviderOrderDetail(int id) async {
     _client.profileType = 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.providerOrderDetail(id)));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.providerOrderDetail(id)),
+    );
     final data = parseApiResponse(response);
     return OrderModel.fromJson(data as Map<String, dynamic>);
   }
@@ -221,7 +230,11 @@ class OrderRepository {
     await _client.get(url: _fullUrl(ApiUrl.providerOrderAccept(id)));
   }
 
-  Future<void> sendProviderCounterOffer(int id, double budget, String message) async {
+  Future<void> sendProviderCounterOffer(
+    int id,
+    double budget,
+    String message,
+  ) async {
     _client.profileType = 'provider';
     await _client.post(
       url: _fullUrl(ApiUrl.providerOrderCounter(id)),
@@ -230,21 +243,16 @@ class OrderRepository {
   }
 
   Future<String> startWork(
-      int id,
-      String address,
-      double lat,
-      double lng,
-      ) async {
+    int id,
+    String address,
+    double lat,
+    double lng,
+  ) async {
     _client.profileType = 'provider';
 
     final response = await _client.post(
       url: _fullUrl(ApiUrl.providerOrderStartWork(id)),
-      body: {
-        'start': true,
-        'address': address,
-        'lat': lat,
-        'lng': lng,
-      },
+      body: {'start': true, 'address': address, 'lat': lat, 'lng': lng},
     );
 
     parseApiResponse(response);
@@ -257,9 +265,7 @@ class OrderRepository {
 
     final response = await _client.post(
       url: _fullUrl(ApiUrl.providerOrderComplete(id)),
-      body: {
-        'otp': otp,
-      },
+      body: {'otp': otp},
     );
 
     parseApiResponse(response);
@@ -280,8 +286,6 @@ class OrderRepository {
       body: {'rating': rating, 'review': review},
     );
   }
-
-  // ----- Order Creation -----
 
   /// Creates a customer order. Pass [attachments] for reference photos/files
   /// and the request is sent as multipart/form-data per API spec §7.2.
@@ -305,8 +309,6 @@ class OrderRepository {
       return OrderModel.fromJson(body as Map<String, dynamic>);
     }
 
-    // Multipart: stringify every field; the server parses decimals/ints
-    // from the form value strings.
     final fields = <String, String>{};
     data.forEach((key, value) {
       if (value == null) return;
@@ -324,13 +326,13 @@ class OrderRepository {
     return OrderModel.fromJson(body as Map<String, dynamic>);
   }
 
-  // ----- Payment Transactions (§7.4) -----
-
   Future<List<Map<String, dynamic>>> getPaymentTransactions({
     String? profileType,
   }) async {
     _client.profileType = profileType;
-    final response = await _client.get(url: _fullUrl(ApiUrl.paymentTransactions));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.paymentTransactions),
+    );
     final body = response.body;
     if (body is Map && body['status'] == true) {
       final list = (body['results'] as List?) ?? (body['data'] as List?) ?? [];
@@ -338,8 +340,6 @@ class OrderRepository {
     }
     throw ApiException(_extractMessage(response));
   }
-
-  // ----- Activity / Dashboard Stats -----
 
   Future<ActivityModel> getActivity({String? profileType}) async {
     _client.profileType = profileType ?? 'customer';
@@ -350,28 +350,33 @@ class OrderRepository {
 
   Future<List<OrderModel>> getNextJobOrders({String? profileType}) async {
     _client.profileType = profileType ?? 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.providerNextJobOrders));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.providerNextJobOrders),
+    );
     final data = parseApiResponse(response);
     final list = data as List<dynamic>;
-    return list.map((e) => OrderModel.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 
   Future<Map<String, dynamic>> getEarningsOverview() async {
     _client.profileType = 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.providerEarningsOverview));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.providerEarningsOverview),
+    );
     final body = response.body;
     if (body is Map && body['status'] == true) {
-      return {
-        'data': body['data'],
-        'reports': body['reports'],
-      };
+      return {'data': body['data'], 'reports': body['reports']};
     }
     throw ApiException(_extractMessage(response));
   }
 
   Future<Map<String, dynamic>> getEarningsTransactions() async {
     _client.profileType = 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.providerEarningsTransactions));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.providerEarningsTransactions),
+    );
     final body = response.body;
     if (body is Map && body['status'] == true) {
       return body['data'] as Map<String, dynamic>? ?? {};

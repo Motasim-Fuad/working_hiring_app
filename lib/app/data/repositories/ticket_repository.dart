@@ -1,9 +1,8 @@
-// lib/data/repositories/ticket_repository.dart
 import 'dart:io';
 import 'package:working_hiring/app/service/api_service.dart';
-import '../../service/api_url.dart';
-import '../models/order_model.dart';
-import '../models/ticket_model.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/data/models/order_model.dart';
+import 'package:working_hiring/app/data/models/ticket_model.dart';
 
 class TicketRepository {
   final ApiClient _client;
@@ -23,38 +22,40 @@ class TicketRepository {
     return [];
   }
 
-  // ---------- Orders (Customer) ----------
   Future<List<OrderModel>> getCustomerOrders({String? profileType}) async {
     _client.profileType = profileType ?? 'CUSTOMER';
     final response = await _client.get(url: _fullUrl(ApiUrl.customerOrders));
     final parsed = parseApiResponse(response);
     final list = _extractDataList(parsed);
-    return list.map((e) => OrderModel.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 
-  // ---------- Orders (Provider) ----------
   Future<List<OrderModel>> getProviderOrders({String? profileType}) async {
     _client.profileType = profileType ?? 'PROVIDER';
     final response = await _client.get(url: _fullUrl(ApiUrl.providerOrders));
     final parsed = parseApiResponse(response);
     final list = _extractDataList(parsed);
-    return list.map((e) => OrderModel.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => OrderModel.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 
-  // ---------- Tickets ----------
   Future<List<TicketModel>> getTickets({String? profileType}) async {
     _client.profileType = profileType ?? 'CUSTOMER';
     final response = await _client.get(url: _fullUrl(ApiUrl.tickets));
     final parsed = parseApiResponse(response);
     final list = _extractDataList(parsed);
-    return list.map((e) => TicketModel.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => TicketModel.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
 
   Future<TicketModel> getTicketDetail(int id, {String? profileType}) async {
     _client.profileType = profileType ?? 'CUSTOMER';
     final response = await _client.get(url: _fullUrl(ApiUrl.ticketDetail(id)));
     final parsed = parseApiResponse(response);
-    // For detail, the parsed data is a single object (Map)
     if (parsed is Map<String, dynamic>) {
       return TicketModel.fromJson(parsed);
     } else {
@@ -105,11 +106,11 @@ class TicketRepository {
   }
 
   Future<TicketReplyModel> replyToTicket(
-      int id,
-      String message, {
-        String? attachmentPath,
-        String? profileType,
-      }) async {
+    int id,
+    String message, {
+    String? attachmentPath,
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'CUSTOMER';
 
     final body = {'message': message};
@@ -143,9 +144,7 @@ class TicketRepository {
 
   Future<void> closeTicket(int id, {String? profileType}) async {
     _client.profileType = profileType ?? 'CUSTOMER';
-    final response = await _client.post(
-      url: _fullUrl(ApiUrl.ticketClose(id)),
-    );
+    final response = await _client.post(url: _fullUrl(ApiUrl.ticketClose(id)));
     parseApiResponse(response); // ignore result
   }
 }

@@ -33,9 +33,7 @@ class ReviewedOrders {
             .where((e) => e >= 0)
             .toSet();
       }
-    } catch (_) {
-      // storage not ready / corrupt — start empty
-    }
+    } catch (_) {}
     _cache = loaded;
     return _cache!;
   }

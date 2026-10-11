@@ -2,23 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../constants/app_colors.dart';
-import '../constants/app_images.dart';
-import '../constants/app_strings.dart';
-import '../../modules/main/controllers/main_controller.dart';
-import '../../modules/i_need_help/home/controllers/home_controller.dart';
-import 'language_selector.dart';
-import 'responsive_layout.dart';
+import 'package:working_hiring/app/core/constants/app_colors.dart';
+import 'package:working_hiring/app/core/constants/app_images.dart';
+import 'package:working_hiring/app/core/constants/app_strings.dart';
+import 'package:working_hiring/app/features/shell/controllers/main_controller.dart';
+import 'package:working_hiring/app/features/client/home/controllers/home_controller.dart';
+import 'package:working_hiring/app/core/widgets/language_selector.dart';
+import 'package:working_hiring/app/core/widgets/responsive_layout.dart';
 
 class HomeHeader extends GetView<MainController> {
-  HomeHeader({super.key});
+  const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ResponsiveCenter(
       maxWidth: AppResponsive.wideContentMaxWidth,
       padding: EdgeInsets.zero,
-      child: Column(children: [_buildLocationHeader(context), _buildRoleSwitcher(context)]),
+      child: Column(
+        children: [_buildLocationHeader(context), _buildRoleSwitcher(context)],
+      ),
     );
   }
 
@@ -35,11 +37,6 @@ class HomeHeader extends GetView<MainController> {
         children: [
           Expanded(
             child: InkWell(
-              // onTap: () {
-              //   if (hasHomeController) {
-              //     Get.find<HomeController>().openLocationList();
-              //   }
-              // },
               borderRadius: BorderRadius.circular(8.r),
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 4.0.h),
@@ -61,50 +58,53 @@ class HomeHeader extends GetView<MainController> {
                               Flexible(
                                 child: hasHomeController
                                     ? Obx(
-                                      () => Text(
-                                    Get.find<HomeController>().currentAddress.value,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                )
+                                        () => Text(
+                                          Get.find<HomeController>()
+                                              .currentAddress
+                                              .value,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 16.sp,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      )
                                     : Text(
-                                  'Your Location'.tr,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 24.sp,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                ),
+                                        'Your Location'.tr,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 24.sp,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                        ),
+                                      ),
                               ),
                               if (hasHomeController)
                                 Icon(Icons.keyboard_arrow_down, size: 20.sp),
                             ],
                           ),
-                          // 🔽 SUB‑TEXT – now dynamic from HomeController
                           hasHomeController
                               ? Obx(
-                                () => Text(
-                              Get.find<HomeController>().currentFullAddress.value,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontSize: 12.sp,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          )
+                                  () => Text(
+                                    Get.find<HomeController>()
+                                        .currentFullAddress
+                                        .value,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 12.sp,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                )
                               : Text(
-                            AppStrings.addressDetail.tr, // fallback static
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              color: Colors.grey,
-                            ),
-                          ),
+                                  AppStrings.addressDetail.tr,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 12.sp,
+                                    color: Colors.grey,
+                                  ),
+                                ),
                         ],
                       ),
                     ),
@@ -181,7 +181,7 @@ class HomeHeader extends GetView<MainController> {
         borderRadius: BorderRadius.circular(25.r),
       ),
       child: Obx(
-            () => Row(
+        () => Row(
           children: [
             Expanded(
               child: _buildRoleButton(

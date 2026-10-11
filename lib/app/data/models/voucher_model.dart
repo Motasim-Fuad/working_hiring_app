@@ -5,7 +5,7 @@ class VoucherModel {
   final String merchantName;
   final double minSpend;
   final DateTime expiryDate;
-  final String type; // 'Restaurants', 'Shops'
+  final String type;
 
   VoucherModel({
     required this.id,

@@ -58,40 +58,40 @@ Future<void> showTicketAttachment(
         child: SafeArea(
           child: Stack(
             children: [
-            Positioned.fill(
-              child: InteractiveViewer(
-                minScale: 0.8,
-                maxScale: 5,
-                child: Center(
-                  child: Image.network(
-                    url,
-                    fit: BoxFit.contain,
-                    loadingBuilder: (context, child, progress) {
-                      if (progress == null) return child;
-                      return const Center(
-                        child: CircularProgressIndicator(color: Colors.white),
-                      );
-                    },
-                    errorBuilder: (context, error, stackTrace) => Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Icon(
-                          Icons.broken_image_outlined,
-                          color: Colors.white70,
-                          size: 48,
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          'Could not open attachment.'.tr,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                      ],
+              Positioned.fill(
+                child: InteractiveViewer(
+                  minScale: 0.8,
+                  maxScale: 5,
+                  child: Center(
+                    child: Image.network(
+                      url,
+                      fit: BoxFit.contain,
+                      loadingBuilder: (context, child, progress) {
+                        if (progress == null) return child;
+                        return const Center(
+                          child: CircularProgressIndicator(color: Colors.white),
+                        );
+                      },
+                      errorBuilder: (context, error, stackTrace) => Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.broken_image_outlined,
+                            color: Colors.white70,
+                            size: 48,
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            'Could not open attachment.'.tr,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
               Positioned(
                 top: 8,
                 right: 8,

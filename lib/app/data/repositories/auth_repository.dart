@@ -1,6 +1,6 @@
-import '../../service/api_service.dart';
-import '../../service/api_url.dart';
-import '../models/auth_response_model.dart';
+import 'package:working_hiring/app/service/api_service.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/data/models/auth_response_model.dart';
 
 class AuthRepository {
   final ApiClient _client;
@@ -28,13 +28,16 @@ class AuthRepository {
       isBasic: true,
       body: {field: contact},
     );
-    parseApiResponse(response); // just check status
+    parseApiResponse(response);
     return contact;
   }
 
   /// Verify login OTP.
-  Future<AuthResponse> verifyLoginOtp(String contact, String otp,
-      {bool isEmail = true}) async {
+  Future<AuthResponse> verifyLoginOtp(
+    String contact,
+    String otp, {
+    bool isEmail = true,
+  }) async {
     final field = isEmail ? 'email' : 'phone';
     final response = await _client.post(
       url: _fullUrl(ApiUrl.verifyLoginOtp),
@@ -56,8 +59,11 @@ class AuthRepository {
   }
 
   /// Verify signup OTP and get tokens.
-  Future<AuthResponse> verifySignUp(String contact, String otp,
-      {bool isEmail = true}) async {
+  Future<AuthResponse> verifySignUp(
+    String contact,
+    String otp, {
+    bool isEmail = true,
+  }) async {
     final field = isEmail ? 'email' : 'phone';
     final response = await _client.post(
       url: _fullUrl(ApiUrl.signUpVerify),

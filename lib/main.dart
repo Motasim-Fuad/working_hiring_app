@@ -1,5 +1,3 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,17 +5,17 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'app/core/constants/app_strings.dart';
-import 'app/core/theme/app_theme.dart';
-import 'app/routes/app_pages.dart';
-import 'app/service/order_event_bus.dart';
-import 'app/service/websocket_service.dart';
+import 'package:working_hiring/app/core/animations/app_durations.dart';
+import 'package:working_hiring/app/core/constants/app_strings.dart';
+import 'package:working_hiring/app/core/theme/app_theme.dart';
+import 'package:working_hiring/app/core/widgets/app_scroll_behavior.dart';
+import 'package:working_hiring/app/routes/app_pages.dart';
+import 'package:working_hiring/app/service/order_event_bus.dart';
+import 'package:working_hiring/app/service/websocket_service.dart';
 
 double _responsiveFontSize(num fontSize, ScreenUtil instance) {
   final width = instance.screenWidth;
 
-  // Preserve the original ScreenUtil behaviour on phones. On wider screens,
-  // increase typography only slightly instead of scaling it with full width.
   if (width >= 1024) return fontSize.toDouble() * 1.08;
   if (width >= 600) return fontSize.toDouble() * 1.04;
   return fontSize.toDouble() * instance.scaleWidth;
@@ -46,6 +44,9 @@ class MyApp extends StatelessWidget {
         onGenerateTitle: (_) => AppStrings.appName.tr,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
+        scrollBehavior: const AppScrollBehavior(),
+        defaultTransition: Transition.cupertino,
+        transitionDuration: AppDurations.page,
         translations: AppStrings(),
         locale: GetStorage().read<String>('lang') == 'zh'
             ? const Locale('zh', 'CN')

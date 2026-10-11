@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 
 class AppStrings extends Translations {
-  // General
   static const String appName = 'App Name',
       selectLanguage = 'Select Language',
       viewRequest = 'View Request',
@@ -22,7 +21,6 @@ class AppStrings extends Translations {
       cad = 'CAD',
       letsGo = 'Let\'s Go';
 
-  // Onboarding
   static const String findTrustedHelp = 'Find Trusted Help',
       chatTrackGet = 'Chat Track Get',
       postTasks = 'Post Tasks',
@@ -32,14 +30,12 @@ class AppStrings extends Translations {
       createAccount = 'Create Account',
       signIn = 'Sign In';
 
-  // Role Selection
   static const String tellUsAboutYourself = 'Tell Us About Yourself',
       iNeedHelp = 'I Need Help',
       iNeedHelpDesc = 'I Need Help Desc',
       iWantToWork = 'I Want To Work',
       iWantToWorkDesc = 'I Want To Work Desc';
 
-  // Auth
   static const String firstName = 'First Name',
       lastName = 'Last Name',
       email = 'Email',
@@ -60,7 +56,6 @@ class AppStrings extends Translations {
       resendCode = 'Resend Code',
       haventGotCode = 'Haven\'t Got Code?';
 
-  // Navigation & Home
   static const String home = 'Home',
       order = 'Order',
       message = 'Message',
@@ -75,7 +70,6 @@ class AppStrings extends Translations {
       addressDetail = 'Address Detail',
       notification = 'Notification';
 
-  // Task Creation
   static const String createTask = 'Create Task',
       category = 'Category',
       chooseCategory = 'Choose Category',
@@ -96,7 +90,6 @@ class AppStrings extends Translations {
       chatAndGetItDone = 'Chat And Get It Done',
       goToMyTask = 'Go To My Task';
 
-  // Categories
   static const String furnitureAssembly = 'Furniture Assembly',
       homeAssistance = 'Home Assistance',
       minorRepairs = 'Minor Repairs',
@@ -106,7 +99,6 @@ class AppStrings extends Translations {
       lockSmith = 'Lock Smith',
       gardenCleaning = 'Garden Cleaning';
 
-  // Orders & Reviews
   static const String allOrder = 'All Order',
       confirm = 'Confirm',
       completed = 'Completed',
@@ -148,11 +140,8 @@ class AppStrings extends Translations {
       reviewSubmittedSuccess = 'Review Submitted Success',
       backToHome = 'Back To Home';
 
-  // Chat & Messages
-  static const String messages = 'Messages',
-      typeMessage = 'Type Message';
+  static const String messages = 'Messages', typeMessage = 'Type Message';
 
-  // Billing & Payments
   static const String billingAndPayments = 'Billing And Payments',
       manageBillingMethod = 'Manage Billing Method',
       manageBillingDesc = 'Manage Billing Desc',
@@ -171,7 +160,6 @@ class AppStrings extends Translations {
       paymentIsReleased = 'Payment Is Released',
       pay = 'Pay';
 
-  // Account & Settings
   static const String account = 'Account',
       changePassword = 'Change Password',
       payment = 'Payment',
@@ -186,7 +174,6 @@ class AppStrings extends Translations {
       orderLabel = 'Order ',
       attachment = 'Attachment',
       yourMessage = 'Your Message',
-      // nameExample = 'Enter Subject',
       selectYourOrder = 'Select Your Order',
       addAttachment = 'Add Attachment',
       termsConfirmText1 = 'Terms Confirm Text 1',
@@ -216,7 +203,6 @@ class AppStrings extends Translations {
       ticketHistory = 'Ticket History',
       resolved = 'Resolved';
 
-  // Notifications & Time
   static const String notificationRequest = 'Notification Request',
       notificationMessage = 'Notification Message',
       notificationSystem = 'Notification System',
@@ -263,7 +249,6 @@ class AppStrings extends Translations {
       successBanner = 'Success Banner',
       privacyBanner = 'Privacy Banner';
 
-  // Verification
   static const String accountVerification = 'Account Verification',
       documentVerification = 'Document Verification',
       documentType = 'Document Type',
@@ -295,7 +280,8 @@ class AppStrings extends Translations {
       securePayBadge = 'Secure Pay Badge',
       successRate = 'Success Rate',
       communitySafetyOtp = 'Community Safety OTP',
-      signOutConfirm = 'Sign Out Confirm';
+      signOutConfirm = 'Sign Out Confirm',
+      pleaseWait = 'Please wait...';
 
   @override
   Map<String, Map<String, String>> get keys => {
@@ -307,30 +293,40 @@ class AppStrings extends Translations {
       '12 Jan, 2026': '12 Jan, 2026',
       '45246282554252': '45246282554252',
       '8340 3948 9303 2087': '8340 3948 9303 2087',
-      'A fresh OTP has been sent to the client.': 'A fresh OTP has been sent to the client.',
+      'A fresh OTP has been sent to the client.':
+          'A fresh OTP has been sent to the client.',
       'Account Holder Name': 'Account Holder Name',
       'Account Number': 'Account Number',
       'Account Status': 'Account Status',
-      'Account number and routing code are required': 'Account number and routing code are required',
+      'Account number and routing code are required':
+          'Account number and routing code are required',
       'Add': 'Add',
       'Add Bank Account': 'Add Bank Account',
       'Add New Address': 'Add New Address',
       'Add a Voucher': 'Add a Voucher',
-      'Add your location to discover helpers near you.': 'Add your location to discover helpers near you.',
-      'Add, update or remove your billing method.': 'Add, update or remove your billing method.',
+      'Add your location to discover helpers near you.':
+          'Add your location to discover helpers near you.',
+      'Add, update or remove your billing method.':
+          'Add, update or remove your billing method.',
       'Additional Notes': 'Additional Notes',
       'Additional Notes (Optional)': 'Additional Notes (Optional)',
-      'Address line and city are required.': 'Address line and city are required.',
+      'Address line and city are required.':
+          'Address line and city are required.',
       'All': 'All',
       'All Categories': 'All Categories',
       'Already reviewed': 'Already reviewed',
-      'An error occurred while creating profile.': 'An error occurred while creating profile.',
-      'An error occurred while updating profile.': 'An error occurred while updating profile.',
+      'An error occurred while creating profile.':
+          'An error occurred while creating profile.',
+      'An error occurred while updating profile.':
+          'An error occurred while updating profile.',
       'Apple Sign in clicked': 'Apple Sign in clicked',
-      'Applicable to each selected day of every week.': 'Applicable to each selected day of every week.',
+      'Applicable to each selected day of every week.':
+          'Applicable to each selected day of every week.',
       'Apply Filters': 'Apply Filters',
-      'Are you sure you want to decline this job request?': 'Are you sure you want to decline this job request?',
-      'Ask the customer for their 6-digit confirmation code to complete the job.': 'Ask the customer for their 6-digit confirmation code to complete the job.',
+      'Are you sure you want to decline this job request?':
+          'Are you sure you want to decline this job request?',
+      'Ask the customer for their 6-digit confirmation code to complete the job.':
+          'Ask the customer for their 6-digit confirmation code to complete the job.',
       'Assemble an IKEA Desk': 'Assemble an IKEA Desk',
       'Attach a PDF': 'Attach a PDF',
       'Attached Photos': 'Attached Photos',
@@ -352,7 +348,8 @@ class AppStrings extends Translations {
       'Budget / Price': 'Budget / Price',
       'Budget too low': 'Budget too low',
       'Cancel Booking': 'Cancel Booking',
-      'Cancellation Policy: Full refund if cancelled 24h before job start; 50% refund after 24h.': 'Cancellation Policy: Full refund if cancelled 24h before job start; 50% refund after 24h.',
+      'Cancellation Policy: Full refund if cancelled 24h before job start; 50% refund after 24h.':
+          'Cancellation Policy: Full refund if cancelled 24h before job start; 50% refund after 24h.',
       'Cancellation reference missing.': 'Cancellation reference missing.',
       'Cancellation requested': 'Cancellation requested',
       'Category ': 'Category ',
@@ -360,41 +357,52 @@ class AppStrings extends Translations {
       'Checking availability…': 'Checking availability…',
       'Choose from gallery': 'Choose from gallery',
       'Complete Rate': 'Complete Rate',
-      'Complete Work': 'Complete Work',
-      'Complete jobs to receive your first review.': 'Complete jobs to receive your first review.',
+      'Complete jobs to receive your first review.':
+          'Complete jobs to receive your first review.',
       'Confirm Hours': 'Confirm Hours',
       'Confirmation OTP': 'Confirmation OTP',
-      'Connection failed. Check your network.': 'Connection failed. Check your network.',
-      'Could not create task. Please try again.': 'Could not create task. Please try again.',
+      'Connection failed. Check your network.':
+          'Connection failed. Check your network.',
+      'Could not create task. Please try again.':
+          'Could not create task. Please try again.',
       'Could not download file.': 'Could not download file.',
-      'Could not fetch address for this location.': 'Could not fetch address for this location.',
+      'Could not fetch address for this location.':
+          'Could not fetch address for this location.',
       'Could not load activity data': 'Could not load activity data',
-      'Could not load available times. Try again.': 'Could not load available times. Try again.',
-      'Could not load helper information. Please try again.': 'Could not load helper information. Please try again.',
+      'Could not load available times. Try again.':
+          'Could not load available times. Try again.',
+      'Could not load helper information. Please try again.':
+          'Could not load helper information. Please try again.',
       'Could not load helper.': 'Could not load helper.',
       'Could not load message history.': 'Could not load message history.',
-      'Could not load recommended helpers': 'Could not load recommended helpers',
+      'Could not load recommended helpers':
+          'Could not load recommended helpers',
       'Could not load saved helpers.': 'Could not load saved helpers.',
       'Could not load service categories': 'Could not load service categories',
       'Could not load sub-categories': 'Could not load sub-categories',
       'Could not load your addresses': 'Could not load your addresses',
-      'Could not load your data. Please try again.': 'Could not load your data. Please try again.',
+      'Could not load your data. Please try again.':
+          'Could not load your data. Please try again.',
       'Could not pick file.': 'Could not pick file.',
       'Could not pick image': 'Could not pick image',
       'Could not pick image.': 'Could not pick image.',
       'Could not remove helper.': 'Could not remove helper.',
       'Could not save. Please try again.': 'Could not save. Please try again.',
       'Could not save/unsave helper.': 'Could not save/unsave helper.',
-      'Could not start chat. Please try again.': 'Could not start chat. Please try again.',
-      'Could not update. Please try again.': 'Could not update. Please try again.',
+      'Could not start chat. Please try again.':
+          'Could not start chat. Please try again.',
+      'Could not update. Please try again.':
+          'Could not update. Please try again.',
       'Counter': 'Counter',
       'Counter Offer': 'Counter Offer',
       'Counter offer sent to client.': 'Counter offer sent to client.',
       'Counter offer sent to provider.': 'Counter offer sent to provider.',
       'Counter offer sent.': 'Counter offer sent.',
-      'Counter sent — waiting for client response.': 'Counter sent — waiting for client response.',
+      'Counter sent — waiting for client response.':
+          'Counter sent — waiting for client response.',
       'Create Profile': 'Create Profile',
-      'Create your helper profile to start offering services.': 'Create your helper profile to start offering services.',
+      'Create your helper profile to start offering services.':
+          'Create your helper profile to start offering services.',
       'Customer Reviews': 'Customer Reviews',
       'Date': 'Date',
       'Decline Request': 'Decline Request',
@@ -411,57 +419,81 @@ class AppStrings extends Translations {
       'Enter Counteroffer': 'Enter Counteroffer',
       'Enter OTP': 'Enter OTP',
       'Enter a valid price.': 'Enter a valid price.',
-      'Enter details about the work performed...': 'Enter details about the work performed...',
-      'Enter details about your proposal...': 'Enter details about your proposal...',
+      'Enter details about the work performed...':
+          'Enter details about the work performed...',
+      'Enter details about your proposal...':
+          'Enter details about your proposal...',
       'Enter issue title': 'Enter issue title',
-      'Enter the actual hours needed for this task.': 'Enter the actual hours needed for this task.',
+      'Enter the actual hours needed for this task.':
+          'Enter the actual hours needed for this task.',
       'Enter voucher code': 'Enter voucher code',
-      'Enter your email to receive a reset code': 'Enter your email to receive a reset code',
+      'Enter your email to receive a reset code':
+          'Enter your email to receive a reset code',
       'Enter your reason here...': 'Enter your reason here...',
       'Error': 'Error',
       'Explain your counter offer...': 'Explain your counter offer...',
-      'Failed to accept. Please try again.': 'Failed to accept. Please try again.',
-      'Failed to add account. Please try again.': 'Failed to add account. Please try again.',
-      'Failed to add payment method. Please try again.': 'Failed to add payment method. Please try again.',
-      'Failed to add voucher. Please try again.': 'Failed to add voucher. Please try again.',
+      'Failed to accept. Please try again.':
+          'Failed to accept. Please try again.',
+      'Failed to add account. Please try again.':
+          'Failed to add account. Please try again.',
+      'Failed to add payment method. Please try again.':
+          'Failed to add payment method. Please try again.',
+      'Failed to add voucher. Please try again.':
+          'Failed to add voucher. Please try again.',
       'Failed to apply voucher.': 'Failed to apply voucher.',
-      'Failed to cancel. Please try again.': 'Failed to cancel. Please try again.',
+      'Failed to cancel. Please try again.':
+          'Failed to cancel. Please try again.',
       'Failed to close ticket.': 'Failed to close ticket.',
-      'Failed to complete. Please try again.': 'Failed to complete. Please try again.',
-      'Failed to decline. Please try again.': 'Failed to decline. Please try again.',
+      'Failed to complete. Please try again.':
+          'Failed to complete. Please try again.',
+      'Failed to decline. Please try again.':
+          'Failed to decline. Please try again.',
       'Failed to delete notification.': 'Failed to delete notification.',
       'Failed to get current location.': 'Failed to get current location.',
       'Failed to load categories': 'Failed to load categories',
-      'Failed to propose new time. Please try again.': 'Failed to propose new time. Please try again.',
-      'Failed to respond. Please try again.': 'Failed to respond. Please try again.',
+      'Failed to propose new time. Please try again.':
+          'Failed to propose new time. Please try again.',
+      'Failed to respond. Please try again.':
+          'Failed to respond. Please try again.',
       'Failed to send counter offer.': 'Failed to send counter offer.',
-      'Failed to send offer. Please try again.': 'Failed to send offer. Please try again.',
+      'Failed to send offer. Please try again.':
+          'Failed to send offer. Please try again.',
       'Failed to send reply.': 'Failed to send reply.',
-      'Failed to set default payment method.': 'Failed to set default payment method.',
-      'Failed to set hours. Please try again.': 'Failed to set hours. Please try again.',
-      'Failed to submit feedback. Please try again.': 'Failed to submit feedback. Please try again.',
+      'Failed to set default payment method.':
+          'Failed to set default payment method.',
+      'Failed to set hours. Please try again.':
+          'Failed to set hours. Please try again.',
+      'Failed to submit feedback. Please try again.':
+          'Failed to submit feedback. Please try again.',
       'Failed to submit ticket.': 'Failed to submit ticket.',
       'Failed to update payment method.': 'Failed to update payment method.',
-      'Failed to update payout method. Please try again.': 'Failed to update payout method. Please try again.',
+      'Failed to update payout method. Please try again.':
+          'Failed to update payout method. Please try again.',
       'Feedback submitted': 'Feedback submitted',
       'Fetching GPS location...': 'Fetching GPS location...',
-      'File missing or exceeds the 25 MB limit.': 'File missing or exceeds the 25 MB limit.',
+      'File missing or exceeds the 25 MB limit.':
+          'File missing or exceeds the 25 MB limit.',
       'File saved to Downloads': 'File saved to Downloads',
       'File too large': 'File too large',
-      'Fill in the details below to start offering your services.': 'Fill in the details below to start offering your services.',
+      'Fill in the details below to start offering your services.':
+          'Fill in the details below to start offering your services.',
       'Filter': 'Filter',
       'Find Helpers': 'Find Helpers',
       'Forgot Password': 'Forgot Password',
       'GPS': 'GPS',
       'Gallery': 'Gallery',
-      'Geocoding failed. Location saved as raw coordinate point.': 'Geocoding failed. Location saved as raw coordinate point.',
+      'Geocoding failed. Location saved as raw coordinate point.':
+          'Geocoding failed. Location saved as raw coordinate point.',
       'Go to Dashboard': 'Go to Dashboard',
-      'Google Sign-In requires the google_sign_in package': 'Google Sign-In requires the google_sign_in package',
-      'Home assistant > Standard task > ...': 'Home assistant > Standard task > ...',
+      'Google Sign-In requires the google_sign_in package':
+          'Google Sign-In requires the google_sign_in package',
+      'Home assistant > Standard task > ...':
+          'Home assistant > Standard task > ...',
       'Hour': 'Hour',
       'Hourly Rate': 'Hourly Rate',
       'How many hours?': 'How many hours?',
-      'I acknowledge that canceling this job will result in 1 strike.': 'I acknowledge that canceling this job will result in 1 strike.',
+      'I acknowledge that canceling this job will result in 1 strike.':
+          'I acknowledge that canceling this job will result in 1 strike.',
       'ID CARD': 'ID CARD',
       'Identity Verification Required': 'Identity Verification Required',
       'Info': 'Info',
@@ -480,17 +512,21 @@ class AppStrings extends Translations {
       'Location': 'Location',
       'Location detected successfully.': 'Location detected successfully.',
       'Location needed': 'Location needed',
-      'Location permission is permanently denied. Please enable it in Settings.': 'Location permission is permanently denied. Please enable it in Settings.',
-      'Location permission is required to auto-fill your address.': 'Location permission is required to auto-fill your address.',
+      'Location permission is permanently denied. Please enable it in Settings.':
+          'Location permission is permanently denied. Please enable it in Settings.',
+      'Location permission is required to auto-fill your address.':
+          'Location permission is required to auto-fill your address.',
       'Location permissions are denied': 'Location permissions are denied',
-      'Location permissions are permanently denied.': 'Location permissions are permanently denied.',
+      'Location permissions are permanently denied.':
+          'Location permissions are permanently denied.',
       'Location services are disabled.': 'Location services are disabled.',
       'Manage Availability': 'Manage Availability',
       'Message / Description': 'Message / Description',
       'Min. Booking': 'Min. Booking',
       'Minimum Rating': 'Minimum Rating',
       'Missing': 'Missing',
-      'Modify your profile details below.': 'Modify your profile details below.',
+      'Modify your profile details below.':
+          'Modify your profile details below.',
       'More Categories': 'More Categories',
       'My Activity': 'My Activity',
       'Active Jobs': 'Active Jobs',
@@ -579,10 +615,6 @@ class AppStrings extends Translations {
       'Budget Value': 'Budget: @amount',
       'Please review details.': 'Please review details.',
       'See more': 'See more',
-      'Cancel': 'Cancel',
-      'Save': 'Save',
-      'Accept': 'Accept',
-      'Decline': 'Decline',
       'Date Not Set': 'Date Not Set',
       'No description provided.': 'No description provided.',
       'Final Price': 'Final Price: @amount',
@@ -630,7 +662,6 @@ class AppStrings extends Translations {
       'STATUS: WORK COMPLETED': 'STATUS: WORK COMPLETED',
       'STATUS: WORK IN PROGRESS': 'STATUS: WORK IN PROGRESS',
       'Work Completed': 'Work Completed',
-      'Work In Progress': 'Work In Progress',
       'Reason for Time Change:': 'Reason for Time Change:',
       'Message:': 'Message:',
       'Category:': 'Category:',
@@ -641,7 +672,6 @@ class AppStrings extends Translations {
       'General': 'General',
       'Chat deactivated': 'Chat deactivated',
       'Type a message...': 'Type a message...',
-      'Attachment': 'Attachment',
       'Could not open attachment.': 'Could not open attachment.',
       'Cancel Request': 'Cancel Request',
       'Order cancelled': 'Order cancelled',
@@ -651,36 +681,11 @@ class AppStrings extends Translations {
           'Waiting for your response — see above, or check your Orders tab.',
       'Waiting for the client to respond.':
           'Waiting for the client to respond.',
-      'Confirm Location': 'Confirm Location',
       'Field is required': '@field is required',
       'Code Sent To Address': 'Code sent to @email',
-      'Email': 'Email',
-      'Password': 'Password',
       'Forgot password?': 'Forgot password?',
-      'Try Again': 'Try Again',
-      'Message': 'Message',
       'Change email address': 'Change email address',
-      'Ticket History': 'Ticket History',
-      'About': 'About',
-      'Skills': 'Skills',
-      'Available': 'Available',
-      "Your account isn't verified yet.\nTo send work requests and get hired, please\ncomplete your verification.":
-          "Your account isn't verified yet.\nTo send work requests and get hired, please\ncomplete your verification.",
-      "Your account isn't verified yet.\nTo send work requests and get hired,\nplease complete your verification.":
-          "Your account isn't verified yet.\nTo send work requests and get hired,\nplease complete your verification.",
-      'Details': 'Details',
-      'Offer Help': 'Offer Help',
-      'Remove': 'Remove',
       'Select date': 'Select date',
-      'Amount': 'Amount',
-      'Apply': 'Apply',
-      'Close': 'Close',
-      'Camera': 'Camera',
-      'Document': 'Document',
-      'Verified': 'Verified',
-      'Completed': 'Completed',
-      'My Location': 'My Location',
-      'Budget': 'Budget',
       'Post task': 'Post task',
       'Just now': 'Just now',
       'Tasks Count Parenthesized': '(@count tasks)',
@@ -691,7 +696,6 @@ class AppStrings extends Translations {
       'Unverified': 'Unverified',
       'N/A': 'N/A',
       'Service Provider In': 'Service provider in @category',
-      'Select Time': 'Select Time',
       'Subject Value': 'Subject: @subject',
       'Strike Count Warning':
           '@count strike(s) recorded — more may reduce your visibility.',
@@ -713,11 +717,9 @@ class AppStrings extends Translations {
       'Reviews Count': '@count reviews',
       'Rating Smart Score': '@rating • Smart Score: @score',
       'Voucher Summary': '@code: @discount TK OFF ON @minimum',
-      'By signing up, you agree to our ':
-          'By signing up, you agree to our ',
+      'By signing up, you agree to our ': 'By signing up, you agree to our ',
       'Terms of Service': 'Terms of Service',
       ' and ': ' and ',
-      'Privacy Policy': 'Privacy Policy',
       'Send Reset OTP': 'Send Reset OTP',
       'Payout Settings': 'Payout Settings',
       'Tax Documents': 'Tax Documents',
@@ -754,11 +756,12 @@ class AppStrings extends Translations {
       'October': 'October',
       'November': 'November',
       'December': 'December',
-      'NB: If you to clear Available any date do it manually by clicking selected time slot.': 'To clear availability for a date, tap the selected time slot.',
-      'To clear availability for a date, tap the selected time slot.': 'To clear availability for a date, tap the selected time slot.',
+      'NB: If you to clear Available any date do it manually by clicking selected time slot.':
+          'To clear availability for a date, tap the selected time slot.',
+      'To clear availability for a date, tap the selected time slot.':
+          'To clear availability for a date, tap the selected time slot.',
       'Name updated': 'Name updated',
       'Net Amount:': 'Net Amount:',
-      'New Password': 'New Password',
       'New address saved!': 'New address saved!',
       'New passwords do not match': 'New passwords do not match',
       'New time proposed successfully!': 'New time proposed successfully!',
@@ -770,7 +773,8 @@ class AppStrings extends Translations {
       'No categories available': 'No categories available',
       'No conversations yet.': 'No conversations yet.',
       'No customer reviews yet': 'No customer reviews yet',
-      'No helpers match your filter criteria.': 'No helpers match your filter criteria.',
+      'No helpers match your filter criteria.':
+          'No helpers match your filter criteria.',
       'No messages yet. Say hello!': 'No messages yet. Say hello!',
       'No notifications yet': 'No notifications yet',
       'No orders found.': 'No orders found.',
@@ -785,7 +789,8 @@ class AppStrings extends Translations {
       'No skills provided.': 'No skills provided.',
       'No slots': 'No slots',
       'No slots for this day.': 'No slots for this day.',
-      'No strikes — keep up the great work!': 'No strikes — keep up the great work!',
+      'No strikes — keep up the great work!':
+          'No strikes — keep up the great work!',
       'No sub-categories available': 'No sub-categories available',
       'No tickets found.': 'No tickets found.',
       'No upcoming jobs': 'No upcoming jobs',
@@ -797,16 +802,20 @@ class AppStrings extends Translations {
       'OTP resent successfully!': 'OTP resent successfully!',
       'Office Location': 'Office Location',
       'Office location is required.': 'Office location is required.',
-      'Only providers can propose a new time.': 'Only providers can propose a new time.',
+      'Only providers can propose a new time.':
+          'Only providers can propose a new time.',
       'Order Detail': 'Order Detail',
       'Order accepted successfully!': 'Order accepted successfully!',
       'Order accepted!': 'Order accepted!',
       'Order information missing.': 'Order information missing.',
       'Order reference missing.': 'Order reference missing.',
-      'Override just this date.To click Available fills your daily time range': 'This applies to this date only. Tap Available to fill in your usual daily hours.',
-      'This applies to this date only. Tap Available to fill in your usual daily hours.': 'This applies to this date only. Tap Available to fill in your usual daily hours.',
+      'Override just this date.To click Available fills your daily time range':
+          'This applies to this date only. Tap Available to fill in your usual daily hours.',
+      'This applies to this date only. Tap Available to fill in your usual daily hours.':
+          'This applies to this date only. Tap Available to fill in your usual daily hours.',
       'Password changed successfully': 'Password changed successfully',
-      'Password reset successfully. You can now login.': 'Password reset successfully. You can now login.',
+      'Password reset successfully. You can now login.':
+          'Password reset successfully. You can now login.',
       'Pay and Confirm': 'Pay and Confirm',
       'Payment Completed': 'Payment Completed',
       'Payment Confirmed': 'Payment Confirmed',
@@ -820,24 +829,32 @@ class AppStrings extends Translations {
       'Pick on Map': 'Pick on Map',
       'Pick your location on the map': 'Pick your location on the map',
       'Platform Fee (20%):': 'Platform Fee (20%):',
-      'Please bring your own basic tools. A power drill will make the job much faster and easier.': 'Please bring your own basic tools. A power drill will make the job much faster and easier.',
-      'Please check the acknowledgment box': 'Please check the acknowledgment box',
+      'Please bring your own basic tools. A power drill will make the job much faster and easier.':
+          'Please bring your own basic tools. A power drill will make the job much faster and easier.',
+      'Please check the acknowledgment box':
+          'Please check the acknowledgment box',
       'Please choose a date first.': 'Please choose a date first.',
-      'Please choose a start time and hours the helper is available for.': 'Please choose a start time and hours the helper is available for.',
+      'Please choose a start time and hours the helper is available for.':
+          'Please choose a start time and hours the helper is available for.',
       'Please describe your issue.': 'Please describe your issue.',
-      'Please drop a pin on the map first.': 'Please drop a pin on the map first.',
+      'Please drop a pin on the map first.':
+          'Please drop a pin on the map first.',
       'Please enter a message.': 'Please enter a message.',
       'Please enter a new password': 'Please enter a new password',
       'Please enter a subject.': 'Please enter a subject.',
       'Please enter a task title': 'Please enter a task title',
       'Please enter a valid 6-digit OTP': 'Please enter a valid 6-digit OTP',
       'Please enter a valid budget.': 'Please enter a valid budget.',
-      'Please enter a valid number of hours.': 'Please enter a valid number of hours.',
-      'Please enter a valid price and a message.': 'Please enter a valid price and a message.',
+      'Please enter a valid number of hours.':
+          'Please enter a valid number of hours.',
+      'Please enter a valid price and a message.':
+          'Please enter a valid price and a message.',
       'Please enter a voucher code': 'Please enter a voucher code',
       'Please enter an address': 'Please enter an address',
-      'Please enter the OTP provided by the client to mark this job as completed.': 'Please enter the OTP provided by the client to mark this job as completed.',
-      'Please enter the complete 6-digit OTP': 'Please enter the complete 6-digit OTP',
+      'Please enter the OTP provided by the client to mark this job as completed.':
+          'Please enter the OTP provided by the client to mark this job as completed.',
+      'Please enter the complete 6-digit OTP':
+          'Please enter the complete 6-digit OTP',
       'Please fill all fields': 'Please fill all fields',
       'Please fill out the task title': 'Please fill out the task title',
       'Please pick at least one day.': 'Please pick at least one day.',
@@ -849,8 +866,10 @@ class AppStrings extends Translations {
       'Please select a date.': 'Please select a date.',
       'Please select a job.': 'Please select a job.',
       'Please select a location on map': 'Please select a location on map',
-      'Please select an available time slot': 'Please select an available time slot',
-      'Please select an available time slot.': 'Please select an available time slot.',
+      'Please select an available time slot':
+          'Please select an available time slot',
+      'Please select an available time slot.':
+          'Please select an available time slot.',
       'Please select an issue category': 'Please select an issue category',
       'Please select an order.': 'Please select an order.',
       'Please select the hours worked.': 'Please select the hours worked.',
@@ -858,16 +877,21 @@ class AppStrings extends Translations {
       'Posted by You': 'Posted by You',
       'Pricing Details': 'Pricing Details',
       'Profile Exists': 'Profile Exists',
-      'Profile created but office location could not be saved.': 'Profile created but office location could not be saved.',
+      'Profile created but office location could not be saved.':
+          'Profile created but office location could not be saved.',
       'Profile navigation': 'Profile navigation',
       'Profile photo updated': 'Profile photo updated',
       'Profile updated': 'Profile updated',
-      'Profile updated but office location could not be saved.': 'Profile updated but office location could not be saved.',
+      'Profile updated but office location could not be saved.':
+          'Profile updated but office location could not be saved.',
       'Profile updated successfully': 'Profile updated successfully',
       'Propose New Time': 'Propose New Time',
-      'Propose a different budget to the client.': 'Propose a different budget to the client.',
-      'Propose a new budget to the other party.': 'Propose a new budget to the other party.',
-      'Propose a new budget to the provider.': 'Propose a new budget to the provider.',
+      'Propose a different budget to the client.':
+          'Propose a different budget to the client.',
+      'Propose a new budget to the other party.':
+          'Propose a new budget to the other party.',
+      'Propose a new budget to the provider.':
+          'Propose a new budget to the provider.',
       'Propose new time': 'Propose new time',
       'Provider proposed a new time': 'Provider proposed a new time',
       'Rate & Review': 'Rate & Review',
@@ -876,7 +900,8 @@ class AppStrings extends Translations {
       'Reason for cancellation': 'Reason for cancellation',
       'Recent Activity': 'Recent Activity',
       'Recommended Helpers': 'Recommended Helpers',
-      'Reconnecting… please try again in a moment.': 'Reconnecting… please try again in a moment.',
+      'Reconnecting… please try again in a moment.':
+          'Reconnecting… please try again in a moment.',
       'Referral Code (Optional)': 'Referral Code (Optional)',
       'Remove Helper': 'Remove Helper',
       'Removed': 'Removed',
@@ -886,14 +911,15 @@ class AppStrings extends Translations {
       'Report an Issue': 'Report an Issue',
       'Request Cancellation': 'Request Cancellation',
       'Request Form': 'Request Form',
-      'Request ID missing. Please refresh the chat.': 'Request ID missing. Please refresh the chat.',
+      'Request ID missing. Please refresh the chat.':
+          'Request ID missing. Please refresh the chat.',
       'Request This Helper': 'Request This Helper',
-      'Request reference missing. Pull to refresh and try again.': 'Request reference missing. Pull to refresh and try again.',
+      'Request reference missing. Pull to refresh and try again.':
+          'Request reference missing. Pull to refresh and try again.',
       'Requesting help from': 'Requesting help from',
-      'Required to appear in search results': 'Required to appear in search results',
+      'Required to appear in search results':
+          'Required to appear in search results',
       'Reset Password': 'Reset Password',
-      'Review Submitted': 'Review Submitted',
-      'Reviews': 'Reviews',
       'Routing / Sort Code': 'Routing / Sort Code',
       'STATUS: WAITING FOR RESPONSE': 'STATUS: WAITING FOR RESPONSE',
       'Save Changes': 'Save Changes',
@@ -904,7 +930,6 @@ class AppStrings extends Translations {
       'Search in this category...': 'Search in this category...',
       'Search location manually...': 'Search location manually...',
       'Select Category': 'Select Category',
-      'Select Date': 'Select Date',
       'Select Days': 'Select Days',
       'Select Hours': 'Select Hours',
       'Select Issue Category': 'Select Issue Category',
@@ -914,8 +939,10 @@ class AppStrings extends Translations {
       'Select categories': 'Select categories',
       'Select days': 'Select days',
       'Select hours': 'Select hours',
-      'Select one of your available slots. Client will Accept or Decline.': 'Select one of your available slots. Client will Accept or Decline.',
-      'Select one of your available slots. The client will Accept or Decline.': 'Select one of your available slots. The client will Accept or Decline.',
+      'Select one of your available slots. Client will Accept or Decline.':
+          'Select one of your available slots. Client will Accept or Decline.',
+      'Select one of your available slots. The client will Accept or Decline.':
+          'Select one of your available slots. The client will Accept or Decline.',
       'Send Counter': 'Send Counter',
       'Send Message': 'Send Message',
       'Send OTP to Client': 'Send OTP to Client',
@@ -929,36 +956,42 @@ class AppStrings extends Translations {
       'Set Logged Hours': 'Set Logged Hours',
       'Set Up Your Profile': 'Set Up Your Profile',
       'Set as default': 'Set as default',
-      'Set the work hours required for this task': 'Set the work hours required for this task',
-      'Share this code with your friends:': 'Share this code with your friends:',
-      'Share this confirmation code with the provider.': 'Share this confirmation code with the provider.',
+      'Set the work hours required for this task':
+          'Set the work hours required for this task',
+      'Share this code with your friends:':
+          'Share this code with your friends:',
+      'Share this confirmation code with the provider.':
+          'Share this confirmation code with the provider.',
       'Share your experience…': 'Share your experience…',
       'Show Available Only': 'Show Available Only',
-      'Sign Out': 'Sign Out',
       'Slot unavailable': 'Slot unavailable',
       'Something went wrong': 'Something went wrong',
-      'Something went wrong while loading availability': 'Something went wrong while loading availability',
+      'Something went wrong while loading availability':
+          'Something went wrong while loading availability',
       'Something went wrong.': 'Something went wrong.',
-      'Something went wrong. Please try again.': 'Something went wrong. Please try again.',
+      'Something went wrong. Please try again.':
+          'Something went wrong. Please try again.',
       'Sort by Budget': 'Sort by Budget',
       'Sort by Date': 'Sort by Date',
       'Special Date': 'Special Date',
       'Start Time': 'Start Time',
-      'Start Work': 'Start Work',
       'Strike Count': 'Strike Count',
       'Submit': 'Submit',
       'Submit Report': 'Submit Report',
       'Support Responses': 'Support Responses',
       'Support Ticket Feedback': 'Support Ticket Feedback',
       'Take a photo': 'Take a photo',
-      'Tap a date to open it. Use it to override a single day.': 'Tap a date to open it. Use it to override a single day.',
+      'Tap a date to open it. Use it to override a single day.':
+          'Tap a date to open it. Use it to override a single day.',
       'Tap to add a logo / photo': 'Tap to add a logo / photo',
       'Task updated successfully': 'Task updated successfully',
       'Tax Information': 'Tax Information',
       'Thanks for your feedback!': 'Thanks for your feedback!',
       'Thanks!': 'Thanks!',
-      'This helper has no available time on the selected date.': 'This helper has no available time on the selected date.',
-      'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.': 'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.',
+      'This helper has no available time on the selected date.':
+          'This helper has no available time on the selected date.',
+      'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.':
+          'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.',
       'Ticket closed.': 'Ticket closed.',
       'Ticket not found.': 'Ticket not found.',
       'Time': 'Time',
@@ -970,14 +1003,16 @@ class AppStrings extends Translations {
       'Use now': 'Use now',
       'VISA': 'VISA',
       'Validation': 'Validation',
-      'Verification request failed. Please check your connection and try again.': 'Verification request failed. Please check your connection and try again.',
+      'Verification request failed. Please check your connection and try again.':
+          'Verification request failed. Please check your connection and try again.',
       'Verified booking': 'Verified booking',
       'Verify': 'Verify',
       'Verify Job Completion': 'Verify Job Completion',
       'Verify now': 'Verify now',
       'Verify your account': 'Verify your account',
       'Verify your account to continue': 'Verify your account to continue',
-      'Verify your account to start receiving jobs.': 'Verify your account to start receiving jobs.',
+      'Verify your account to start receiving jobs.':
+          'Verify your account to start receiving jobs.',
       'Version 1.0.0': 'Version 1.0.0',
       'View': 'View',
       'Visa ending in 9380': 'Visa ending in 9380',
@@ -994,27 +1029,34 @@ class AppStrings extends Translations {
       'Waiting for provider approval.': 'Waiting for provider approval.',
       'Waiting for the client to pay.': 'Waiting for the client to pay.',
       'Warning': 'Warning',
-      'Why do you need to change the time?': 'Why do you need to change the time?',
+      'Why do you need to change the time?':
+          'Why do you need to change the time?',
       'Work marked complete.': 'Work marked complete.',
       'Work started': 'Work started',
       'Worker not selected': 'Worker not selected',
       'Write message': 'Write message',
-      'You already have a helper profile. Redirecting to dashboard.': 'You already have a helper profile. Redirecting to dashboard.',
-      'You have already submitted feedback for this order.': 'You have already submitted feedback for this order.',
+      'You already have a helper profile. Redirecting to dashboard.':
+          'You already have a helper profile. Redirecting to dashboard.',
+      'You have already submitted feedback for this order.':
+          'You have already submitted feedback for this order.',
       'You have declined the offer.': 'You have declined the offer.',
-      'You haven\'t submitted any reviews yet.': 'You haven\'t submitted any reviews yet.',
       'Your Budget': 'Your Budget',
       'Your Location': 'Your Location',
       'Your account has been verified.': 'Your account has been verified.',
-      'Your account isn\'t verified yet.\nTo send work requests and get hired,\nplease complete your verification.': 'Your account isn\'t verified yet.\nTo send work requests and get hired,\nplease complete your verification.',
-      'Your account isn\'t verified yet.\nTo send work requests and get hired, please\ncomplete your verification.': 'Your account isn\'t verified yet.\nTo send work requests and get hired, please\ncomplete your verification.',
+      'Your account isn\'t verified yet.\nTo send work requests and get hired,\nplease complete your verification.':
+          'Your account isn\'t verified yet.\nTo send work requests and get hired,\nplease complete your verification.',
+      'Your account isn\'t verified yet.\nTo send work requests and get hired, please\ncomplete your verification.':
+          'Your account isn\'t verified yet.\nTo send work requests and get hired, please\ncomplete your verification.',
       'Your feedback has been submitted.': 'Your feedback has been submitted.',
-      'Your order has been paid and confirmed!': 'Your order has been paid and confirmed!',
+      'Your order has been paid and confirmed!':
+          'Your order has been paid and confirmed!',
       'Your proposal has been submitted.': 'Your proposal has been submitted.',
-      'Your review is saved but hidden.\nUnder the Double-Blind policy, it will only become public once the other party reviews you, or 14 days pass.': 'Your review is saved but hidden.\nUnder the Double-Blind policy, it will only become public once the other party reviews you, or 14 days pass.',
+      'Your review is saved but hidden.\nUnder the Double-Blind policy, it will only become public once the other party reviews you, or 14 days pass.':
+          'Your review is saved but hidden.\nUnder the Double-Blind policy, it will only become public once the other party reviews you, or 14 days pass.',
       'mm/dd/yy': 'mm/dd/yy',
       'or, ': 'or, ',
-      '© 2026 Worker Hiring App. All rights reserved.': '© 2026 Worker Hiring App. All rights reserved.',
+      '© 2026 Worker Hiring App. All rights reserved.':
+          '© 2026 Worker Hiring App. All rights reserved.',
       AppStrings.appName: 'Help',
       AppStrings.selectLanguage: 'Select Language',
       AppStrings.viewRequest: 'View Request',
@@ -1037,16 +1079,21 @@ class AppStrings extends Translations {
       AppStrings.findTrustedHelp: 'Find Trusted Help Nearby',
       AppStrings.chatTrackGet: 'Chat, Track & Get Things Done',
       AppStrings.postTasks: 'Post Tasks in Minutes',
-      AppStrings.onBoardingSubTitle1: 'Post a task and connect with reliable people.',
-      AppStrings.onBoardingSubTitle2: 'Manage your tasks and track progress easily.',
-      AppStrings.onBoardingSubTitle3: 'Secure communication and payments guaranteed.',
+      AppStrings.onBoardingSubTitle1:
+          'Post a task and connect with reliable people.',
+      AppStrings.onBoardingSubTitle2:
+          'Manage your tasks and track progress easily.',
+      AppStrings.onBoardingSubTitle3:
+          'Secure communication and payments guaranteed.',
       AppStrings.createAccount: 'Create account',
       AppStrings.signIn: 'Sign in',
       AppStrings.tellUsAboutYourself: 'Tell us about yourself',
       AppStrings.iNeedHelp: 'I need help',
-      AppStrings.iNeedHelpDesc: 'Getting things done with help from professionals',
+      AppStrings.iNeedHelpDesc:
+          'Getting things done with help from professionals',
       AppStrings.iWantToWork: 'I want to work',
-      AppStrings.iWantToWorkDesc: 'Helping the community while earning securely',
+      AppStrings.iWantToWorkDesc:
+          'Helping the community while earning securely',
       AppStrings.firstName: 'First Name',
       AppStrings.lastName: 'Last Name',
       AppStrings.email: 'Email',
@@ -1136,7 +1183,8 @@ class AppStrings extends Translations {
       AppStrings.nicolas: 'Nicolas',
       AppStrings.alexSmith: 'Alex Smith',
       AppStrings.thankYouFeedback: 'Thank you for your feedback!',
-      AppStrings.reviewSubmittedSuccess: 'Your review has been submitted successfully.',
+      AppStrings.reviewSubmittedSuccess:
+          'Your review has been submitted successfully.',
       AppStrings.backToHome: 'Back to home',
       AppStrings.messages: 'Messages',
       AppStrings.typeMessage: 'Type a message',
@@ -1155,7 +1203,8 @@ class AppStrings extends Translations {
       AppStrings.amount: 'Amount',
       AppStrings.paymentMethod: 'Payment method',
       AppStrings.enterAmount: 'Enter Amount',
-      AppStrings.paymentIsReleased: 'Payment is realeased only after completion.',
+      AppStrings.paymentIsReleased:
+          'Payment is realeased only after completion.',
       AppStrings.pay: 'Pay',
       AppStrings.account: 'Account',
       AppStrings.changePassword: 'Change password',
@@ -1171,10 +1220,10 @@ class AppStrings extends Translations {
       AppStrings.orderLabel: 'Order',
       AppStrings.attachment: 'Attachment',
       AppStrings.yourMessage: 'Your message',
-      // AppStrings.nameExample: 'Subject',
       AppStrings.selectYourOrder: 'select your order',
       AppStrings.addAttachment: 'add attachment',
-      AppStrings.termsConfirmText1: 'By submitting this form, you confirm that you have read and agree to Worker\'s ',
+      AppStrings.termsConfirmText1:
+          'By submitting this form, you confirm that you have read and agree to Worker\'s ',
       AppStrings.termsConfirmText2: ' And ',
       AppStrings.privacyStatement: 'Privacy Statement',
       AppStrings.photo: 'Photo',
@@ -1191,7 +1240,8 @@ class AppStrings extends Translations {
       AppStrings.sanFranciscoCA: 'San Francisco CA',
       AppStrings.taskCompletedCount: 'task completed',
       AppStrings.notificationRequest: '@user accepted your @task request.',
-      AppStrings.notificationMessage: 'New message from @user regarding your task.',
+      AppStrings.notificationMessage:
+          'New message from @user regarding your task.',
       AppStrings.notificationSystem: 'System notification: @text',
       AppStrings.reposts: 'Reposts',
       AppStrings.overview: 'Overview',
@@ -1209,7 +1259,8 @@ class AppStrings extends Translations {
       AppStrings.notificationRate: 'Rate your experience with @name',
       AppStrings.timeHoursAgo: 'h',
       AppStrings.timeMinutesAgo: 'm',
-      AppStrings.strikeLateCancellation: 'You received a strike due to late cancellation.',
+      AppStrings.strikeLateCancellation:
+          'You received a strike due to late cancellation.',
       AppStrings.visibilityAffected: 'Your visibility may be affected.',
       AppStrings.justNow: 'now',
       AppStrings.phoneHint: '+1 887 394 0392',
@@ -1228,7 +1279,8 @@ class AppStrings extends Translations {
       AppStrings.startWork: 'Start work',
       AppStrings.finishWork: 'Finish work',
       AppStrings.completeTheTask: 'Complete the task',
-      AppStrings.otpInstruction: 'Ask the buyer for the 6-digit OTP to confirm job completion.',
+      AppStrings.otpInstruction:
+          'Ask the buyer for the 6-digit OTP to confirm job completion.',
       AppStrings.completeWork: 'Complete work',
       AppStrings.accountVerification: 'Account verification',
       AppStrings.documentVerification: 'Document verification',
@@ -1238,7 +1290,8 @@ class AppStrings extends Translations {
       AppStrings.fullName: 'Full name',
       AppStrings.dateOfBirth: 'Date of birth',
       AppStrings.idNumber: 'ID number',
-      AppStrings.takePicturesOfId: 'Take pictures of your goverment issued ID card',
+      AppStrings.takePicturesOfId:
+          'Take pictures of your goverment issued ID card',
       AppStrings.provideIdInfo: 'Please provide your ID Card information',
       AppStrings.verified: 'Verified',
       AppStrings.notVerified: 'Not Verified',
@@ -1254,29 +1307,39 @@ class AppStrings extends Translations {
       AppStrings.document: 'Document',
       AppStrings.submitTicket: 'Submit Ticket',
       AppStrings.attention: 'Attention',
-      AppStrings.acceptTermsWarning: 'Please accept the Terms and Privacy Statement',
+      AppStrings.acceptTermsWarning:
+          'Please accept the Terms and Privacy Statement',
       AppStrings.success: 'Success',
       AppStrings.ticketSubmitted: 'Your ticket has been submitted successfully',
       AppStrings.ticketHistory: 'Ticket History',
       AppStrings.resolved: 'Resolved',
       AppStrings.paymentBanner: 'Payment is released only after completion.',
-      AppStrings.chatBanner: 'For your security, please do not communicate or share payment details outside the app.',
-      AppStrings.orderBanner: "Don't share the completion OTP with your worker if the work is not yet done.",
-      AppStrings.successBanner: 'Please wait a moment while we find requests from nearby workers.',
-      AppStrings.privacyBanner: 'Your privacy is our priority. We never share your personal documents with third parties.',
+      AppStrings.chatBanner:
+          'For your security, please do not communicate or share payment details outside the app.',
+      AppStrings.orderBanner:
+          "Don't share the completion OTP with your worker if the work is not yet done.",
+      AppStrings.successBanner:
+          'Please wait a moment while we find requests from nearby workers.',
+      AppStrings.privacyBanner:
+          'Your privacy is our priority. We never share your personal documents with third parties.',
       AppStrings.beFirstToHelp: 'Be the first to help someone today!',
-      AppStrings.noRequestsRightNow: 'There are no requests here right now.\nCheck back soon!',
+      AppStrings.noRequestsRightNow:
+          'There are no requests here right now.\nCheck back soon!',
       AppStrings.securePayment: '100% Secure Payment',
-      AppStrings.paymentReleasedCompletion: '• Payment is released ONLY after you confirm the completion.',
-      AppStrings.beSpecificDetails: "• Be specific in your details (e.g., 'Need someone with a power drill').",
+      AppStrings.paymentReleasedCompletion:
+          '• Payment is released ONLY after you confirm the completion.',
+      AppStrings.beSpecificDetails:
+          "• Be specific in your details (e.g., 'Need someone with a power drill').",
       AppStrings.tenKVerified: '10k+',
       AppStrings.oneHundredPercent: '100%',
       AppStrings.ninetyNinePercent: '99%',
       AppStrings.helpers: 'Helpers',
       AppStrings.securePayBadge: 'Secure Pay',
       AppStrings.successRate: 'Success Rate',
-      AppStrings.communitySafetyOtp: 'To keep our community safe, we use OTP verification for logging in, signing up, and confirming completed jobs.',
+      AppStrings.communitySafetyOtp:
+          'To keep our community safe, we use OTP verification for logging in, signing up, and confirming completed jobs.',
       AppStrings.signOutConfirm: 'Are you sure you want to sign out?',
+      AppStrings.pleaseWait: 'Please wait...',
       'Settings': 'Settings',
       'Saved Helper': 'Saved Helper',
       'Saved Helpers': 'Saved Helpers',
@@ -1348,7 +1411,8 @@ class AppStrings extends Translations {
       'Applicable to each selected day of every week.': '适用于每周所选的每一天。',
       'Apply Filters': '应用筛选',
       'Are you sure you want to decline this job request?': '确定要拒绝此工作请求吗？',
-      'Ask the customer for their 6-digit confirmation code to complete the job.': '向客户索取 6 位确认码以完成工作。',
+      'Ask the customer for their 6-digit confirmation code to complete the job.':
+          '向客户索取 6 位确认码以完成工作。',
       'Assemble an IKEA Desk': '组装宜家书桌',
       'Attach a PDF': '附加 PDF',
       'Attached Photos': '附加照片',
@@ -1370,7 +1434,8 @@ class AppStrings extends Translations {
       'Budget / Price': '预算 / 价格',
       'Budget too low': '预算过低',
       'Cancel Booking': '取消预约',
-      'Cancellation Policy: Full refund if cancelled 24h before job start; 50% refund after 24h.': '取消政策：工作开始前 24 小时取消可全额退款；不足 24 小时取消可退 50%。',
+      'Cancellation Policy: Full refund if cancelled 24h before job start; 50% refund after 24h.':
+          '取消政策：工作开始前 24 小时取消可全额退款；不足 24 小时取消可退 50%。',
       'Cancellation reference missing.': '缺少取消请求编号。',
       'Cancellation requested': '已提交取消申请',
       'Category ': '类别 ',
@@ -1378,7 +1443,6 @@ class AppStrings extends Translations {
       'Checking availability…': '正在检查可用时间…',
       'Choose from gallery': '从相册选择',
       'Complete Rate': '完成率',
-      'Complete Work': '完成工作',
       'Complete jobs to receive your first review.': '完成工作后即可获得第一条评价。',
       'Confirm Hours': '确认工时',
       'Confirmation OTP': '确认验证码',
@@ -1412,7 +1476,8 @@ class AppStrings extends Translations {
       'Counter offer sent.': '还价已发送。',
       'Counter sent — waiting for client response.': '还价已发送，等待客户回复。',
       'Create Profile': '创建个人资料',
-      'Create your helper profile to start offering services.': '创建帮手资料后即可开始提供服务。',
+      'Create your helper profile to start offering services.':
+          '创建帮手资料后即可开始提供服务。',
       'Customer Reviews': '客户评价',
       'Date': '日期',
       'Decline Request': '拒绝请求',
@@ -1466,20 +1531,24 @@ class AppStrings extends Translations {
       'File missing or exceeds the 25 MB limit.': '文件缺失或超过 25 MB 限制。',
       'File saved to Downloads': '文件已保存到下载目录',
       'File too large': '文件过大',
-      'Fill in the details below to start offering your services.': '填写以下信息以开始提供服务。',
+      'Fill in the details below to start offering your services.':
+          '填写以下信息以开始提供服务。',
       'Filter': '筛选',
       'Find Helpers': '寻找帮手',
       'Forgot Password': '忘记密码',
       'GPS': 'GPS',
       'Gallery': '相册',
-      'Geocoding failed. Location saved as raw coordinate point.': '地址解析失败，位置已按坐标保存。',
+      'Geocoding failed. Location saved as raw coordinate point.':
+          '地址解析失败，位置已按坐标保存。',
       'Go to Dashboard': '前往控制面板',
-      'Google Sign-In requires the google_sign_in package': 'Google 登录需要 google_sign_in 软件包',
+      'Google Sign-In requires the google_sign_in package':
+          'Google 登录需要 google_sign_in 软件包',
       'Home assistant > Standard task > ...': '家居协助 > 标准任务 > …',
       'Hour': '小时',
       'Hourly Rate': '每小时费率',
       'How many hours?': '需要多少小时？',
-      'I acknowledge that canceling this job will result in 1 strike.': '我知悉取消此工作将产生一次违规记录。',
+      'I acknowledge that canceling this job will result in 1 strike.':
+          '我知悉取消此工作将产生一次违规记录。',
       'ID CARD': 'ID CARD',
       'Identity Verification Required': '需要身份验证',
       'Info': '提示',
@@ -1498,8 +1567,10 @@ class AppStrings extends Translations {
       'Location': '位置',
       'Location detected successfully.': '位置检测成功。',
       'Location needed': '需要位置权限',
-      'Location permission is permanently denied. Please enable it in Settings.': '位置权限已被永久拒绝，请在设置中启用。',
-      'Location permission is required to auto-fill your address.': '自动填写地址需要位置权限。',
+      'Location permission is permanently denied. Please enable it in Settings.':
+          '位置权限已被永久拒绝，请在设置中启用。',
+      'Location permission is required to auto-fill your address.':
+          '自动填写地址需要位置权限。',
       'Location permissions are denied': '位置权限已被拒绝',
       'Location permissions are permanently denied.': '位置权限已被永久拒绝。',
       'Location services are disabled.': '位置服务已关闭。',
@@ -1528,8 +1599,7 @@ class AppStrings extends Translations {
       'Your provider profile is ready. Complete verification to start receiving work.':
           '您的服务者资料已创建。完成验证后即可开始接收工作。',
       'Could not check provider profile': '无法检查服务者资料',
-      'Please check your connection and try again.':
-          '请检查网络连接后重试。',
+      'Please check your connection and try again.': '请检查网络连接后重试。',
       'Task title': '任务标题',
       'e.g. Assemble an IKEA Desk': '例如：组装一张宜家书桌',
       'Description': '描述',
@@ -1594,10 +1664,6 @@ class AppStrings extends Translations {
       'Budget Value': '预算：@amount',
       'Please review details.': '请查看详情。',
       'See more': '查看更多',
-      'Cancel': '取消',
-      'Save': '保存',
-      'Accept': '接受',
-      'Decline': '拒绝',
       'Date Not Set': '日期未设置',
       'No description provided.': '未提供描述。',
       'Final Price': '最终价格：@amount',
@@ -1643,7 +1709,6 @@ class AppStrings extends Translations {
       'STATUS: WORK COMPLETED': '状态：工作已完成',
       'STATUS: WORK IN PROGRESS': '状态：工作进行中',
       'Work Completed': '工作已完成',
-      'Work In Progress': '工作进行中',
       'Reason for Time Change:': '时间变更原因：',
       'Message:': '消息：',
       'Category:': '类别：',
@@ -1654,7 +1719,6 @@ class AppStrings extends Translations {
       'General': '常规',
       'Chat deactivated': '聊天已停用',
       'Type a message...': '输入消息…',
-      'Attachment': '附件',
       'Could not open attachment.': '无法打开附件。',
       'Cancel Request': '取消请求',
       'Order cancelled': '订单已取消',
@@ -1663,36 +1727,11 @@ class AppStrings extends Translations {
       'Waiting for your response — see above, or check your Orders tab.':
           '等待您的回复——请查看上方内容或订单页面。',
       'Waiting for the client to respond.': '等待客户回复。',
-      'Confirm Location': '确认位置',
       'Field is required': '@field为必填项',
       'Code Sent To Address': '验证码已发送至 @email',
-      'Email': '电子邮箱',
-      'Password': '密码',
       'Forgot password?': '忘记密码？',
-      'Try Again': '重试',
-      'Message': '消息',
       'Change email address': '更改电子邮箱地址',
-      'Ticket History': '服务单历史',
-      'About': '简介',
-      'Skills': '技能',
-      'Available': '可用',
-      "Your account isn't verified yet.\nTo send work requests and get hired, please\ncomplete your verification.":
-          '您的账户尚未验证。\n要发送工作请求并接受雇佣，\n请完成验证。',
-      "Your account isn't verified yet.\nTo send work requests and get hired,\nplease complete your verification.":
-          '您的账户尚未验证。\n要发送工作请求并接受雇佣，\n请完成验证。',
-      'Details': '详情',
-      'Offer Help': '提供帮助',
-      'Remove': '移除',
       'Select date': '选择日期',
-      'Amount': '金额',
-      'Apply': '应用',
-      'Close': '关闭',
-      'Camera': '相机',
-      'Document': '文档',
-      'Verified': '已验证',
-      'Completed': '已完成',
-      'My Location': '我的位置',
-      'Budget': '预算',
       'Post task': '发布任务',
       'Just now': '刚刚',
       'Tasks Count Parenthesized': '（@count 个任务）',
@@ -1703,7 +1742,6 @@ class AppStrings extends Translations {
       'Unverified': '未验证',
       'N/A': '暂无',
       'Service Provider In': '@category 服务提供者',
-      'Select Time': '选择时间',
       'Subject Value': '主题：@subject',
       'Strike Count Warning': '已记录 @count 次违规——更多违规可能会降低您的曝光度。',
       'Slots For Date': '@date 的可用时段',
@@ -1727,7 +1765,6 @@ class AppStrings extends Translations {
       'By signing up, you agree to our ': '注册即表示您同意我们的',
       'Terms of Service': '服务条款',
       ' and ': '和',
-      'Privacy Policy': '隐私政策',
       'Send Reset OTP': '发送重置验证码',
       'Payout Settings': '收款设置',
       'Tax Documents': '税务文件',
@@ -1764,11 +1801,12 @@ class AppStrings extends Translations {
       'October': '十月',
       'November': '十一月',
       'December': '十二月',
-      'NB: If you to clear Available any date do it manually by clicking selected time slot.': '注意：如需取消某天的可用时间，请点击已选中的时间段。',
-      'To clear availability for a date, tap the selected time slot.': '注意：如需取消某天的可用时间，请点击已选中的时间段。',
+      'NB: If you to clear Available any date do it manually by clicking selected time slot.':
+          '注意：如需取消某天的可用时间，请点击已选中的时间段。',
+      'To clear availability for a date, tap the selected time slot.':
+          '注意：如需取消某天的可用时间，请点击已选中的时间段。',
       'Name updated': '姓名已更新',
       'Net Amount:': '净金额：',
-      'New Password': '新密码',
       'New address saved!': '新地址已保存！',
       'New passwords do not match': '两次输入的新密码不一致',
       'New time proposed successfully!': '新时间建议已发送！',
@@ -1813,8 +1851,10 @@ class AppStrings extends Translations {
       'Order accepted!': '订单已接受！',
       'Order information missing.': '缺少订单信息。',
       'Order reference missing.': '缺少订单编号。',
-      'Override just this date.To click Available fills your daily time range': '仅覆盖这一天。点击“可用”会填入你每天的常用时间。',
-      'This applies to this date only. Tap Available to fill in your usual daily hours.': '仅覆盖这一天。点击“可用”会填入你每天的常用时间。',
+      'Override just this date.To click Available fills your daily time range':
+          '仅覆盖这一天。点击“可用”会填入你每天的常用时间。',
+      'This applies to this date only. Tap Available to fill in your usual daily hours.':
+          '仅覆盖这一天。点击“可用”会填入你每天的常用时间。',
       'Password changed successfully': '密码修改成功',
       'Password reset successfully. You can now login.': '密码重置成功，您现在可以登录。',
       'Pay and Confirm': '付款并确认',
@@ -1830,10 +1870,12 @@ class AppStrings extends Translations {
       'Pick on Map': '在地图上选择',
       'Pick your location on the map': '请在地图上选择位置',
       'Platform Fee (20%):': '平台费（20%）：',
-      'Please bring your own basic tools. A power drill will make the job much faster and easier.': '请自带基本工具。使用电钻可更快、更轻松地完成工作。',
+      'Please bring your own basic tools. A power drill will make the job much faster and easier.':
+          '请自带基本工具。使用电钻可更快、更轻松地完成工作。',
       'Please check the acknowledgment box': '请勾选确认框',
       'Please choose a date first.': '请先选择日期。',
-      'Please choose a start time and hours the helper is available for.': '请选择帮手有空的开始时间和小时数。',
+      'Please choose a start time and hours the helper is available for.':
+          '请选择帮手有空的开始时间和小时数。',
       'Please describe your issue.': '请描述您的问题。',
       'Please drop a pin on the map first.': '请先在地图上放置定位点。',
       'Please enter a message.': '请输入消息。',
@@ -1846,7 +1888,8 @@ class AppStrings extends Translations {
       'Please enter a valid price and a message.': '请输入有效价格和消息。',
       'Please enter a voucher code': '请输入优惠券代码',
       'Please enter an address': '请输入地址',
-      'Please enter the OTP provided by the client to mark this job as completed.': 'Please enter the OTP provided by the client to mark this job as completed.',
+      'Please enter the OTP provided by the client to mark this job as completed.':
+          'Please enter the OTP provided by the client to mark this job as completed.',
       'Please enter the complete 6-digit OTP': '请输入完整的 6 位验证码',
       'Please fill all fields': '请填写所有字段',
       'Please fill out the task title': '请填写任务标题',
@@ -1868,11 +1911,13 @@ class AppStrings extends Translations {
       'Posted by You': '由您发布',
       'Pricing Details': '价格明细',
       'Profile Exists': '个人资料已存在',
-      'Profile created but office location could not be saved.': '个人资料已创建，但无法保存办公地点。',
+      'Profile created but office location could not be saved.':
+          '个人资料已创建，但无法保存办公地点。',
       'Profile navigation': '个人资料导航',
       'Profile photo updated': '头像已更新',
       'Profile updated': '个人资料已更新',
-      'Profile updated but office location could not be saved.': '个人资料已更新，但无法保存办公地点。',
+      'Profile updated but office location could not be saved.':
+          '个人资料已更新，但无法保存办公地点。',
       'Profile updated successfully': '个人资料更新成功',
       'Propose New Time': '建议新时间',
       'Propose a different budget to the client.': '向客户提出不同的预算。',
@@ -1898,12 +1943,11 @@ class AppStrings extends Translations {
       'Request Form': '请求表单',
       'Request ID missing. Please refresh the chat.': '缺少请求编号，请刷新聊天。',
       'Request This Helper': '请求该帮手',
-      'Request reference missing. Pull to refresh and try again.': '缺少请求编号，请下拉刷新后重试。',
+      'Request reference missing. Pull to refresh and try again.':
+          '缺少请求编号，请下拉刷新后重试。',
       'Requesting help from': '正在向以下帮手请求帮助',
       'Required to appear in search results': '必须填写，才能显示在搜索结果中',
       'Reset Password': '重置密码',
-      'Review Submitted': '评价已提交',
-      'Reviews': '评价',
       'Routing / Sort Code': '路由号 / 银行代码',
       'STATUS: WAITING FOR RESPONSE': '状态：等待回复',
       'Save Changes': '保存更改',
@@ -1914,7 +1958,6 @@ class AppStrings extends Translations {
       'Search in this category...': '在此类别中搜索…',
       'Search location manually...': '手动搜索位置…',
       'Select Category': '选择类别',
-      'Select Date': '选择日期',
       'Select Days': '选择日期',
       'Select Hours': '选择时段',
       'Select Issue Category': '选择问题类别',
@@ -1924,8 +1967,10 @@ class AppStrings extends Translations {
       'Select categories': '选择类别',
       'Select days': '选择日期',
       'Select hours': '选择时段',
-      'Select one of your available slots. Client will Accept or Decline.': '选择一个可用时间段，客户将接受或拒绝。',
-      'Select one of your available slots. The client will Accept or Decline.': '选择一个可用时间段，客户将接受或拒绝。',
+      'Select one of your available slots. Client will Accept or Decline.':
+          '选择一个可用时间段，客户将接受或拒绝。',
+      'Select one of your available slots. The client will Accept or Decline.':
+          '选择一个可用时间段，客户将接受或拒绝。',
       'Send Counter': '发送还价',
       'Send Message': '发送消息',
       'Send OTP to Client': '向客户发送验证码',
@@ -1944,7 +1989,6 @@ class AppStrings extends Translations {
       'Share this confirmation code with the provider.': '请将此确认码提供给服务人员。',
       'Share your experience…': '分享您的体验…',
       'Show Available Only': '仅显示有空的帮手',
-      'Sign Out': '退出登录',
       'Slot unavailable': '该时间段不可用',
       'Something went wrong': '出现错误',
       'Something went wrong while loading availability': '加载可用时间时出现错误',
@@ -1954,21 +1998,23 @@ class AppStrings extends Translations {
       'Sort by Date': '按日期排序',
       'Special Date': '特殊日期',
       'Start Time': '开始时间',
-      'Start Work': '开始工作',
       'Strike Count': '违规次数',
       'Submit': '提交',
       'Submit Report': '提交报告',
       'Support Responses': '客服回复',
       'Support Ticket Feedback': '客服工单反馈',
       'Take a photo': '拍照',
-      'Tap a date to open it. Use it to override a single day.': '点击日期打开，可用于覆盖单独一天的设置。',
+      'Tap a date to open it. Use it to override a single day.':
+          '点击日期打开，可用于覆盖单独一天的设置。',
       'Tap to add a logo / photo': '点击添加标志 / 照片',
       'Task updated successfully': '任务更新成功',
       'Tax Information': '税务信息',
       'Thanks for your feedback!': '感谢您的反馈！',
       'Thanks!': '谢谢！',
-      'This helper has no available time on the selected date.': '该帮手在所选日期没有可用时间。',
-      'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.': 'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.',
+      'This helper has no available time on the selected date.':
+          '该帮手在所选日期没有可用时间。',
+      'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.':
+          'This is a detailed description of the task. I recently purchased an IKEA MICKE desk and need professional assistance with assembly. The desk is brand new and still in its original packaging. All parts, screws, and the instruction manual are included in the box.\n\nThe desk will be placed in my home office, which has enough space to work comfortably.',
       'Ticket closed.': '工单已关闭。',
       'Ticket not found.': '未找到工单。',
       'Time': '时间',
@@ -1980,7 +2026,8 @@ class AppStrings extends Translations {
       'Use now': '立即使用',
       'VISA': 'VISA',
       'Validation': '验证',
-      'Verification request failed. Please check your connection and try again.': '验证请求失败，请检查网络连接后重试。',
+      'Verification request failed. Please check your connection and try again.':
+          '验证请求失败，请检查网络连接后重试。',
       'Verified booking': '已验证预约',
       'Verify': '验证',
       'Verify Job Completion': '验证工作完成',
@@ -2009,22 +2056,26 @@ class AppStrings extends Translations {
       'Work started': '工作已开始',
       'Worker not selected': '未选择工作人员',
       'Write message': '输入消息',
-      'You already have a helper profile. Redirecting to dashboard.': '您已有帮手资料，正在跳转到控制面板。',
+      'You already have a helper profile. Redirecting to dashboard.':
+          '您已有帮手资料，正在跳转到控制面板。',
       'You have already submitted feedback for this order.': '您已为此订单提交过反馈。',
       'You have declined the offer.': '您已拒绝该请求。',
-      'You haven\'t submitted any reviews yet.': '您尚未提交任何评价。',
       'Your Budget': '您的预算',
       'Your Location': '您的位置',
       'Your account has been verified.': '您的账户已通过验证。',
-      'Your account isn\'t verified yet.\nTo send work requests and get hired,\nplease complete your verification.': '您的账户尚未验证。\n要发送工作请求并接受雇佣，\n请完成验证。',
-      'Your account isn\'t verified yet.\nTo send work requests and get hired, please\ncomplete your verification.': '您的账户尚未验证。\n要发送工作请求并接受雇佣，\n请完成验证。',
+      'Your account isn\'t verified yet.\nTo send work requests and get hired,\nplease complete your verification.':
+          '您的账户尚未验证。\n要发送工作请求并接受雇佣，\n请完成验证。',
+      'Your account isn\'t verified yet.\nTo send work requests and get hired, please\ncomplete your verification.':
+          '您的账户尚未验证。\n要发送工作请求并接受雇佣，\n请完成验证。',
       'Your feedback has been submitted.': '您的反馈已提交。',
       'Your order has been paid and confirmed!': '您的订单已付款并确认！',
       'Your proposal has been submitted.': '您的请求已提交。',
-      'Your review is saved but hidden.\nUnder the Double-Blind policy, it will only become public once the other party reviews you, or 14 days pass.': '您的评价已保存但暂时隐藏。\n根据双盲评价政策，对方评价您或 14 天后，该评价才会公开。',
+      'Your review is saved but hidden.\nUnder the Double-Blind policy, it will only become public once the other party reviews you, or 14 days pass.':
+          '您的评价已保存但暂时隐藏。\n根据双盲评价政策，对方评价您或 14 天后，该评价才会公开。',
       'mm/dd/yy': 'mm/dd/yy',
       'or, ': 'or, ',
-      '© 2026 Worker Hiring App. All rights reserved.': '© 2026 Worker Hiring App。保留所有权利。',
+      '© 2026 Worker Hiring App. All rights reserved.':
+          '© 2026 Worker Hiring App。保留所有权利。',
       AppStrings.viewRequest: '查看请求',
       AppStrings.appName: '帮',
       AppStrings.getStarted: '立即开始',
@@ -2181,7 +2232,6 @@ class AppStrings extends Translations {
       AppStrings.orderLabel: '订单',
       AppStrings.attachment: '附件',
       AppStrings.yourMessage: '您的留言',
-      // AppStrings.nameExample: 'name@example.com',
       AppStrings.selectYourOrder: '选择您的订单',
       AppStrings.addAttachment: '添加附件',
       AppStrings.termsConfirmText1: '提交此表单即表示您确认已阅读并同意Worker的',
@@ -2285,6 +2335,7 @@ class AppStrings extends Translations {
       AppStrings.successRate: '成功率',
       AppStrings.communitySafetyOtp: '为了维护社区安全，我们使用动态验证码（OTP）进行登录、注册及确认工作完成。',
       AppStrings.signOutConfirm: '您确定要退出吗？',
+      AppStrings.pleaseWait: '请稍候...',
       'Settings': '设置',
       'Saved Helper': '已收藏的帮手',
       'Saved Helpers': '已收藏的帮手',
@@ -2299,12 +2350,10 @@ class AppStrings extends Translations {
       'Paid Payouts': '已付款',
       'Available Payouts': '可用款项',
       'Remove Payout Method': '移除收款方式',
-      'Are you sure you want to remove this payout method?':
-          '您确定要移除此收款方式吗？',
+      'Are you sure you want to remove this payout method?': '您确定要移除此收款方式吗？',
       'Edit Payment Method': '编辑付款方式',
       'Remove Payment Method': '移除付款方式',
-      'Are you sure you want to remove this payment method?':
-          '您确定要移除此付款方式吗？',
+      'Are you sure you want to remove this payment method?': '您确定要移除此付款方式吗？',
       'Helper Profile': '帮手资料',
       'Unknown': '未知',
       'Open': '打开',

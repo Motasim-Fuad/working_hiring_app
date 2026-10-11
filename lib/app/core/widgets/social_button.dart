@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../constants/app_colors.dart';
-import 'responsive_layout.dart';
+import 'package:working_hiring/app/core/constants/app_colors.dart';
+import 'package:working_hiring/app/core/widgets/responsive_layout.dart';
 
 class SocialButton extends StatelessWidget {
   final String text;
@@ -30,41 +30,41 @@ class SocialButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
           ),
-          foregroundColor: AppColors.textPrimary, // Splash color
+          foregroundColor: AppColors.textPrimary,
         ),
         child: isLoading
-          ? Center(
-              child: SizedBox(
-                width: AppResponsive.icon(24),
-                height: AppResponsive.icon(24),
-                child: const CircularProgressIndicator(
-                  strokeWidth: 2,
-                  color: AppColors.textPrimary,
-                ),
-              ),
-            )
-          : Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  iconPath,
+            ? Center(
+                child: SizedBox(
                   width: AppResponsive.icon(24),
                   height: AppResponsive.icon(24),
-                ),
-                SizedBox(width: 12.w),
-                Flexible(
-                  child: Text(
-                    text,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: AppResponsive.font(16),
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.textPrimary,
-                    ),
+                  child: const CircularProgressIndicator(
+                    strokeWidth: 2,
+                    color: AppColors.textPrimary,
                   ),
                 ),
-              ],
-            ),
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    iconPath,
+                    width: AppResponsive.icon(24),
+                    height: AppResponsive.icon(24),
+                  ),
+                  SizedBox(width: 12.w),
+                  Flexible(
+                    child: Text(
+                      text,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: AppResponsive.font(16),
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.textPrimary,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
       ),
     );
   }

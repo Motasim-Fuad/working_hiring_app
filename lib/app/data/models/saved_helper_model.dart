@@ -1,7 +1,4 @@
-// lib/data/models/saved_helper_model.dart
 import 'package:working_hiring/app/data/repositories/helper_repository.dart';
-
-import 'helper_model.dart';
 
 class SavedHelperEntry {
   final int entryId;

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 
-import '../data/models/order_event.dart';
+import 'package:working_hiring/app/data/models/order_event.dart';
 
 /// App-wide broadcast bus for `OrderEvent` frames.
 ///

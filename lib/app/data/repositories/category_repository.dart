@@ -1,6 +1,6 @@
-import '../../service/api_service.dart';
-import '../../service/api_url.dart';
-import '../models/category_model.dart';
+import 'package:working_hiring/app/service/api_service.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/data/models/category_model.dart';
 
 class CategoryRepository {
   final ApiClient _client;

@@ -11,7 +11,6 @@ abstract class Routes {
   static const ROLE_SELECTION = _Paths.ROLE_SELECTION;
   static const SERVICE_SELECTION = _Paths.SERVICE_SELECTION;
   static const DASHBOARD = _Paths.DASHBOARD;
-  static const CREATE_TASK = _Paths.CREATE_TASK;
   static const PAYMENT = _Paths.PAYMENT;
   static const ADD_PAYMENT = _Paths.ADD_PAYMENT;
   static const CHANGE_PASSWORD = _Paths.CHANGE_PASSWORD;
@@ -30,7 +29,6 @@ abstract class Routes {
   static const HELPER_LIST = _Paths.HELPER_LIST;
   static const HELPER_PROFILE = _Paths.HELPER_PROFILE;
   static const VOUCHERS_OFFERS = _Paths.VOUCHERS_OFFERS;
-  static const SETTINGS = _Paths.SETTINGS;
   static const WORKER_SETTINGS = _Paths.WORKER_SETTINGS;
   static const CREATE_HELPER_PROFILE = _Paths.CREATE_HELPER_PROFILE;
   static const CHECKOUT = _Paths.CHECKOUT;
@@ -46,12 +44,10 @@ abstract class _Paths {
   static const ROLE_SELECTION = '/role-selection';
   static const SERVICE_SELECTION = '/service-selection';
   static const DASHBOARD = '/dashboard';
-  static const CREATE_TASK = '/create-task';
   static const PAYMENT = '/payment';
   static const ADD_PAYMENT = '/add-payment';
   static const CHANGE_PASSWORD = '/change-password';
   static const NOTIFICATION = '/notification';
-  static const CREATE_TASK_SUCCESS = '/create-task-success';
   static const ORDER_VIEW = '/order_view';
   static const FEEDBACK_SUCCESS = '/feedback-success';
   static const WORKER_HOME = '/worker-home';
@@ -66,7 +62,6 @@ abstract class _Paths {
   static const HELPER_LIST = '/helper-list';
   static const HELPER_PROFILE = '/helper-profile';
   static const VOUCHERS_OFFERS = '/vouchers-offers';
-  static const SETTINGS = '/settings';
   static const WORKER_SETTINGS = '/worker-settings';
   static const CREATE_HELPER_PROFILE = '/create-helper-profile';
   static const CHECKOUT = '/checkout';

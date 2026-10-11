@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 
-import '../../service/api_service.dart';
-import '../../service/api_url.dart';
-import '../models/user_model.dart';
+import 'package:working_hiring/app/service/api_service.dart';
+import 'package:working_hiring/app/service/api_url.dart';
+import 'package:working_hiring/app/data/models/user_model.dart';
 
 class UserRepository {
   final ApiClient _client;
@@ -72,8 +72,10 @@ class UserRepository {
   }
 
   /// Create a new address.
-  Future<AddressModel> createAddress(Map<String, dynamic> data,
-      {String? profileType}) async {
+  Future<AddressModel> createAddress(
+    Map<String, dynamic> data, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType;
     final response = await _client.post(
       url: _fullUrl(ApiUrl.userAddresses),
@@ -84,8 +86,11 @@ class UserRepository {
   }
 
   /// Update an existing address.
-  Future<AddressModel> updateAddress(int id, Map<String, dynamic> data,
-      {String? profileType}) async {
+  Future<AddressModel> updateAddress(
+    int id,
+    Map<String, dynamic> data, {
+    String? profileType,
+  }) async {
     _client.profileType = profileType;
     final response = await _client.patch(
       url: '${_fullUrl(ApiUrl.userAddresses)}$id/',
@@ -132,11 +137,13 @@ class UserRepository {
     await _client.delete(url: _fullUrl(ApiUrl.currentUser));
   }
 
-  // ----- Provider Verification -----
-
-  Future<Map<String, dynamic>?> getVerificationStatus({String? profileType}) async {
+  Future<Map<String, dynamic>?> getVerificationStatus({
+    String? profileType,
+  }) async {
     _client.profileType = profileType ?? 'provider';
-    final response = await _client.get(url: _fullUrl(ApiUrl.providerVerification));
+    final response = await _client.get(
+      url: _fullUrl(ApiUrl.providerVerification),
+    );
     try {
       return parseApiResponse(response) as Map<String, dynamic>?;
     } on ApiException {
@@ -154,26 +161,18 @@ class UserRepository {
       url: _fullUrl(ApiUrl.providerVerification),
       reqType: 'POST',
       body: fields,
-      multipartBody: [
-        MultipartBody('document', File(documentFilePath)),
-      ],
+      multipartBody: [MultipartBody('document', File(documentFilePath))],
     );
     parseApiResponse(response);
   }
 
-  // ----- Referrals -----
-
-  // lib/data/repositories/user_repository.dart
-
   Future<String?> getReferralCode() async {
     try {
-      // No profile type needed for this endpoint
-      final response = await _client.get(
-        url: _fullUrl(ApiUrl.myReferralCode),
-      );
-      // Response body is: {"status": true, "referral_code": "75K26R9U"}
+      final response = await _client.get(url: _fullUrl(ApiUrl.myReferralCode));
       final body = response.body;
-      if (body is Map && body['status'] == true && body.containsKey('referral_code')) {
+      if (body is Map &&
+          body['status'] == true &&
+          body.containsKey('referral_code')) {
         return body['referral_code'] as String;
       }
       return null;
@@ -193,8 +192,6 @@ class UserRepository {
       return [];
     }
   }
-
-  // ----- Reviews -----
 
   Future<List<Map<String, dynamic>>> getCustomerReviews() async {
     _client.profileType = 'customer';

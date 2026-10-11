@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+export 'package:working_hiring/app/core/widgets/responsive_center.dart';
 
 abstract final class AppResponsive {
   static const double mobileBreakpoint = 600;
@@ -52,41 +53,7 @@ abstract final class AppResponsive {
     final media = MediaQuery.of(context);
     return math.max(
       0,
-      media.size.height -
-          media.padding.vertical -
-          media.viewInsets.bottom,
-    );
-  }
-}
-
-class ResponsiveCenter extends StatelessWidget {
-  final Widget child;
-  final double maxWidth;
-  final EdgeInsetsGeometry? padding;
-  final AlignmentGeometry alignment;
-
-  const ResponsiveCenter({
-    super.key,
-    required this.child,
-    this.maxWidth = AppResponsive.formMaxWidth,
-    this.padding,
-    this.alignment = Alignment.topCenter,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: alignment,
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: maxWidth),
-        child: Padding(
-          padding: padding ??
-              EdgeInsets.symmetric(
-                horizontal: AppResponsive.horizontalPadding(context),
-              ),
-          child: child,
-        ),
-      ),
+      media.size.height - media.padding.vertical - media.viewInsets.bottom,
     );
   }
 }

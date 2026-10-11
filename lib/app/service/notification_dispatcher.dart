@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'websocket_service.dart';
+import 'package:working_hiring/app/service/websocket_service.dart';
 
-/// ✅ NEW FILE — fixes the "only one screen gets order updates" bug.
+///  NEW FILE — fixes the "only one screen gets order updates" bug.
 ///
 /// PROBLEM: WebSocketService.onNotification is a single callback field
 /// (`void Function(Map<String, dynamic>)? onNotification`). Both
@@ -23,7 +23,7 @@ import 'websocket_service.dart';
 class NotificationDispatcher {
   NotificationDispatcher._internal();
   static final NotificationDispatcher instance =
-  NotificationDispatcher._internal();
+      NotificationDispatcher._internal();
 
   final List<void Function(Map<String, dynamic> data)> _listeners = [];
   bool _hooked = false;
@@ -50,13 +50,10 @@ class NotificationDispatcher {
     final payload = (data['type'] == 'notify' && data['data'] is Map)
         ? Map<String, dynamic>.from(data['data'] as Map)
         : data;
-    // Iterate over a copy in case a listener removes itself mid-dispatch.
     for (final l in List.of(_listeners)) {
       try {
         l(payload);
-      } catch (_) {
-        // One listener's error must never stop the others from running.
-      }
+      } catch (_) {}
     }
   }
 }
